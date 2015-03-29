@@ -1,0 +1,7 @@
+#posts      
+    - @videos.each do |video| 
+        .post
+            .post_image
+                = link_to (image_tag video.image.url(:medium)), video 
+           
+    = will_paginate @videos 

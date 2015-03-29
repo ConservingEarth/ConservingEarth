@@ -1,0 +1,377 @@
+/*
+	* This is a manifest file that'll be compiled into application.css, which will include all the files
+	* listed below.
+	*
+	* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+	* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+	*
+	* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+	* compiled file so the styles you add here take precedence over styles defined in any styles
+	* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+	* file per style scope.
+	*
+	*= require 'masonry/transitions'
+	*= require_tree .
+	*= require_self
+	*/
+
+
+
+
+@import 'media.css.scss';
+
+ 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+	
+
+}
+
+span{
+	color: #33CC33;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.body-container{
+	
+	width: 100%;
+	height: 100%;
+}
+
+html, body { 
+ 	font-family: 'Raleway', sans-serif; 
+ } 
+ 
+ 
+ h1, h2, h3, h4, h5, h6 { 
+ 	font-weight: 500;
+ 	text-decoration: none; 
+ } 
+ 
+ 
+.button{
+	border: 1px solid black;
+	padding: 5px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.mapcontainer{
+ overflow: hidden;
+}
+
+ .map {
+ 	float: left;
+ 	width: 60%;
+ 	height: 100%;
+ 	background-color: lightblue;
+ 	
+
+ }
+
+.overview{
+overflow: hidden;
+ height: 100%;
+ width: 40%;
+ background-color: yellow;
+
+}
+
+.header {
+	margin: auto;
+	float: top;
+	background-color: #f9f9f9;
+	height: 50px;
+	width: 100%;
+
+	
+}
+
+.navhead{
+	
+	
+	padding-left: 50px
+}
+
+.logo a {
+	font-size: 1.3em;
+	color: inherit;
+	list-style: none;
+	text-decoration: none;
+}
+
+.logo{
+	width: 300px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin: 0 auto;
+	color: inherit;
+	list-style: none;
+	
+	
+
+}
+
+.userlogin{
+
+	float: right;
+	padding-top: 10px;
+	padding-right: 50px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+
+.usermenu{
+
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background-color: #f9f9f9;
+	display: block;
+	text-decoration: none;
+	list-style: none;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	margin: 0px auto;
+	padding-top: 20px;
+	top: 50px;
+	overflow: hidden;
+}
+
+.usermenu ul {
+	width: 100%;
+	list-style: none;
+
+}
+
+.usermenu ul li{
+	width: 100%;
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+}
+
+.usermenu ul li a {
+	padding-left: 10px;
+	padding-top: 10px;
+	width: 100%;
+	text-decoration: none;
+	color: #666;
+	display: block;
+	-webkit-transition :0.2s;
+	-moz-transition :0.2s;
+	-o-transition :0.2s;
+	transition :0.2s;
+}
+
+.userlogin a{
+	color: inherit;
+	list-style: none;
+	text-decoration: none;
+
+	
+}
+.userlogin a:hover{
+	background-color: gray;
+
+}
+
+.search{
+	
+	padding: 10px;
+	width: 600px;
+	margin: 0px auto;
+	padding-top: 10px;
+
+}
+.wrapper {
+	margin:0 auto;
+	background-color: #fff;
+}
+
+.sidebar {
+	width: 200px;
+	height: 100%;
+	background-color: #f9f9f9;
+	float: left;
+	text-decoration: none;
+	border-top: 1px solid lightgray;
+	position: relative;
+	
+	
+
+}
+
+.content{
+	margin:0 auto;
+	width: 70%;
+	margin: 0 auto;
+	
+}
+
+.yield{
+	height: 90%;
+	margin: 0px auto;
+	width: 100%;
+ 	border: 1px solid black;
+
+}
+
+.rightbar {
+	width: 300px;
+	height: 100%;
+	background-color: #fff;
+	float: right;
+	border: 1px solid black;
+
+	
+}
+
+.sidebar-nav{
+	
+	margin: 0px auto;
+}
+
+.sidebar-nav ul {
+	
+	align-items: center;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.sidebar-nav ul li {
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+	margin: 0 20px;
+
+}
+
+.sidebar-nav ul li a {
+	text-decoration: none;
+	color: #666;
+	display: block;
+	padding: 10px;
+	font-size: 0.8em;
+	border-bottom: 1px solid #0A0A0A;
+	-webkit-transition :0.2s;
+	-moz-transition :0.2s;
+	-o-transition :0.2s;
+	transition :0.2s;
+}
+
+.sidebar-nav a:hover{
+	text-decoration: none;
+	background-color: #33CC33;
+	text-decoration: none;
+	color: #fff; 
+
+}
+
+.sidebar-nav a.focus {
+	text-decoration: none;
+	background-color: #33CC33;
+	color: #fff;
+	text-decoration: none; 
+}
+
+.sidebar-nav-links {
+	text-decoration: none;
+	list-style: none;
+	color: #666;
+	display: block;
+	padding: 10px;
+	font-size: 0.8em;
+	text-decoration: none;
+	padding-left: 20px;
+
+}
+
+
+
+input{
+	padding: 5px;
+}
+
+.positioner{
+	max-width: 970px;
+	margin: 0 auto;
+
+}
+
+.mediapagecontainer{
+	display: flex;
+}
+
+.mediacontainer{
+	
+	width: 1000px;
+	height: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+.media {
+	position: relative;
+	width: auto;
+	height: 150px;
+	padding: 10px;
+	border: 1px solid black;
+	
+	
+}
+
+.media img{
+ 	height: 100px;
+ 	width: 100px;
+	
+
+}
+
+.mediacontent{
+
+	height: 100px;
+	width: 100px
+
+}
+
+.meta{
+	
+	margin: 0 20px;
+}
