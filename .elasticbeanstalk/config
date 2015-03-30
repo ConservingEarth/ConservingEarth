@@ -13,4 +13,3 @@ RdsSourceSnapshotName=awseb-e-jsnqsu7mqr-stack-snapshot-awsebrdsdatabase-rpi7wtt
 Region=eu-west-1
 ServiceEndpoint=https://elasticbeanstalk.eu-west-1.amazonaws.com
 SolutionStack=64bit Amazon Linux 2014.09 v1.2.1 running Ruby 2.2 (Puma)
-

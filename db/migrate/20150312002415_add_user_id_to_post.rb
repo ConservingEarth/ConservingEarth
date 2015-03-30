@@ -1,5 +1,5 @@
 class AddUserIdToPost < ActiveRecord::Migration
-  def change
+  def add
     add_column :posts, :user_id, :interger
   end
 end

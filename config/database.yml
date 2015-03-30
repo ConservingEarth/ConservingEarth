@@ -1,23 +1,23 @@
-evelopment:
+development:
   adapter: postgresql
   encoding: unicode
-  database: ce_development
+  database: postgres
   pool: 5
-  username: ce_postgres
-  password:
+  username: postgres
+  password: ce
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: ce_test
+  database: postgres
   pool: 5
-  username: ce_postgres
-  password:
+  username: postgres
+  password: ce
 
 production:
   adapter: postgresql
   encoding: unicode
   database: ce_production
   pool: 5
-  username: ce_postgres
-  password:
+  username: postgres
+  password: ce

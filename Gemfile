@@ -46,18 +46,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 
-group :development, :test do
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'pg', '~> 0.18.1'
+gem 'byebug'
+gem 'pg', '~> 0.18.1'
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-end
+gem 'web-console', '~> 2.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-group :production do
-	gem 'pg', '~> 0.18.1'
-	gem 'aws-sdk'
-end
+
+gem 'aws-sdk'
