@@ -1,0 +1,16 @@
+[global]
+ApplicationName=ConservingEarth
+AwsCredentialFile=C:\Users\Greg\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.eu-west-1.amazonaws.com
+EnvironmentName=ConservingEarth-env
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=SingleInstance
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\ConservingEarth\.elasticbeanstalk\optionsettings.ConservingEarth-env
+RdsDeletionPolicy=Snapshot
+RdsEnabled=Yes
+RdsSourceSnapshotName=awseb-e-jsnqsu7mqr-stack-snapshot-awsebrdsdatabase-rpi7wtt1o79o
+Region=eu-west-1
+ServiceEndpoint=https://elasticbeanstalk.eu-west-1.amazonaws.com
+SolutionStack=64bit Amazon Linux 2014.09 v1.2.1 running Ruby 2.2 (Puma)
+
