@@ -1,15 +1,29 @@
+# these commands run before the application and web server are
+# set up and the application version file is extracted
+commands:
+  01_node_install:
+    # run this command from /tmp directory
+    cwd: /tmp
+    # don't run the command if node is already installed (file /usr/bin/node exists)
+    test: '[ ! -f /usr/bin/node ] && echo "node not installed"'
+    # install from epel repository
+    # flag -y for no-interaction installation
+    command: 'yum install -y nodejs --enablerepo=epel'
+
+
 [global]
-ApplicationName=
-AwsCredentialFile=
-DevToolsEndpoint=
-EnvironmentName=
-EnvironmentTier=
-EnvironmentType=
-InstanceProfileName=
-OptionSettingFile=
-RdsDeletionPolicy=
-RdsEnabled=
+ApplicationName=ConservingEarth
+AwsCredentialFile=C:\Users\Greg\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.eu-west-1.amazonaws.com
+EnvironmentName=ConservingEarth
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=SingleInstance
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\ConservingEarth\.elasticbeanstalk\optionsettings.ConservingEarth
+RdsDeletionPolicy=Snapshot
+RdsEnabled=Yes
 RdsSourceSnapshotName=
-Region=
-ServiceEndpoint=
-SolutionStack=
+Region=eu-west-1
+ServiceEndpoint=https://elasticbeanstalk.eu-west-1.amazonaws.com
+SolutionStack=64bit Amazon Linux 2014.09 v1.2.1 running Ruby 2.2 (Puma)
+
