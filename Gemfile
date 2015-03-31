@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -70,5 +70,5 @@ group :production do
 	gem 'therubyracer', :platform => :ruby
 	gem 'libv8', '~> 3.16.14.7'
 	gem 'pg'
-	gem 'puma'
+
 end
