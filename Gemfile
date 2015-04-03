@@ -71,5 +71,5 @@ group :production do
 	gem 'libv8', '~> 3.16.14.7'
 	gem 'pg'
 	gem 'puma'
-	gem 'rmagick'
+	gem "rmagick", :require => 'RMagick'
 end
