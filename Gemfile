@@ -20,10 +20,12 @@ gem 'byebug'
 gem 'web-console'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 group :production do
 	gem 'therubyracer', :platform => :ruby
 	gem 'libv8', '~> 3.16.14.7'
 	gem 'puma'
 	gem "rmagick"
+
 end
