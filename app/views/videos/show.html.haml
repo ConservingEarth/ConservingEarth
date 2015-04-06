@@ -1,0 +1,23 @@
+#post_show
+  %h1= @video.title
+  %p.username
+    Shared by
+    = @video.user.name
+    about
+    = time_ago_in_words(@video.created_at)
+  .clearfix
+    .video_image_description
+      = image_tag @video.image.url(:small)
+      .description= simple_format(@video.description)
+    .video_data
+      = link_to "Visit Link", @video.link, class: "button"
+      = link_to video_path(@video), method: :get, class: "data" do
+        %i.fa.fa-thumbs-o-up
+        = pluralize(@video, "Like")
+      = link_to video_path(@video), method: :get, class: "data" do
+        %i.fa.fa-thumbs-o-down
+        = pluralize(@video, "Dislike")
+      - if @video.user == current_user
+        = link_to "Edit", edit_video_path(@video), class: "data"
+        = link_to "Delete", video_path(@video), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
+
