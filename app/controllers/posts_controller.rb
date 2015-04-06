@@ -21,14 +21,14 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = current_user.posts.build
+		@post = Post.new
 		
 
 	end
 
 	def create
-		@post = current_user.posts.build(post_params)
-		@post.user_id = current_user.id
+		@post = Post.new(post_params)
+		
 		if @post.save
 			redirect_to @post, notice: "Successfully uploaded your post"
 		else
