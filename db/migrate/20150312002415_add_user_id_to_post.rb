@@ -1,6 +1,7 @@
 class AddUserIdToPost < ActiveRecord::Migration
-  def add
-    add_column :videos, :user_id, :integer
-    add_index :videos, :user_id
+  def change
+    add_column :posts, :user_id, :integer
+    
   end
+  
 end

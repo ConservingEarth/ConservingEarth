@@ -19,13 +19,17 @@ gem 'sdoc',  group: :doc
 gem 'byebug' 
 gem 'web-console'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'ruby-oembed'
+
+group :development, :test do
+	gem 'sqlite3', '~> 1.3.10'
+end
 
 group :production do
 	gem 'therubyracer', :platform => :ruby
 	gem 'libv8', '~> 3.16.14.7'
 	gem 'puma'
 	gem "rmagick"
-
+	gem 'pg'
 end

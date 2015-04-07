@@ -13,10 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150312005304) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "adminpack"
-
   create_table "comments", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
@@ -25,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150312005304) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "infos", force: :cascade do |t|
     t.text     "comment"
@@ -36,9 +32,11 @@ ActiveRecord::Schema.define(version: 20150312005304) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
+    t.string   "link"
     t.text     "body"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -61,8 +59,8 @@ ActiveRecord::Schema.define(version: 20150312005304) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "videos", force: :cascade do |t|
     t.string   "title"
@@ -77,7 +75,4 @@ ActiveRecord::Schema.define(version: 20150312005304) do
     t.datetime "image_updated_at"
   end
 
-  add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
-
-  add_foreign_key "comments", "posts"
 end
