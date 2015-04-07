@@ -77,19 +77,18 @@ ul{
  overflow: hidden;
 }
 
- .map {
+ #map {
  	float: left;
- 	width: 60%;
- 	height: 100%;
- 	background-color: darkblue;
+ 	width: 800px;
+ 	height: 400px;
  	
 
  }
 
 .overview{
 overflow: hidden;
- height: 100%;
- width: 40%;
+ height: 40px;
+ width: 40px;
  background-color: yellow;
 
 }

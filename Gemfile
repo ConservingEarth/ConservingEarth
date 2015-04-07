@@ -21,6 +21,7 @@ gem 'web-console'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_12factor', group: :production
 gem 'ruby-oembed'
+gem 'gmaps4rails'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'
