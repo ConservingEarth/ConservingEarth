@@ -62,11 +62,11 @@ html, body {
  
  
 .button{
-	border: 1px solid black;
-	padding: 5px;
-	background-color: lightgray;
-	text-decoration: none;
-	color: inherit;
+	padding: .4rem .5rem;
+	border-radius: .2rem;
+	outline: none;
+	background: #33CC33;
+	color: white;
 }
 
 ul{
@@ -193,6 +193,12 @@ overflow: hidden;
 .userlogin a:hover{
 	background-color: gray;
 
+}
+
+.form-inputs {
+	border: 1px black solid;
+	padding: 20px;
+	background-color: yellow;
 }
 
 .search{

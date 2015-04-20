@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-	before_action :find_video, only: [:show, :edit, :update, :destroy]
+	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
 	before_action :authenticate_user!, execpt: [:index, :show]
 	
 	def search 
@@ -18,6 +18,7 @@ class VideosController < ApplicationController
 	def show
 		 @infos = Info.where(video_id: @video)
 		 @comments = Comment.where(video_id: @video)
+		 @random_video = Video.where.not(id: @Video).order("RANDOM()").first
 	end
 
 	def new
@@ -49,6 +50,11 @@ class VideosController < ApplicationController
 	def destroy
 		@video.destroy
 		redirect_to root_path
+	end
+
+	def upvote
+		@post.upvote_by current_user
+		redirect_to :back
 	end
 
 	private

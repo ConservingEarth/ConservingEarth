@@ -22,6 +22,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_12factor', group: :production
 gem 'ruby-oembed'
 gem 'gmaps4rails'
+gem 'acts_as_votable'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'
