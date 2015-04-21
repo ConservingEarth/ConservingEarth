@@ -34,4 +34,5 @@ group :production do
 	gem 'puma'
 	gem "rmagick"
 	gem 'pg'
+	gem 'aws-sdk'
 end
