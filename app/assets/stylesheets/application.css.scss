@@ -59,6 +59,29 @@ html, body {
  	font-weight: 500;
  	text-decoration: none; 
  } 
+
+ .btn-submit {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #33CC33;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 6px;
+}
+
+.form {
+  text-align:center;
+  margin: 0 auto 10px;
+  padding: 20px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+  }
+
+ .signupcontainer {
+  padding: 0;
+  width: 100%;
+}
  
  
 .button{
@@ -220,7 +243,6 @@ overflow: hidden;
 	background-color: #f9f9f9;
 	float: left;
 	text-decoration: none;
-	border-top: 1px solid lightgray;
 	position: relative;
 	
 	
@@ -232,6 +254,15 @@ overflow: hidden;
 	width: 70%;
 	margin: 0 auto;
 	
+}
+
+.paginate {
+	clear: both;
+ 	position: relative;
+ 	z-index: 10;
+ 	height: 3em;
+	margin-top: -3em;
+
 }
 
 .yield{

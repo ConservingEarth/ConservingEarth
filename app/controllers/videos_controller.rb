@@ -2,6 +2,9 @@ class VideosController < ApplicationController
 	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
 	before_action :authenticate_user!, execpt: [:index, :show]
 	
+	require 'json'
+	require 'oembed'
+
 	def search 
      	if params[:search].present? 
       		@video = Video.search(params[:search]) 
@@ -13,12 +16,14 @@ class VideosController < ApplicationController
 
 	def index
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 20)
+
 	end
 
 	def show
 		 @infos = Info.where(video_id: @video)
 		 @comments = Comment.where(video_id: @video)
 		 @random_video = Video.where.not(id: @Video).order("RANDOM()").first
+		 @youtube = OEmbed::Providers::Youtube.get(@video.link)
 	end
 
 	def new
@@ -49,7 +54,7 @@ class VideosController < ApplicationController
 
 	def destroy
 		@video.destroy
-		redirect_to root_path
+		redirect_to video_path
 	end
 
 	def upvote

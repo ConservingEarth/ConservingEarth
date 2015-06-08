@@ -1,6 +1,6 @@
+%h1 Edit Video
 = image_tag @video.image.url(:medium)
 %br
-edit video
 = render 'form'
 = link_to "cancel", video_path
-= link_to "back", root_path
+= link_to "back", video_path

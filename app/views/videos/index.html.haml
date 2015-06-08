@@ -17,3 +17,6 @@
 						%span
 							%i.fa.fa-thumbs-o-up
 							= video.get_likes.size
+
+.paginate
+	= will_paginate @Videos 

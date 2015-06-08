@@ -1,5 +1,5 @@
 #post_show
-  %h1= @video.title
+  %h1= @youtube.title.html_safe 
   %p.username
     Shared by
     = @video.user.name
@@ -7,10 +7,10 @@
     = time_ago_in_words(@video.created_at)
   .clearfix
     .post_image_description
-      = image_tag @video.image.url(:medium)
+      = @youtube.html.html_safe 
       .description= simple_format(@video.description)
     .post_data
-      = link_to "Visit Link", @video.link, class: "button"
+      = link_to "Official Link", @video.link, class: "button"
       = link_to like_video_path(@video), method: :get, class: "data" do
         %i.fa.fa-thumbs-o-up
         = pluralize(@video.get_upvotes.size, "Like")

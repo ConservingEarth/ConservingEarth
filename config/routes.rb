@@ -21,7 +21,7 @@ devise_for :users
 
  end
 
-
+ resources :uploads
 
 
  root 'posts#index'
@@ -30,4 +30,5 @@ devise_for :users
  get '/about', to:'welcome#about'
  get '/map', to:'welcome#map'
  get '/user', to:'welcome#user'
+ get '/youtube', to:'welcome#youtube'
 end

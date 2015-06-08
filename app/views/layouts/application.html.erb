@@ -16,7 +16,11 @@
 	<div class="body-container">
 	<div class="header">
 		<nav class="navhead">
-			<div class="logo"><%= link_to "Conserving Earth", root_path %>
+			<div class="logo">
+			
+				<%= link_to "Conserving Earth", root_path %>
+				<div class="logoimg"></div>
+				<div class="home"></div>
 			</div>
 			<div class="userlogin">
 			<% if user_signed_in? %>
@@ -69,10 +73,10 @@
 						 		 
 							
 			</div> 
-	      	<div class="rightbar">
+	      	<!-- sidebar for add?<div class="rightbar">
 				<div>
 					<%= image_tag("inline-rectangle.jpg", :alt => "rss feed") %>
-				</div>
+				</div> -->
 			</div>
  		</div>
 	</div>

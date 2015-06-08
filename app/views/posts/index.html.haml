@@ -17,3 +17,5 @@
 						%span
 							%i.fa.fa-thumbs-o-up
 							= post.get_likes.size
+.paginate
+	= will_paginate @posts 
