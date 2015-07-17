@@ -36,9 +36,7 @@
               %span
                 %i.fa.fa-comments-o
                 = @random_video.comments.count
-              %span
-                %i.fa.fa-thumbs-o-up
-                = @random_video.get_likes.size 
+
 
 #comments
   %h2.comment_count= pluralize(@video.comments.count, "Comment")

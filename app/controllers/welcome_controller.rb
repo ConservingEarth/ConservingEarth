@@ -5,7 +5,7 @@ require 'oembed'
 
 	def youtube
 		
-		@video = OEmbed::Providers::Youtube.get("https://www.youtube.com/watch?v=galL-HzdOC4")
+		@video = OEmbed::Providers::Youtube.get("https://youtu.be/HkZDSqyE1do")
 
 	end
 

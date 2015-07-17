@@ -7,8 +7,7 @@
 		= time_ago_in_words(@post.created_at)
 	.clearfix
 		.post_image_description
-			= image_tag @post.image.url(:medium)
-			.description= simple_format(@post.description)
+			= @post.description
 		.post_data
 			= link_to "Official Link", @post.link, class: "button"
 			= link_to like_post_path(@post), method: :get, class: "data" do
@@ -36,9 +35,7 @@
 							%span
 								%i.fa.fa-comments-o
 								= @random_post.comments.count
-							%span
-								%i.fa.fa-thumbs-o-up
-								= @random_post.get_likes.size
+
 
 #comments
 	%h2.comment_count= pluralize(@post.comments.count, "Comment")

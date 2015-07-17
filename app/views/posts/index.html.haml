@@ -1,21 +1,20 @@
-#posts
+#news
 	- @posts.each do |post|
-		.post
-			.post_image
-				= link_to (image_tag post.image.url(:small)), post
-			.post_content
+		.new
+			.new_image
+			.new_content
 				.title
-					%h2= link_to post.title, post
-				.data.clearfix
+					%h2= link_to post.title, post.link
 					%p.username
 						Shared by
 						= post.user.name
+						= time_ago_in_words(post.created_at)
+						ago
 					%p.buttons
 						%span
+							= link_to "Comments", post
 							%i.fa.fa-comments-o
 							= post.comments.count
-						%span
-							%i.fa.fa-thumbs-o-up
-							= post.get_likes.size
+					
 .paginate
 	= will_paginate @posts 
