@@ -1,20 +1,6 @@
-<div id="posts">
-  <% @groups.each do |group| %>
-    <div class="post">
-      <div class="post_image">
-        <%= link_to (image_tag group.image.url(:small)), group %>
-      </div>
-      <div class="post_content">
-        <div class="title">
-          <h2><%= link_to group.title, group %></h2>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="mapcontainer">
 	<div id="map">
   </div>
-</div>
+
 
 <script type="text/javascript">
 handler = Gmaps.build('Google');

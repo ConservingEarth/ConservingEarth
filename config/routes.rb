@@ -11,7 +11,7 @@ devise_for :users
  end
 
  resources :welcome
-
+ resources :groups
  resources :videos do
  	member do
  		get "like", to: "posts#upvote"
@@ -28,7 +28,9 @@ devise_for :users
 
  get '/videos', to:'videos#index' 
  get '/about', to:'welcome#about'
- get '/map', to:'welcome#map'
+ get '/map', to:'groups#map'
  get '/user', to:'welcome#user'
  get '/youtube', to:'welcome#youtube'
+ get '/community', to:'welcome#community'
+ get '/groups', to:'groups#index'
 end

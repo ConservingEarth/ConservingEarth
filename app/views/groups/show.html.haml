@@ -1,0 +1,27 @@
+.activities
+  = link_to "Name", user_path, class: "button2" 
+  = link_to "Activity", user_path, class: "button2" 
+  = link_to "Chat", user_path, class: "button2" 
+  = link_to "Members", user_path, class: "button2" 
+  = link_to "Events", user_path, class: "button2" 
+  = link_to "Fotos", user_path, class: "button2" 
+  = link_to "Videos", user_path, class: "button2" 
+  = link_to "Files", user_path, class: "button2" 
+  = link_to "Manage", user_path, class: "button2" 
+  
+#post_show
+  %h1= @group.title
+  %p.username
+    created by
+  .clearfix
+    .post_image_description
+      = @group.description
+      .description= simple_format(@group.description)
+    .post_data
+      = link_to "Website", class: "button"
+      %p.data
+        %i.fa.fa-comments-o
+        = link_to "Edit", edit_group_path(@group), class: "data"
+        = link_to "Delete", group_path(@group), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
+
+

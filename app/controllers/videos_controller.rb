@@ -16,7 +16,6 @@ class VideosController < ApplicationController
 
 	def index
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 20)
-
 	end
 
 	def show
@@ -54,7 +53,7 @@ class VideosController < ApplicationController
 
 	def destroy
 		@video.destroy
-		redirect_to video_path
+		redirect_to videos_path
 	end
 
 	def upvote

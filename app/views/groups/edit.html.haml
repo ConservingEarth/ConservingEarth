@@ -1,0 +1,6 @@
+%h1 Edit Group
+= image_tag @group.image.url(:medium)
+%br
+= render 'form'
+= link_to "cancel", group_path
+= link_to "back", group_path

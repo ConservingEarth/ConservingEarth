@@ -1,7 +1,19 @@
-<h1>Hello <%= current_user.name %></h1>
+<div class="activities">
+<%= link_to "Dashboard", user_path, class: "button2" %>
+<%= link_to "Activity", user_path, class: "button2" %>
+<%= link_to "Favorites", user_path, class: "button2" %>
+<%= link_to "Inbox", user_path, class: "button2" %>
+<%= link_to "Groups", user_path, class: "button2" %>
+<%= link_to "Your Groups", user_path, class: "button2" %>
+<%= link_to "Profiel", user_path, class: "button2" %>
+<%= link_to "Account", user_path, class: "button2" %>
+<%= link_to "Settings", user_path, class: "button2" %>
+</div>
 <br>
 <%= link_to "add post", new_post_path, class: "button" %><br>
 <br>
-<%= link_to "add video", new_video_path, class: "button" %>
+<%= link_to "add video", new_video_path, class: "button" %><br>
+<br>
+
 
 

@@ -1,0 +1,10 @@
+#posts
+    - @groups.each do |group|
+        .post
+            .post_image
+                = link_to (image_tag group.image.url(:small)), group
+            .post_content
+                .title
+                    %h2= link_to group.title, group
+.mapcontainer
+    = render "welcome/maps"

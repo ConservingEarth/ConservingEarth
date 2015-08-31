@@ -7,13 +7,10 @@
     = time_ago_in_words(@video.created_at)
   .clearfix
     .post_image_description
-      = @youtube.html.html_safe 
+      = @youtube.html.html_safe
       .description= simple_format(@video.description)
     .post_data
       = link_to "Official Link", @video.link, class: "button"
-      = link_to like_video_path(@video), method: :get, class: "data" do
-        %i.fa.fa-thumbs-o-up
-        = pluralize(@video.get_upvotes.size, "Like")
       %p.data
         %i.fa.fa-comments-o
         = pluralize(@video.comments.count, "Comment")
@@ -21,7 +18,7 @@
         = link_to "Edit", edit_video_path(@video), class: "data"
         = link_to "Delete", video_path(@video), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
     #random_post
-      %h3 Random Inspiration
+      %h3 Ad
       .post
         .post_image
           = link_to "image", video_path(@random_video)
