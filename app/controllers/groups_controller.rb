@@ -2,6 +2,12 @@ class GroupsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!
 
+	def search
+		@group = Group.search(params[:search])
+	end
+		
+	end
+
 	def index
 		@groups = Group.all
 	end
