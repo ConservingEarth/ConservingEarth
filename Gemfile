@@ -22,6 +22,7 @@ gem 'rails_12factor', group: :production
 gem 'ruby-oembed'
 gem 'xml-simple'
 gem 'gmaps4rails'
+gem 'geocoder'
 gem 'acts_as_votable'
 gem 'bcrypt', '~> 3.1.10'
 
