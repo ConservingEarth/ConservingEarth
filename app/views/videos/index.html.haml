@@ -2,14 +2,17 @@
 	= link_to "New", user_path, class: "button2"
 	= link_to "Popular", user_path, class: "button2"
 	= link_to "Search", user_path, class: "button2"
+	= link_to "Add Video", new_video_path, class: "button2"
+
 #posts
 	- @videos.each do |video|
+		- @youtube = OEmbed::Providers::Youtube.get(video.link)
 		.post
 			.post_image
-				= link_to (image_tag video.image.url(:small)), video
+				= link_to (image_tag @youtube.thumbnail_url.html_safe), video
 			.post_content
 				.title
-					%h2= link_to video.title, video
+					%h2= link_to (@youtube.title.html_safe), video
 				.data.clearfix
 					%p.username
 						Shared by

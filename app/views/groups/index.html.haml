@@ -1,5 +1,9 @@
 .activities
 	= link_to "Search", user_path, class: "button2"
+	= link_to "Add Group", new_group_path, class: "button2"
+	
+
+
 #posts
 	- @groups.each do |group|
 		.post

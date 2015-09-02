@@ -16,5 +16,11 @@
 
 	.form-group
 		= f.input :description, imput_html: {class: 'form-control'}
+	.form-group
+		= f.label :latitude 
+		= f.text_field :latitude
+	.form-group  
+		= f.label :longitude 
+		= f.text_field :longitude 
 
 	= f.button :submit, class: "btn btn-primary"

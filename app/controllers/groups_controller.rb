@@ -4,8 +4,11 @@ class GroupsController < ApplicationController
 
 	def search
 		@group = Group.search(params[:search])
-	end
-		
+		if params[:search].present?
+			@groups = Group.near(params[search], 50, :order => :distance)
+		else
+			@groups = Groups.all
+		end
 	end
 
 	def index
@@ -27,10 +30,11 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
-
+		@group = Group.find(params[:id])
 	end
 
 	def update
+		@group = Group.find(params[:id])
 		if @group.update(group_params)
 			redirect_to @group, notice: "group updated"
 		else
@@ -39,14 +43,20 @@ class GroupsController < ApplicationController
 	end
 
 	def show
+		@group = Group.find(params[:id])
 	end
 
 	def map
 		@groups = Group.all
+		@hash = Gmaps4rails.build_markers(@groups) do |group, marker|
+ 		marker.lat group.latitude
+  		marker.lng group.longitude
+		end
 	end
 
 	def destroy
-		@video.destroy
+		@group = Group.find(params[:id])
+		@group.destroy
 		redirect_to groups_path
 	end
 
@@ -61,7 +71,7 @@ class GroupsController < ApplicationController
     	end
 
 		def group_params
-			params.require(:group).permit(:title, :description, :image, :link)
+			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude)
 		end
 
 end

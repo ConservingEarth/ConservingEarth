@@ -24,14 +24,8 @@
 				.post_content
 					.title
 						%h2= link_to @random_post.title, post_path(@random_post)
-					.data.clearfix
-						%p.username
-							Shared by
-							= @random_post.user.name
-						%p.buttons
-							%span
-								%i.fa.fa-comments-o
-								= @random_post.comments.count
+
+
 
 
 #comments

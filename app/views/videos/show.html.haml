@@ -25,14 +25,7 @@
         .post_content
           .title
             %h2= link_to @random_video.title, video_path(@random_video)
-          .data.clearfix
-            %p.username
-              Shared by
-              = @random_video.user.name
-            %p.buttons
-              %span
-                %i.fa.fa-comments-o
-                = @random_video.comments.count
+
 
 
 #comments

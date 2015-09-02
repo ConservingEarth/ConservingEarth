@@ -13,15 +13,17 @@
   %h1= @group.title
   %p.username
     created by
+    = @group.longitude
+    = @group.latitude 
   .clearfix
     .post_image_description
+      = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
       = @group.description
-      .description= simple_format(@group.description)
     .post_data
       = link_to "Website", class: "button"
       %p.data
         %i.fa.fa-comments-o
         = link_to "Edit", edit_group_path(@group), class: "data"
         = link_to "Delete", group_path(@group), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
-
+        
 
