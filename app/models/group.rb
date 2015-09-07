@@ -11,8 +11,9 @@ class Group < ActiveRecord::Base
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   	
-  	geocoded_by :address
-  	
+	geocoded_by :address   
+	after_validation :geocode
+
   	
   		
   	

@@ -51,6 +51,7 @@ class GroupsController < ApplicationController
 		@hash = Gmaps4rails.build_markers(@groups) do |group, marker|
  		marker.lat group.latitude
   		marker.lng group.longitude
+  		
 		end
 	end
 
@@ -71,7 +72,7 @@ class GroupsController < ApplicationController
     	end
 
 		def group_params
-			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude)
+			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude, :address)
 		end
 
 end

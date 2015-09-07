@@ -14,7 +14,8 @@
   %p.username
     created by
     = @group.longitude
-    = @group.latitude 
+    = @group.latitude
+    = @group.address
   .clearfix
     .post_image_description
       = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"

@@ -1,7 +1,7 @@
 development:
   adapter: sqlite3
   encoding: unicode
-  database: db/db_dev_db2.sqlite3
+  database: db/db_dev_db3.sqlite3
   pool: 5
   username: postgres
   password: ce
@@ -9,7 +9,7 @@ development:
 test:
   adapter: sqlite3
   encoding: unicode
-  database: db/db_dev_db2.sqlite3
+  database: db/db_dev_db3.sqlite3
   pool: 5
   username: postgres
   password: ce

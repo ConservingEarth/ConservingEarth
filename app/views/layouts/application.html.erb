@@ -16,7 +16,7 @@
 	<div class="header">
 		<nav class="navhead">
 			<div class="logo">
-				<i class="fa fa-bars"></i>
+				<button><i class="fa fa-bars"></i></button>
 				<%= link_to "Conserving Earth", root_path %>
 				<div class="logoimg"></div>
 				<div class="home"></div>
@@ -27,8 +27,8 @@
 				<i class="fa fa-user"></i>
 				<div class="usermenu">
 					<ul>
-						<li><%= link_to "Dashboard", user_path %></a></li>
-						<li><a href="#">community</a></li>
+						<li><%= link_to "Dashboard", user_path(current_user) %></li>
+						<li><%= link_to "Community", community_path %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 					</ul>
 				</div>
@@ -49,11 +49,10 @@
 	</div>				   
         <!-- Sidebar -->
 	        <div class="sidebar">
-	        
 	            <ul class="sidebar-nav">
 		            <li><%= link_to '<i class="fa fa-newspaper-o"></i> News'.html_safe, root_path, :class => "sidebar-nav-links" %></li>
 		            <li><%= link_to '<i class="fa fa-video-camera"></i> Videos'.html_safe, videos_path, :class => "sidebar-nav-links" %></li>
-		            <li><%= link_to '<i class="fa fa-leaf"></i> Community'.html_safe, groups_path, :class => "sidebar-nav-links" %></li>
+		            <li><%= link_to '<i class="fa fa-leaf"></i> Groups'.html_safe, groups_path, :class => "sidebar-nav-links" %></li>
 					<li><%= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, :class => "sidebar-nav-links" %></li>
 	                <li><%= link_to '<i class="fa fa-info"></i> About'.html_safe, about_path, :class => "sidebar-nav-links" %></li>
 	              </ul>
@@ -61,6 +60,19 @@
 	      	</div>
 	      	<div class="content">
 	   			<%= yield %>				
-			</div> 
+			</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.fa fa-bars').onClick(function (){
+		$('.fa fa-bars').toggle('.sidebar');
+		if ($('.fa fa-bars').has('.sidebar')) {
+			$('.sidebar').animate({'width': '0px'});
+		} else {
+			$('.sidebar').animate({'width': '200px'});
+		}
+		
+	});
+}); 
+</script>
 </body>
 <html>

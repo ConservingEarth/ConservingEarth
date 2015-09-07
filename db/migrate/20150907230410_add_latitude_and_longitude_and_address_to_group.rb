@@ -1,4 +1,4 @@
-class AddLatitudeAndLongitudeToGroup < ActiveRecord::Migration
+class AddLatitudeAndLongitudeAndAddressToGroup < ActiveRecord::Migration
   def change
     add_column :groups, :latitude, :float
     add_column :groups, :longitude, :float
