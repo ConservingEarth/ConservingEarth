@@ -1,25 +1,29 @@
 .activities
-	= link_to "New", class: "button2"
-	= link_to "Popular", class: "button2"
-	= link_to "Search", class: "button2"
+	= link_to "New", root_path, class: "button2"
+	= link_to "Popular", root_path, class: "button2"
+	= link_to "Search", root_path, class: "button2"
 	= link_to "Add Post", new_post_path, class: "button2" 
-#news
-	- @posts.each do |post|
-		.new
-			.new_image
-			.new_content
-				.title
-					%h2= link_to post.title, post.link
-					%p.username
-						Shared by
-						= post.user.name
-						= time_ago_in_words(post.created_at)
-						ago
-					%p.buttons
-						%span
-							= link_to "Comments", post
-							%i.fa.fa-comments-o
-							= post.comments.count
+#thenews
+	#news
+		- @posts.each do |post|
+			.new
+				.new_image
+				.new_content
+					.title
+						%h2= link_to post.title, post.link
+						%p.username
+							Shared by
+							= post.user.name
+							= time_ago_in_words(post.created_at)
+							ago
+						%p.buttons
+							%span
+								= link_to "Comments", post
+								%i.fa.fa-comments-o
+								= post.comments.count
+	#tweets
+		= render 'tweets'
+		
 %br	
 %br				
 .paginate

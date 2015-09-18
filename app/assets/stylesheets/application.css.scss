@@ -48,6 +48,12 @@ a {
 
 }
 
+#add{
+	float: left;
+	width: 27.5%;
+	padding: 0 2.5%;
+}
+
 .arrow_box {
 	position: relative;
 	background: #88b7d5;
@@ -419,12 +425,9 @@ input{
 }
 
 #news {
-	padding: 5px;
-	text-decoration: none;
-	.new {
-		padding: 5px;
-		text-decoration: none;
-	}
+	float: left;
+	width:	45%;
+	padding: 0 5% 0 2.5%;
 }
 
 .overview{
@@ -588,6 +591,17 @@ span{
 	font-size: 0.8em;
 	text-decoration: none;
 	padding-left: 20px;
+}
+
+#thenews{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#tweets{
+ 	float: left;
+ 	width: 27.5%;
+	padding: 0 2.5%;
 }
 
 ul{

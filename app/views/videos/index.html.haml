@@ -1,8 +1,8 @@
 .activities
-	= link_to "New", class: "button2"
-	= link_to "Popular", class: "button2"
-	= link_to "Search", class: "button2"
-	= link_to "Add Video", new_video_path, class: "button2"
+	= link_to "New", video_path(current_user), class: "button2"
+	= link_to "Popular", video_path(current_user), class: "button2"
+	= link_to "Search", video_path(current_user), class: "button2"
+	= link_to "Add Video", new_video_path(current_user), class: "button2"
 
 #posts
 	- @videos.each do |video|
