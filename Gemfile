@@ -25,6 +25,13 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'acts_as_votable'
 gem 'bcrypt', '~> 3.1.10'
+gem 'friendly_id', '~> 5.1.0'
+gem 'twitter'
+gem 'acts-as-taggable-on', '~> 3.5.0'
+gem 'public_activity', '~> 1.4.2'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'mailboxer', '~> 0.13.0'
+gem 'bootstrap-sass'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'

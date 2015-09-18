@@ -26,13 +26,4 @@
           .title
             %h2= link_to @random_video.title, video_path(@random_video)
 
-
-
-#comments
-  %h2.comment_count= pluralize(@video.comments.count, "Comment")
-  - @comments.each do |comment|
-    .comment
-      %p.username= comment.user.name
-      %p.content= comment.content
-
-  = render "comments/videoform"
+  = render "disqusv"

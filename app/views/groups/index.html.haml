@@ -8,7 +8,10 @@
 	- @groups.each do |group|
 		.post
 			.post_image
-				= link_to (image_tag group.image.url(:small)), group
+				- if group.image?
+					= link_to (image_tag group.image.url(:small)), group
+				- else
+					= link_to (image_tag "/assets/images/celogo.png"), group 
 			.post_content
 				.title
 					%h2= link_to group.title, group

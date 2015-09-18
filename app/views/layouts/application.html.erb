@@ -13,6 +13,12 @@
 	<script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 </head>
 <body>
+<% flash.each do |key, value| %>
+    <div class="text-center <%= flash_class(key) %>">
+      <%= value %>
+    </div>
+<% end %>
+<div class="bodycontainer">
 	<div class="header">
 		<nav class="navhead">
 			<div class="logo">
@@ -21,8 +27,8 @@
 				<div class="logoimg"></div>
 				<div class="home"></div>
 			</div>
+			<% if user_signed_in? %>	
 			<div class="userlogin">
-			<% if user_signed_in? %>
 				<%= current_user.name %>
 				<i class="fa fa-user"></i>
 				<div class="usermenu">
@@ -38,7 +44,7 @@
 			<% end %>
 			
 			</div>
-			<div class="search">
+			<div class="search1">
 				<form>
 					<input type="text" placeholder="search">
 					<i class="fa fa-search"></i>
@@ -74,5 +80,18 @@ $(document).ready(function() {
 	});
 }); 
 </script>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'conservingearth';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</div>
 </body>
 <html>

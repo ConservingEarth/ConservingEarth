@@ -1,15 +1,23 @@
 class GroupsController < ApplicationController
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!
 
 	def search
-		@group = Group.search(params[:search])
-		if params[:search].present?
-			@groups = Group.near(params[search], 50, :order => :distance)
-		else
-			@groups = Groups.all
-		end
+		
 	end
+
+	def join
+	    @group = Group.friendly.find(params[:id])
+	    @m = @group.members.build(:user_id => current_user.id)
+	    respond_to do |format|
+	      if @m.save
+	        format.html { redirect_to(@group, :notice => 'You have joined this group.') }
+	        format.xml  { head :ok }
+	      else
+	        format.html { redirect_to(@group, :notice => 'Join error.') }
+	        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+	      end
+	    end
+	  end
 
 	def index
 		@groups = Group.all
@@ -30,11 +38,11 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
-		@group = Group.find(params[:id])
+		@group = Group.friendly.find(params[:id])
 	end
 
 	def update
-		@group = Group.find(params[:id])
+		@group = Group.friendly.find(params[:id])
 		if @group.update(group_params)
 			redirect_to @group, notice: "group updated"
 		else
@@ -43,7 +51,11 @@ class GroupsController < ApplicationController
 	end
 
 	def show
-		@group = Group.find(params[:id])
+		@group = Group.friendly.find(params[:id])
+	end
+
+	def members
+		@group = Group.friendly.find(params[:id])
 	end
 
 	def map
@@ -51,12 +63,25 @@ class GroupsController < ApplicationController
 		@hash = Gmaps4rails.build_markers(@groups) do |group, marker|
  		marker.lat group.latitude
   		marker.lng group.longitude
+  		marker.infowindow "#{group.id}"
   		
+  		end
+
+
+  		@location = params[:search], 100
+		@group = Group.near(@location)
+
+		if @location.empty?
+			gflash notice: "need search term"
+			redirect_to "/"
+		else
+			@groups
 		end
+
 	end
 
 	def destroy
-		@group = Group.find(params[:id])
+		@group = Group.friendly.find(params[:id])
 		@group.destroy
 		redirect_to groups_path
 	end
@@ -64,7 +89,7 @@ class GroupsController < ApplicationController
 	private
 
 		def find_post
-			@group = Group.find(params[:id])
+			@group = Group.friendly.find(params[:id])
 		end
 
 		def set_post
@@ -72,7 +97,7 @@ class GroupsController < ApplicationController
     	end
 
 		def group_params
-			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude, :address)
+			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude, :address, :slug)
 		end
 
 end

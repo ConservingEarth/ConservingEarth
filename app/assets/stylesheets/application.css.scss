@@ -19,6 +19,7 @@
 
 
 @import 'media.css.scss';
+@import 'normalize.scss';
 @import "bourbon";
 
 
@@ -38,6 +39,15 @@ a {
 	text-decoration: none;
 }
 
+.activities{
+	width: 100vw;
+	height: 4rem;
+	background-color: gray;
+	padding-top: 1.5em;
+
+
+}
+
 .arrow_box {
 	position: relative;
 	background: #88b7d5;
@@ -53,11 +63,8 @@ a {
 	pointer-events: none;
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #88b7d5;
-	border-width: 30px;
-	margin-left: -30px;
-}
-span{
-	color: #33CC33;
+	border-width: 3rem;
+	margin-left: -3rem;
 }
 
 .clearfix:before, .clearfix:after {
@@ -69,53 +76,54 @@ span{
 	clear: both;
 }
 
-html {
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    
-}
 
 body{
 	
-	position:relative;
 }
 
-html { 
- 	font-family: 'Raleway', sans-serif; 
- 	
- } 
- 
- 
- h1, h2, h3, h4, h5, h6 { 
- 	font-weight: 500;
- 	text-decoration: none; 
- } 
+.bodycontainer{
+	height: 100vh;
+	width: 100vw;
+}
 
  .btn-submit {
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: .8rem;
   text-transform: uppercase;
   background: #33CC33;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border: 0;
-  margin-top: 6px;
+  margin-top: 0.6rem;
 }
 
-.form {
-  text-align:center;
-  margin: 0 auto 10px;
-  padding: 20px 0 10px 0;
-  font-size: 16px;
-  width: 300px;
-  }
-
- .signupcontainer {
-  padding: 0;
-  width: 100%;
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
- 
- 
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
 .button{
 	padding: .4rem .5rem;
 	border-radius: .2rem;
@@ -132,9 +140,144 @@ html {
 	font-size: 30px;
 }
 
+.col-md-4{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
-ul{
-	list-style-type: none;
+.col-md-12{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.content{
+	@include position(relative, 0 0 0 0);
+	width: 89%;
+	z-index: 0;
+	left: 200px;
+	overflow-y: scroll;
+	height: 100%;
+	padding-top: -50px;
+
+
+	
+}
+
+.form {
+  text-align:center;
+  margin: 0 auto 10px;
+  padding: 20px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+  }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-inputs {
+	border: 1px black solid;
+	padding: 20px;
+	background-color: yellow;
+}
+
+
+
+ h1, h2, h3, h4, h5, h6 { 
+ 	font-weight: 500;
+ 	text-decoration: none; 
+ } 
+
+ .header {
+	margin: auto;
+	float: top;
+	background-color: #333;
+	height: 3.5rem;
+	width: 100%;
+
+	
+}
+
+
+html { 
+ 	font-family: 'Raleway', sans-serif; 
+ 	
+ } 
+
+ html {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+ 
+input{
+	padding: 5px;
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label-danger {
+  background-color: #d9534f;
+}
+
+.logo a {
+	font-size: 1.3em;
+	color: inherit;
+	list-style: none;
+	text-decoration: none;
+	color: white;
+}
+
+.logo{
+	width: 20rem;
+	float: left;
+	padding-top: 10px;
+	padding-left: 5px;
+	margin: 0 auto;
+	color: inherit;
+	list-style: none;
+
+}
+
+.mailbox{
+
+
 }
 
 .mapcontainer{
@@ -152,6 +295,137 @@ ul{
 
  }
 
+.mediapagecontainer{
+	display: flex;
+}
+
+.mediacontainer{
+	
+	width: 1000px;
+	height: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+.media {
+	position: relative;
+	width: auto;
+	height: 150px;
+	padding: 10px;
+	border: 1px solid black;
+	
+	
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-body {
+  width: 10000px;
+}
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.media img{
+ 	height: 100px;
+ 	width: 100px;
+	
+
+}
+
+.mediacontent{
+
+	height: 100px;
+	width: 100px
+
+}
+
+.meta{
+	
+	margin: 0 20px;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-pills > li {
+  float: left;
+}
+.nav-pills > li > a {
+  border-radius: 4px;
+}
+.nav-pills > li + li {
+  margin-left: 2px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+.nav-stacked > li {
+  float: none;
+}
+.nav-stacked > li + li {
+  margin-top: 2px;
+  margin-left: 0;
+ }
+
+.navhead{
+
+	padding-left: 15px
+}
+
+#news {
+	padding: 5px;
+	text-decoration: none;
+	.new {
+		padding: 5px;
+		text-decoration: none;
+	}
+}
+
 .overview{
  height: 100%;
  width: 50%;
@@ -160,122 +434,80 @@ ul{
 
 }
 
-.header {
-	margin: auto;
-	float: top;
-	background-color: #333;
-	height: 50px;
-	width: 100%;
+.paginate {
+	clear: both;
+ 	position: relative;
+ 	z-index: 10;
+ 	
 
-	
 }
 
-.navhead{
-
-	padding-left: 15px
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
-.logo a {
-	font-size: 1.3em;
-	color: inherit;
-	list-style: none;
-	text-decoration: none;
-	color: white;
+.panel-default {
+  border-color: #ddd;
 }
 
-.logo{
-	width: 200px;
-	float: left;
-	padding-top: 10px;
-	padding-left: 5px;
+.panel-body {
+  padding: 15px;
+}
+
+.positioner{
+	max-width: 970px;
 	margin: 0 auto;
-	color: inherit;
-	list-style: none;
-	
-	
 
 }
 
-.userlogin{
+.pull-right {
+  float: right !important;
+}
 
+.rightbar {
+	@include position(absolute, 50px 0 0 0);
+	width: 300px;
+	background-color: #fff;
 	float: right;
-	padding-top: 10px;
-	padding-right: 50px;
-	width: 200px;
-	margin: 0 auto;
-	color: white;
-}
-
-
-.usermenu{
-
-	height: 150px;
-	width: 150px;
-	position: absolute;
-	background-color: #333;
-	display: block;
-	text-decoration: none;
-	list-style: none;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	margin: 0px auto;
-	padding-top: 20px;
-	top: 50px;
-	overflow: hidden;
-	z-index: 5;
-}
-
-.usermenu ul {
-	width: 100%;
-	list-style: none;
-
-}
-
-.usermenu ul li{
-	width: 100%;
-	display: inline-block;
-	list-style: none;
-	text-decoration: none;
-}
-
-.usermenu ul li a {
-	padding-left: 10px;
-	padding-top: 10px;
-	width: 100%;
-	text-decoration: none;
-	color: white;
-	display: block;
-	-webkit-transition :0.2s;
-	-moz-transition :0.2s;
-	-o-transition :0.2s;
-	transition :0.2s;
-}
-
-.userlogin a{
-	color: inherit;
-	list-style: none;
-	text-decoration: none;
-
+	z-index: 0;
 	
 }
-.userlogin a:hover{
-	background-color: gray;
 
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.form-inputs {
-	border: 1px black solid;
-	padding: 20px;
-	background-color: yellow;
+ .signupcontainer {
+  padding: 0;
+  width: 100%;
 }
 
-.search{
+.search1{
 	
-	padding: 10px;
-	width: 600px;
-	margin: 0px auto;
-	padding-top: 10px;
+	width: 50rem;
+	margin-left: 42rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.1rem;
+	margin-top: 0rem;
+	padding-top: 0.5rem;
+
+}
+
+.search2{
+	
+	
+	width: 50rem;
+	margin-left: 30rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.1rem;
+	margin-top: 0rem;
+	padding-bottom: 1rem;	
 
 }
 
@@ -290,50 +522,12 @@ ul{
 
 }
 
-.content{
-	@include position(relative, 0 0 0 0);
-	width: 89%;
-	z-index: 0;
-	left: 200px;
-	overflow-y: scroll;
-	height: 100%;
-	padding-top: -50px;
 
 
-	
+span{
+	color: #33CC33;
 }
 
-.activities{
-	width: 100%;
-	height: 100px;
-	background-color: gray;
-	padding-top: 1.5em;
-
-
-}
-
-.paginate {
-	clear: both;
- 	position: relative;
- 	z-index: 10;
- 	
-
-}
-
-.yield{
-	
-}
-
-.rightbar {
-	@include position(absolute, 50px 0 0 0);
-	width: 300px;
-	background-color: #fff;
-	float: right;
-	z-index: 0
-	
-
-	
-}
 
 .sidebar-nav{
 	
@@ -395,83 +589,81 @@ ul{
 	padding-left: 20px;
 }
 
-
-
-input{
-	padding: 5px;
+ul{
+	list-style-type: none;
 }
 
-.positioner{
-	max-width: 970px;
+.userlogin{
+
+	float: right;
+	padding-top: 10px;
+	padding-right: 50px;
+	width: 200px;
 	margin: 0 auto;
-
-}
-
-.mediapagecontainer{
-	display: flex;
-}
-
-.mediacontainer{
-	
-	width: 1000px;
-	height: 50%;
-	border: 1px solid black;
-	margin: 0 auto;
-	display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   /* You can set flex-wrap and flex-direction individually */
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   /* Or do it all in one line with flex flow */
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-   /* tweak the where items line up on the row */
-   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-   -webkit-align-content: flex-end;
-   align-content: flex-end;
-}
-
-.media {
-	position: relative;
-	width: auto;
-	height: 150px;
-	padding: 10px;
-	border: 1px solid black;
-	
-	
-}
-
-.media img{
- 	height: 100px;
- 	width: 100px;
-	
-
-}
-
-.mediacontent{
-
-	height: 100px;
-	width: 100px
-
-}
-
-.meta{
-	
-	margin: 0 20px;
+	color: white;
 }
 
 
-#news {
-	padding: 5px;
+.usermenu{
+
+	height: 10rem;
+	width: 10rem;
+	position: absolute;
+	background-color: #333;
+	display: block;
 	text-decoration: none;
-	.new {
-		padding: 5px;
-		text-decoration: none;
-	}
+	list-style: none;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	margin: 0px auto;
+	padding-top: 20px;
+	top: 50px;
+	overflow: hidden;
+	z-index: 5;
 }
+
+.usermenu ul {
+	width: 100vw;
+	list-style: none;
+
+}
+
+.usermenu ul li{
+	width: 100vw;
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+}
+
+.usermenu ul li a {
+	padding-left: 1rem;
+	padding-top: 1rem;
+	width: 100%;
+	text-decoration: none;
+	color: white;
+	display: block;
+	-webkit-transition :0.2s;
+	-moz-transition :0.2s;
+	-o-transition :0.2s;
+	transition :0.2s;
+}
+
+.userlogin a{
+	color: inherit;
+	list-style: none;
+	text-decoration: none;
+
+	
+}
+.userlogin a:hover{
+	background-color: gray;
+
+}
+
+.yield{
+	
+}
+
+
+

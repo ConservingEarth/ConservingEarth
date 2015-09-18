@@ -7,5 +7,17 @@ class User < ActiveRecord::Base
   has_many :infos, dependent: :destroy
   has_many :posts
   has_many :comments
+  has_many :members, :dependent => :destroy
+  has_many :groups, :through => :members
 
+  acts_as_messageable
+
+  def mailboxer_name
+    self.name
+  end
+
+  def mailboxer_email(object)
+    self.email
+  end
+  
 end

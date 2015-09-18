@@ -1,13 +1,4 @@
-.activities
-  = link_to "Name", user_path, class: "button2" 
-  = link_to "Activity", user_path, class: "button2" 
-  = link_to "Chat", user_path, class: "button2" 
-  = link_to "Members", user_path, class: "button2" 
-  = link_to "Events", user_path, class: "button2" 
-  = link_to "Fotos", user_path, class: "button2" 
-  = link_to "Videos", user_path, class: "button2" 
-  = link_to "Files", user_path, class: "button2" 
-  = link_to "Manage", user_path, class: "button2" 
+= render "dashboard"
   
 #post_show
   %h1= @group.title
@@ -22,6 +13,8 @@
       = @group.description
     .post_data
       = link_to "Website", class: "button"
+      = link_to "Join this group", join_group_path(@group), class: "button"
+      = link_to 'leave', leave_group_path(@group) 
       %p.data
         %i.fa.fa-comments-o
         = link_to "Edit", edit_group_path(@group), class: "data"
