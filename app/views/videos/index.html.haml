@@ -1,26 +1,28 @@
+= render "layouts/nav"
 .activities
 	= link_to "New", video_path(current_user), class: "button2"
 	= link_to "Popular", video_path(current_user), class: "button2"
 	= link_to "Search", video_path(current_user), class: "button2"
 	= link_to "Add Video", new_video_path(current_user), class: "button2"
-
-#posts
-	- @videos.each do |video|
-		- @youtube = OEmbed::Providers::Youtube.get(video.link)
-		.post
-			.post_image
-				= link_to (image_tag @youtube.thumbnail_url.html_safe), video
-			.post_content
-				.title
-					%h2= link_to (@youtube.title.html_safe), video
-				.data.clearfix
-					%p.username
-						Shared by
-						= video.user.name
-					%p.buttons
-						%span
-							%i.fa.fa-comments-o
-							= video.comments.count
+	
+.contentpage
+	#posts
+		- @videos.each do |video|
+			- @youtube = OEmbed::Providers::Youtube.get(video.link)
+			.post
+				.post_image
+					= link_to (image_tag @youtube.thumbnail_url.html_safe), video
+				.post_content
+					.title
+						%h2= link_to (@youtube.title.html_safe), video
+					.data.clearfix
+						%p.username
+							Shared by
+							= video.user.name
+						%p.buttons
+							%span
+								%i.fa.fa-comments-o
+								= video.comments.count
 
 
 .paginate

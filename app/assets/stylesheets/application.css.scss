@@ -39,16 +39,24 @@ a {
 	text-decoration: none;
 }
 
+.about{
+	width: 100%;
+	float: left;
+	margin-left: 12%;
+}
+
 .activities{
-	width: 100vw;
-	height: 4rem;
+	width: 90%;
+	height: 5%;
 	background-color: gray;
-	padding-top: 1.5em;
+	position: fixed;
+	margin-left: 10%;
+	margin-top: 2.5%;
 
 
 }
 
-#add{
+#ad{
 	float: left;
 	width: 27.5%;
 	padding: 0 2.5%;
@@ -160,20 +168,11 @@ body{
   padding-left: 15px;
 }
 
-
-.content{
-	@include position(relative, 0 0 0 0);
-	width: 89%;
-	z-index: 0;
-	left: 200px;
-	overflow-y: scroll;
-	height: 100%;
-	padding-top: -50px;
-
-
-	
+.contentpage{
+	margin-left: 12%;
+	padding-top: 5%;
+	z-index: 1;
 }
-
 .form {
   text-align:center;
   margin: 0 auto 10px;
@@ -210,6 +209,10 @@ body{
 	background-color: yellow;
 }
 
+.fullnav{
+	z-index: 0;
+
+}
 
 
  h1, h2, h3, h4, h5, h6 { 
@@ -218,11 +221,11 @@ body{
  } 
 
  .header {
-	margin: auto;
 	float: top;
 	background-color: #333;
-	height: 3.5rem;
+	height: 5%;
 	width: 100%;
+	position: fixed;
 
 	
 }
@@ -262,6 +265,11 @@ input{
   background-color: #d9534f;
 }
 
+.login{
+	margin: 0 auto;
+
+}
+
 .logo a {
 	font-size: 1.3em;
 	color: inherit;
@@ -293,13 +301,18 @@ input{
  #map {
  	float: right;
  	width: 50%;
- 	height: 100%;
+ 	height: 90%;
  	display: block;
  	position: fixed;
  	right: 0;
  	left: auto;
  	bottom: 0;
 
+ }
+
+ .mappage{
+ 	padding-left: 10%;
+ 	width: 100%;
  }
 
 .mediapagecontainer{
@@ -442,6 +455,7 @@ input{
 	clear: both;
  	position: relative;
  	z-index: 10;
+ 	margin-left: 40%;
  	
 
 }
@@ -516,13 +530,14 @@ input{
 }
 
 .sidebar {
-	@include position(absolute, 50px 0 0 0);
-	width: 200px;
+	height: 95%;
+	width: 10%;
 	background-color: #333;
 	float: left;
 	text-decoration: none;
 	z-index: 0;
-
+	position: fixed;
+	margin-top: 2.5%;
 
 }
 
@@ -607,6 +622,8 @@ span{
 ul{
 	list-style-type: none;
 }
+
+
 
 .userlogin{
 
