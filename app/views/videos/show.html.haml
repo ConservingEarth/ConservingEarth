@@ -1,4 +1,5 @@
-#post_show
+= render "layouts/nav"
+#video_show
   %h1= @youtube.title.html_safe 
   %p.username
     Shared by
@@ -6,11 +7,12 @@
     about
     = time_ago_in_words(@video.created_at)
   .clearfix
-    .post_image_description
+    .video_image_description
       = @youtube.html.html_safe
       .description= simple_format(@video.description)
-    .post_data
+    .video_data
       = link_to "Official Link", @video.link, class: "button"
+      = link_to "favorite", class: "button"
       %p.data
         %i.fa.fa-comments-o
         = pluralize(@video.comments.count, "Comment")
@@ -19,10 +21,10 @@
         = link_to "Delete", video_path(@video), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
     #random_post
       %h3 Ad
-      .post
-        .post_image
+      .video
+        .video_image
           = link_to "image", video_path(@random_video)
-        .post_content
+        .video_content
           .title
             %h2= link_to @random_video.title, video_path(@random_video)
 

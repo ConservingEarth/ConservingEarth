@@ -6,9 +6,12 @@
 	= link_to "Add Post", new_post_path, class: "button2" 
 #thenews
 	#news
+		%br
+		%h2 News
+		%hr
+		%br
 		- @posts.each do |post|
 			.new
-				.new_image
 				.new_content
 					.title
 						%h2= link_to post.title, post.link
@@ -23,9 +26,17 @@
 								%i.fa.fa-comments-o
 								= post.comments.count
 	#tweets
+		%br
+		%h2 Tweets
+		%hr
+		%br
 		= render 'tweets'
-		
-%br	
-%br				
-.paginate
-	= will_paginate @posts 
+	#ad
+		%br
+		%h2 Ad
+		%hr
+		%br	
+	%br	
+	%br				
+	.paginate
+		= will_paginate @posts 

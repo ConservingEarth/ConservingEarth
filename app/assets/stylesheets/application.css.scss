@@ -18,7 +18,9 @@
 
 
 
-@import 'media.css.scss';
+@import 'videos.css.scss';
+@import 'posts.css.scss';
+@import 'groups.css.scss';
 @import 'normalize.scss';
 @import "bourbon";
 
@@ -33,6 +35,10 @@
   	-moz-box-sizing: border-box;
 	
 
+}
+
+.marker_container{
+ background-color: white;
 }
 
 a {
@@ -52,10 +58,19 @@ a {
 	position: fixed;
 	margin-left: 10%;
 	margin-top: 2.5%;
+	z-index: 1;
 
 
 }
+.activities2{
+	width: 90%;
+	height: 5%;
+	background-color: gray;
+	position: fixed;
+	margin-top: -2.5%;
 
+
+}
 #ad{
 	float: left;
 	width: 27.5%;
@@ -210,11 +225,15 @@ body{
 }
 
 .fullnav{
-	z-index: 0;
+	z-index: 1;
 
 }
 
-
+#groupindex{
+	margin-left: 10%;
+	padding-top: 5%;
+	width: 100%;
+}
  h1, h2, h3, h4, h5, h6 { 
  	font-weight: 500;
  	text-decoration: none; 
@@ -300,8 +319,8 @@ input{
 
  #map {
  	float: right;
- 	width: 50%;
- 	height: 90%;
+ 	width: 100%;
+ 	height: 100%;
  	display: block;
  	position: fixed;
  	right: 0;
@@ -311,8 +330,8 @@ input{
  }
 
  .mappage{
- 	padding-left: 10%;
- 	width: 100%;
+ 	margin-left: 10%;
+ 	padding-top: 2.5%;
  }
 
 .mediapagecontainer{
@@ -443,6 +462,25 @@ input{
 	padding: 0 5% 0 2.5%;
 }
 
+
+.title{
+	padding: 5px;
+	border: 5px;
+	border-color: black;
+
+}
+.new{
+	padding: 5px;
+	border: 5px;
+	border-color: black;
+	
+}
+.new_content{
+	padding: 5px;
+	border: 5px;
+	border-color: black;
+	
+}
 .overview{
  height: 100%;
  width: 50%;
@@ -609,8 +647,9 @@ span{
 }
 
 #thenews{
-	width: 90%;
-	margin: 0 auto;
+	margin-left: 10%;
+	padding-top: 5%;
+	width: 100%;
 }
 
 #tweets{
@@ -633,6 +672,7 @@ ul{
 	width: 200px;
 	margin: 0 auto;
 	color: white;
+	z-index: 0;
 }
 
 
@@ -641,6 +681,7 @@ ul{
 	height: 10rem;
 	width: 10rem;
 	position: absolute;
+	position: fixed;
 	background-color: #333;
 	display: block;
 	text-decoration: none;
@@ -651,8 +692,7 @@ ul{
 	margin: 0px auto;
 	padding-top: 20px;
 	top: 50px;
-	overflow: hidden;
-	z-index: 5;
+	z-index: 1000;
 }
 
 .usermenu ul {

@@ -6,13 +6,13 @@
 	= link_to "Add Video", new_video_path(current_user), class: "button2"
 	
 .contentpage
-	#posts
+	#videos
 		- @videos.each do |video|
 			- @youtube = OEmbed::Providers::Youtube.get(video.link)
-			.post
-				.post_image
+			.video
+				.video_image
 					= link_to (image_tag @youtube.thumbnail_url.html_safe), video
-				.post_content
+				.video_content
 					.title
 						%h2= link_to (@youtube.title.html_safe), video
 					.data.clearfix

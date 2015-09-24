@@ -1,18 +1,4 @@
 = render "layouts/nav"
 .mappage
-	.activities
-		.search2
-			= form_tag map_path, :method => :get do
-				= text_field_tag :search, params[:search], placeholder: "address"
-				= submit_tag "search", :name => nil	
-
-	#posts
-		- @groups.each do |group|
-			.post
-				.post_image
-					= link_to (image_tag group.image.url(:small)), group
-				.post_content
-					.title
-						%h2= link_to group.title, group
 	.mapcontainer
 		= render "welcome/maps"

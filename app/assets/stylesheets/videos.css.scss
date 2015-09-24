@@ -8,20 +8,23 @@
 		color: #9B9B9B;
 	}
 }
-#posts {
-	.post {
+#videos {
+		float: left;
+		width:	50%;
+		padding: 0 5% 0 2.5%;
+	.video {
 		background: #F8F9FA;
 		width: 15%;
 		float: left;
 		margin: 0.5rem 0.5%;
-		.post_image {
+		.video_image {
 			overflow: hidden;
 			img {
 				width: 100%;
 				
 			}
 		}
-		.post_content {
+		.video_content {
 			h2 {
 				margin: 0;
 				font-weight: 100;
@@ -57,14 +60,16 @@
 	}
 }
 
-#post_show {
-	padding-top: 2rem;
-	.post_image_description {
+#video_show {
+	padding-top: 5rem;
+	margin-left: 12%;
+	padding-right: 2%;
+	.video_image_description {
 		width: 50%;
 		float: left;
 		margin-right: 5%;
 	}
-	.post_data {
+	.video_data {
 		width: 15%;
 		float: left;
 		.button {
@@ -98,7 +103,7 @@
 		h3 {
 			font-size: 1rem;
 		}
-		.post {
+		.video {
 			background: #F8F9FA;
 			border: 1px solid #E4E4E4;
 			border-radius: 0.3rem;
@@ -110,7 +115,7 @@
 					border-radius: .3rem .3rem 0 0;
 				}
 			}
-			.post_content {
+			.video_content {
 				h2 {
 					margin: 0;
 					font-weight: 100;

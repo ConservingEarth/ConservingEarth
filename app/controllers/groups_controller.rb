@@ -63,23 +63,13 @@ class GroupsController < ApplicationController
 		@hash = Gmaps4rails.build_markers(@groups) do |group, marker|
  		marker.lat group.latitude
   		marker.lng group.longitude
-  		marker.infowindow "#{group.id}"
-  		
-  		end
-
-
-  		@location = params[:search], 100
-		@group = Group.near(@location)
-
-		if @location.empty?
-			gflash notice: "need search term"
-			redirect_to "/"
-		else
-			@groups
-		end
+  		marker.infowindow render_to_string(:partial => "/groups/infowindow", :locals => { :group => group})
+  	end
 
 	end
-
+	def infowindow
+		@group = Group.friendly.find(params[:id])
+	end
 	def destroy
 		@group = Group.friendly.find(params[:id])
 		@group.destroy
