@@ -14,7 +14,8 @@
 			.new
 				.new_content
 					.title
-						%h2= link_to post.title, post.link
+						%h2= link_to truncate(post.title, :length => 60), post.link
+						%br
 						%p.username
 							Shared by
 							= post.user.name
@@ -23,8 +24,7 @@
 						%p.buttons
 							%span
 								= link_to "Comments", post
-								%i.fa.fa-comments-o
-								= post.comments.count
+
 	#tweets
 		%br
 		%h2 Tweets

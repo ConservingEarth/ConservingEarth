@@ -2,7 +2,7 @@
 <div class="header">
 		<nav class="navhead">
 			<div class="logo">
-				<button><i class="fa fa-bars"></i></button>
+				<i class="fa fa-bars"></i>
 				<%= link_to "Conserving Earth", root_path %>
 				<div class="logoimg"></div>
 				<div class="home"></div>
@@ -10,7 +10,7 @@
 			<% if user_signed_in? %>	
 			<div class="userlogin">
 				<%= current_user.name %>
-				<i class="fa fa-user"></i>
+				<i class="fa fa-angle-down"></i>
 				<div class="usermenu">
 					<ul>
 						<li><%= link_to "Dashboard", user_path(current_user) %></li>
@@ -43,29 +43,10 @@
 	                <li><%= link_to '<i class="fa fa-info"></i> About'.html_safe, about_path, :class => "sidebar-nav-links" %></li>
 	              </ul>
 	        </div>
-</div>
-					<script type="text/javascript">
+	        <script type="text/javascript">
 					$(document).ready(function() {
-						$('.fa fa-bars').onClick(function (){
-							$('.fa fa-bars').toggle('.sidebar');
-							if ($('.fa fa-bars').has('.sidebar')) {
-								$('.sidebar').animate({'width': '0px'});
-							} else {
-								$('.sidebar').animate({'width': '200px'});
-							}
-							
-						});
-					}); 
-					</script>
-					<script type="text/javascript">
-					    /* * * CONFIGURATION VARIABLES * * */
-					    var disqus_shortname = 'conservingearth';
-					    
-					    /* * * DON'T EDIT BELOW THIS LINE * * */
-					    (function () {
-					        var s = document.createElement('script'); s.async = true;
-					        s.type = 'text/javascript';
-					        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-					        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-					    }());
-					</script>
+						$(".fa fa-angle-down").click(function(){
+							alert( "Handler for .click() called." );
+					});
+			</script>
+</div>
