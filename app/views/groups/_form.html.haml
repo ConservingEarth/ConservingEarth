@@ -1,30 +1,29 @@
-.newgroup
-	= simple_form_for @group, html: {multipart: true } do |f|
-		- if @group.errors.any?
-			#errors
-			%h2
-			= pluralize(@group.errors.count, "error")
-			prevent this group from saving
-			%ul
-				- @group.errors.full_messages.each do |msg|
-					%li= msg
+= simple_form_for @group, html: {multipart: true } do |f|
+	- if @group.errors.any?
+		#errors
+		%h2
+		= pluralize(@group.errors.count, "error")
+		prevent this group from saving
+		%ul
+			- @group.errors.full_messages.each do |msg|
+				%li= msg
 
-		.form-group
-			= f.input :image, imput_html: {class: 'form-control'}
+	.form-group
+		= f.input :image, imput_html: {class: 'form-control'}
 
-		.form-group
-			= f.input :title, imput_html: {class: 'form-control'}
+	.form-group
+		= f.input :title, imput_html: {class: 'form-control'}
 
-		.form-group
-			= f.input :description, imput_html: {class: 'form-control'}
-		.form-group
-			= f.label :latitude 
-			= f.text_field :latitude
-		.form-group  
-			= f.label :longitude 
-			= f.text_field :longitude
-		.form-group  
-			= f.label :address
-			= f.text_field :address
+	.form-group
+		= f.input :description, imput_html: {class: 'form-control'}
+	.form-group
+		= f.label :latitude 
+		= f.text_field :latitude
+	.form-group  
+		= f.label :longitude 
+		= f.text_field :longitude
+	.form-group  
+		= f.label :address
+		= f.text_field :address
 
-		= f.button :submit, class: "btn btn-primary"
+	= f.button :submit, class: "btn btn-primary"

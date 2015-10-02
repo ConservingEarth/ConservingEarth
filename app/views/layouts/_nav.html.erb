@@ -13,7 +13,7 @@
 				<i class="fa fa-angle-down"></i>
 				<div class="usermenu">
 					<ul>
-						<li><%= link_to "Dashboard", user_path(current_user) %></li>
+						<li><%= link_to "profile", user_path(current_user) %></li>
 						<li><%= link_to "Community", community_path %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 					</ul>

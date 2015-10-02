@@ -1,0 +1,10 @@
+= render "layouts/nav" 
+= render "user/activities" 
+.useractivity
+	%br
+	= link_to "add post", new_post_path, class: "button" 
+	%br
+	= link_to "add video", new_video_path, class: "button" 
+	%br
+	= link_to "add group", new_group_path, class: "button" 
+	%br

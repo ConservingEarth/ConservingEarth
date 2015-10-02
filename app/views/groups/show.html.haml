@@ -1,23 +1,23 @@
 = render "layouts/nav"
+.grouptitle
+  = link_to @group.title, group_path, class: "button3"
 = render "dashboard"
   
 #group_show
-  %h1= @group.title
-  %p.username
-    created by
-    = @group.longitude
-    = @group.latitude
-    = @group.address
   .clearfix
     .group_image_description
-      = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
+      %br
+      Description
+      %br
+      %hr
+      %br
       = @group.description
     .group_data
       = link_to "Website", @group, class: "button"
       = link_to "Join this group", join_group_path(@group), class: "button"
       = link_to 'leave', leave_group_path(@group), class: "button" 
+      = image_tag "http://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
       %p.data
-        %i.fa.fa-comments-o
         = link_to "Edit", edit_group_path(@group), class: "data"
         = link_to "Delete", group_path(@group), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
         
