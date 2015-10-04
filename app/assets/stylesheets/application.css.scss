@@ -57,12 +57,12 @@ a {
 }
 
 .activities{
-	width: 80%;
+	width: 70%;
 	height: 5%;
-	background-color: gray;
 	position: fixed;
 	margin-left: 10%;
 	margin-top: 2.5%;
+	color: black;
 	
 
 
@@ -70,7 +70,7 @@ a {
 .activities2{
 	width: 90%;
 	height: 5%;
-	background-color: gray;
+	color:black;
 	position: fixed;
 	margin-top: -2.5%;
 
@@ -170,7 +170,7 @@ body{
 	padding: .9rem .9rem .9rem .9rem;
 	border-radius: .2rem;
 	outline: none;
-	color: white;
+	color: black;
 	font-size: 30px;
 }
 .button3{
@@ -267,7 +267,7 @@ body{
 
  .header {
 	float: top;
-	background-color: #333;
+	background-color: gray;
 	height: 5%;
 	width: 100%;
 	position: fixed;
@@ -601,20 +601,17 @@ input{
 .sidebar {
 	height: 95%;
 	width: 10%;
-	background-color: #333;
+	background-color: white;
 	float: left;
 	text-decoration: none;
 	z-index: 0;
 	position: fixed;
 	margin-top: 2.5%;
-
+	box-shadow: 2px 2px 2px black;
 }
 
 
 
-span{
-	color: #33CC33;
-}
 
 
 .sidebar-nav{
@@ -659,7 +656,7 @@ span{
 
 }
 
-.sidebar-nav a.focus {
+.sidebar-nav-links a:active{
 	text-decoration: none;
 	background-color: #33CC33;
 	color: #fff;
@@ -669,13 +666,22 @@ span{
 .sidebar-nav-links {
 	text-decoration: none;
 	list-style: none;
-	color: white;
+	color: darkgray;
 	display: block;
 	padding: 10px;
 	font-size: 0.8em;
 	text-decoration: none;
 	padding-left: 20px;
+		.current {
+	    font-style: normal;
+	    font-weight: bold;
+	    color: #33CC33; }
+
 }
+span{
+	color: #33CC33;
+}
+
 
 #thenews{
 	margin-left: 10%;
@@ -718,13 +724,11 @@ ul{
 	width: 10rem;
 	position: absolute;
 	position: fixed;
-	background-color: #333;
+	background-color: gray;
 	display: block;
 	text-decoration: none;
 	list-style: none;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
+	box-shadow: 1px 1px 1px 1px gray;
 	margin: 0px auto;
 	padding-top: 20px;
 	top: 50px;
@@ -821,4 +825,52 @@ ul{
 .aboutbox{
 	margin-left: 10%;
 	padding-top: 5%
+}
+
+.pagination{
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  clear: both;
+ 	position: relative;
+ 	z-index: 10;
+ 	margin-left: -20%; }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em; }
+  .pagination .disabled {
+    color: #aaaaaa; }
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #33CC33; }
+  .pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .pagination a:hover, .pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .pagination .previous_page, .pagination .next_page {
+    border-width: 2px; }
+  .pagination .previous_page {
+    margin-right: 1em; }
+  .pagination .next_page {
+    margin-left: 1em; }
+
+.jumbotron{
+	background-color:gray;
+	width: 50rem;
+	height: 20rem;
+	margin-left: 20rem;
+	text-align: center;
+	h1 {
+		padding-top: 5rem;
+	}
+	p{
+		padding-top: 1rem;
+	}
 }

@@ -1,6 +1,5 @@
 class GroupsController < ApplicationController
-	before_action :authenticate_user!
-
+	protect_from_forgery with: :exception
 	def search
 		
 	end
@@ -20,7 +19,7 @@ class GroupsController < ApplicationController
 	  end
 
 	def index
-		@groups = Group.all
+		@groups = Group.all.paginate(page: params[:page], per_page: 30)
 	end
 
 	def new

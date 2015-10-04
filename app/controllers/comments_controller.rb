@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_user!, execpt: [:index, :show]
 	
 	def create
 		@post = Post.find(params[:post_id])

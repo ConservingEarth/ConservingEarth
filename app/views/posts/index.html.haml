@@ -1,9 +1,9 @@
 = render "layouts/nav"
 .activities
-	= link_to "New", root_path, class: "button2"
-	= link_to "Popular", root_path, class: "button2"
-	= link_to "Search", root_path, class: "button2"
-	= link_to "Add Post", new_post_path, class: "button2" 
+	-#= link_to "New", root_path, class: "button2"
+	-#= link_to "Popular", root_path, class: "button2"
+	-#= link_to "Search", root_path, class: "button2"
+	= link_to " + Add Post", new_post_path, class: "button2" 
 #thenews
 	#news
 		%br
@@ -40,5 +40,5 @@
 
 	%br	
 	%br				
-	.paginate
+	.pagination
 		= will_paginate @posts 

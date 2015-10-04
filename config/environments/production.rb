@@ -83,7 +83,7 @@ Rails.application.configure do
 
   config.gem "rmagick", :lib => "rmagick" 
 
-  #paperclip heroku
+  #paperclip heroku S3
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {

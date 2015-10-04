@@ -1,9 +1,9 @@
 = render "layouts/nav"
 .activities
-	= link_to "New", video_path(current_user), class: "button2"
-	= link_to "Popular", video_path(current_user), class: "button2"
-	= link_to "Search", video_path(current_user), class: "button2"
-	= link_to "Add Video", new_video_path(current_user), class: "button2"
+	-#= link_to "New", video_path(current_user), class: "button2"
+	-#= link_to "Popular", video_path(current_user), class: "button2"
+	-#= link_to "Search", video_path(current_user), class: "button2"
+	= link_to " + Add Video", new_video_path(current_user), class: "button2"
 	
 .contentpage
 	#videos
@@ -26,8 +26,5 @@
 		%hr
 		%br
 		= render "layouts/ad2"
-
-
-
-.paginate
-	= will_paginate @Videos 
+	.pagination
+		= will_paginate @videos 

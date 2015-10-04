@@ -2,7 +2,6 @@
 <div class="header">
 		<nav class="navhead">
 			<div class="logo">
-				<i class="fa fa-bars"></i>
 				<%= link_to "Conserving Earth", root_path %>
 				<div class="logoimg"></div>
 				<div class="home"></div>
@@ -14,7 +13,7 @@
 				<div class="usermenu">
 					<ul>
 						<li><%= link_to "profile", user_path(current_user) %></li>
-						<li><%= link_to "Community", community_path %></li>
+						<!--<li><%= link_to "Community", community_path %></li> -->
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 					</ul>
 				</div>
@@ -24,12 +23,12 @@
 			<% end %>
 			
 			</div>
-			<div class="search1">
+			<!--<div class="search1">
 				<form>
 					<input type="text" placeholder="search">
 					<i class="fa fa-search"></i>
 				</form>
-			</div>
+			</div>-->
 			
 		</nav>
 	</div>				   

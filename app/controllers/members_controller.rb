@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
-
-	before_filter :authenticate_user!
+	before_action :authenticate_user!, execpt: [:index, :show]
+	
 	  def create
 	    @member = current_user.members.build(:group_id => params[:group_friendly_id])
 	    if @member.save

@@ -1,7 +1,7 @@
 = render "layouts/nav"
 .activities
-	= link_to "Search", user_path(current_user), class: "button2"
-	= link_to "Add Group", new_group_path, class: "button2"
+	-#= link_to "Search", user_path(current_user), class: "button2"
+	= link_to " + Add Group", new_group_path, class: "button2"
 	
 
 #groupindex
@@ -26,3 +26,8 @@
 		%hr
 		%br	
 		= render "layouts/ad2"
+
+	%br	
+	%br				
+	.pagination
+		= will_paginate @groups 

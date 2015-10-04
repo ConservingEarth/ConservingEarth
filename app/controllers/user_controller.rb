@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-
+	before_action :authenticate_user!, execpt: [:index, :show]
 	def index
 		
 	end

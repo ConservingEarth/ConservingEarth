@@ -1,7 +1,7 @@
 class InfosController < ApplicationController
   before_action :set_info, only: [:show, :edit, :update, :destroy]
   before_action :set_video
-  before_action :authenticate_user!
+  before_action :authenticate_user!, execpt: [:index, :show]
 
   
   def new
