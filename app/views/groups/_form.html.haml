@@ -1,4 +1,4 @@
-= simple_form_for @group, html: {multipart: true } do |f|
+= simple_form_for @group, html: {multipart: true }, validate: true do |f|
 	- if @group.errors.any?
 		#errors
 		%h2
@@ -16,12 +16,7 @@
 
 	.form-group
 		= f.input :description, imput_html: {class: 'form-control'}
-	.form-group
-		= f.label :latitude 
-		= f.text_field :latitude
-	.form-group  
-		= f.label :longitude 
-		= f.text_field :longitude
+
 	.form-group  
 		= f.label :address
 		= f.text_field :address

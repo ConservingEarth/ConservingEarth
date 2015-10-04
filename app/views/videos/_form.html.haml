@@ -1,4 +1,4 @@
-= simple_form_for @video, html: {multipart: true } do |f|
+= simple_form_for @video, html: {multipart: true }, validate: true do |f|
 	- if @video.errors.any?
 		#errors
 		%h2

@@ -3,7 +3,7 @@
     <div class="form">
       <h2>Log in</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= simple_form_for(resource, :as => resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.error_notification %>
           <%= f.email_field :email, required: true, :placeholder => "Email" %>
           <br>

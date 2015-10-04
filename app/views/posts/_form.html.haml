@@ -1,4 +1,4 @@
-= simple_form_for @post, html: {multipart: true } do |f|
+= simple_form_for @post, html: {multipart: true }, validate: true do |f|
 	- if @post.errors.any?
 		#errors
 		%h2
