@@ -4,6 +4,10 @@ class UserController < ApplicationController
 		
 	end
 
+	def user
+		@users = User.all
+	end
+
 	def show
 		
 	end

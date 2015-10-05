@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
 	  end
 
 	def index
-		@groups = Group.all.paginate(page: params[:page], per_page: 30)
+		@groups = Group.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
 	end
 
 	def new

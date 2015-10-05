@@ -61,5 +61,6 @@ end
  get '/profile', to: 'user#profile'
  get '/friends', to: 'user#friends'
  get '/community', to: 'user#community'
+ get '/secretpath', to: 'user#user'
  get '/groups/:group_friendly_id/members/:id', to: 'members#index'
 end
