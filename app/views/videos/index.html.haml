@@ -20,11 +20,11 @@
 					.title
 						%h2= link_to truncate(@youtube.title.html_safe, :length => 15), video
 
-	#ad
-		%br
-		%h2 Ad
-		%hr
-		%br
-		= render "layouts/ad2"
+	-#ad
+		-#%br
+		-#%h2 Ad
+		-#%hr
+		-#%br
+		-#= render "layouts/ad2"
 	.pagination
 		= will_paginate @videos 

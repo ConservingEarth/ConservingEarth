@@ -17,9 +17,9 @@
       - if @video.user == current_user
         = link_to "Edit", edit_video_path(@video), class: "data"
         = link_to "Delete", video_path(@video), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
-    #random_post
-      %h3 Ad
-      .video
-        = render "layouts/ad1"
+    -##random_post
+      -#%h3 Ad
+      -#.video
+        -#= render "layouts/ad1"
 .disques
   = render "disqusv"

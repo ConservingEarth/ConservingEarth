@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
 
 	def index
-		@posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 20)
+		@posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
 	end
 
 	def show

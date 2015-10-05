@@ -16,10 +16,10 @@
       - if @post.user == current_user
         = link_to "Edit", edit_post_path(@post), class: "data"
         = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
-    #random_post
-      %h3 Ad
-      .new
-        = render "layouts/ad1" 
+    -##random_post
+      -#%h3 Ad
+      -#.new
+        -#= render "layouts/ad1" 
 
 .disques
   = render "disqusp"
