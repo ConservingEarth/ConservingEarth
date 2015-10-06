@@ -1,5 +1,5 @@
 class MailboxController < ApplicationController
-	before_action :authenticate_user!, execpt: [:index, :show]
+	
 
   def inbox
     @inbox = mailbox.inbox

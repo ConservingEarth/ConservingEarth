@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 	protect_from_forgery with: :exception
+	 
 	def search
 		
 	end

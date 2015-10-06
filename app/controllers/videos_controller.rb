@@ -1,6 +1,5 @@
 class VideosController < ApplicationController
 	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
-	before_action :authenticate_user!, execpt: [:index, :show]
 	
 	require 'json'
 	require 'oembed'

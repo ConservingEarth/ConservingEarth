@@ -1,10 +1,12 @@
 = render "layouts/nav"
-.activities
-	-#= link_to "New", root_path, class: "button2"
-	-#= link_to "Popular", root_path, class: "button2"
-	-#= link_to "Search", root_path, class: "button2"
-	= link_to " + Add Post", new_post_path, class: "button2" 
+ 
 #thenews
+	.activities
+		- if user_signed_in?
+			-#= link_to "New", root_path, class: "button2"
+			-#= link_to "Popular", root_path, class: "button2"
+			-#= link_to "Search", root_path, class: "button2"
+			= link_to " + Add Post", new_post_path, class: "button2"
 	#news
 		%br
 		%h2 News

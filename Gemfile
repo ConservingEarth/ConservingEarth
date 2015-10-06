@@ -34,6 +34,7 @@ gem 'mailboxer', '~> 0.13.0'
 gem 'bootstrap-sass'
 gem 'client_side_validations', github: "DavyJonesLocker/client_side_validations", branch: "4-2-stable"
 gem 'aws-sdk', '< 2.0'
+gem "pundit"
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'

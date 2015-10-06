@@ -1,11 +1,12 @@
 = render "layouts/nav"
-.activities
-	-#= link_to "New", video_path(current_user), class: "button2"
-	-#= link_to "Popular", video_path(current_user), class: "button2"
-	-#= link_to "Search", video_path(current_user), class: "button2"
-	= link_to " + Add Video", new_video_path(current_user), class: "button2"
 	
 .contentpage
+	.activities
+		- if user_signed_in?
+			-#= link_to "New", video_path(current_user), class: "button2"
+			-#= link_to "Popular", video_path(current_user), class: "button2"
+			-#= link_to "Search", video_path(current_user), class: "button2"
+			= link_to " + Add Video", new_video_path(current_user), class: "button2"
 	#videos
 		%br
 		%h2 Videos

@@ -1,10 +1,10 @@
 = render "layouts/nav"
-.activities
-	-#= link_to "Search", user_path(current_user), class: "button2"
-	= link_to " + Add Group", new_group_path, class: "button2"
-	
 
 #groupindex
+	.activities
+		- if user_signed_in?
+			-#= link_to "Search", user_path(current_user), class: "button2"
+			= link_to " + Create Group", new_group_path, class: "button2"
 	#groups
 		%br
 		%h2 Groups

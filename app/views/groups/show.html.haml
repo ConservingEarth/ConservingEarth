@@ -14,8 +14,8 @@
       = @group.description
     .group_data
       = link_to "Website", @group, class: "button"
-      = link_to "Join this group", join_group_path(@group), class: "button"
-      = link_to 'leave', leave_group_path(@group), class: "button" 
+      -#= link_to "Join this group", join_group_path(@group), class: "button"
+      -#= link_to 'leave', leave_group_path(@group), class: "button" 
       = image_tag "http://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
       %p.data
         = link_to "Edit", edit_group_path(@group), class: "data"
