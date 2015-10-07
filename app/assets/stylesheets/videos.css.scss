@@ -14,10 +14,12 @@
 		padding: 0 5% 0 2.5%;
 	.video {
 		background: #F8F9FA;
-		width: 15%;
+		width: 200px;
 		float: left;
-		margin: 0.5rem 0.5%;
+		margin-left: 20px;
+		margin-bottom: 20px;
 		.video_image {
+			width: 100%;
 			overflow: hidden;
 			img {
 				width: 100%;
@@ -28,9 +30,9 @@
 			h2 {
 				margin: 0;
 				font-weight: 100;
-				padding: 1rem 5%;
-				border-bottom: 1px solid #E4E4E4;
-				font-size: 1.25rem;
+				padding: 0.5rem 5%;
+				font-size: 15px;
+				height: 50px;
 				a {
 					text-decoration: none;
 					color: #333233;
