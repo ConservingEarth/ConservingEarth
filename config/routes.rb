@@ -62,6 +62,5 @@ end
  get '/friends', to: 'user#friends'
  get '/community', to: 'user#community'
  get '/secretpath', to: 'user#user'
- get '/googleaa4329ffa970a83f', to: 'welcome#googleaa4329ffa970a83f'
  get '/groups/:group_friendly_id/members/:id', to: 'members#index'
 end
