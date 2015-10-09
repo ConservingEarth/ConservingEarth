@@ -1,3 +1,21 @@
+.giimage{
+
+}
+.gititle{
+ padding: 5px;
+ font-size: 1.5rem;
+ text-decoration: none;
+ color: black;
+ list-style: none;
+}
+
+.gidescription{
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+
 #intro {
 	margin: 2.75rem 0 1.75rem 0;
 	text-align: center;
@@ -10,13 +28,14 @@
 }
 #groups {
 		float: left;
-		width:	60%;
+		width:	85%;
 		padding: 0 5% 0 2.5%;
 	.group {
 		background: #F8F9FA;
-		width: 15%;
+		width: 200px;
 		float: left;
-		margin: 0.5rem 0.5%;
+		margin-left: 20px;
+		margin-bottom: 20px;
 		.group_image {
 			overflow: hidden;
 			img {
@@ -28,9 +47,9 @@
 			h2 {
 				margin: 0;
 				font-weight: 100;
-				padding: 1rem 5%;
-				border-bottom: 1px solid #E4E4E4;
-				font-size: 1.25rem;
+				padding: 0.5rem 5%;
+				font-size: 15px;
+				height: 50px;
 				a {
 					text-decoration: none;
 					color: #333233;

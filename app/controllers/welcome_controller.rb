@@ -18,4 +18,10 @@ require 'oembed'
 
 	def delete
 	end
+
+	def user
+		@users = User.all
+		autorize User
+	end
+	
 end

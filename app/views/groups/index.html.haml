@@ -19,7 +19,7 @@
 							= link_to (image_tag "/assets/images/celogo.png"), group 
 					.group_content
 						.title
-							%h2= link_to group.title, group
+							%h2= link_to truncate(group.title, :length => 30), group
 	-##ad
 		-#%br
 		-#%h2 Ad
