@@ -122,11 +122,10 @@ body{
  .btn-submit {
   color: #FFFFFF;
   font-size: .8rem;
-  text-transform: uppercase;
   background: #33CC33;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border: 0;
-  margin-top: 0.6rem;
+  border-radius: 4px;
 }
 
 .btn {
@@ -206,6 +205,11 @@ body{
 	margin-left: 15%;
 }
 
+.euser{
+	margin-left: 20%;
+	padding-top: 2%
+}
+
 .form {
   text-align:center;
   margin: 0 auto 10px;
@@ -213,6 +217,11 @@ body{
   font-size: 16px;
   width: 300px;
   }
+
+.form-actions{
+	margin-left: 20%;
+	padding-top:20px;
+}
 
 .form-control {
   display: block;
@@ -239,9 +248,20 @@ body{
 .form-inputs {
 	border: 1px black solid;
 	padding: 20px;
-	background-color: yellow;
+	width: 60%;
+	margin-left: 20%;
 }
 
+.Fpassword{
+	padding-left: 20%;
+	padding-top: 15%;
+}
+
+.Fpasswordbtn{
+	padding-left:20%;
+	padding-top: 2%;
+	float: left; 
+}
 .fullnav{
 	z-index: 1;
 
@@ -593,6 +613,7 @@ input{
 	padding-bottom: 1rem;	
 
 }
+
 
 .sidebar {
 	height: 100%;
