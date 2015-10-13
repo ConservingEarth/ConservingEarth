@@ -9,4 +9,7 @@ class Video < ActiveRecord::Base
 	has_attached_file :image, styles: { medium: "700x500#", small: "350x250#" }
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+
+  	validates :link, :on => :create, :presence => true, :uniqueness => true, format: { with: /\A(https?):\/\/(www.)?(youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]*)(\&\S+)?.*/,
+    message: "Only Youtube is allowed" }
 end
