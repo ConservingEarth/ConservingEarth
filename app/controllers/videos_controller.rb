@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
 	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
-	 
+	
 	require 'json'
 	require 'oembed'
 
@@ -15,7 +15,7 @@ class VideosController < ApplicationController
 
 	def index
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 50)
-		
+
 	end
 
 	def show
@@ -40,7 +40,8 @@ class VideosController < ApplicationController
 	end
 
 	def edit
-
+		@video = current_user.videos.find(params[:id])
+		redirect_to(request.referrer || root_path) 	
 	end
 
 	def update
@@ -49,11 +50,15 @@ class VideosController < ApplicationController
 		else
 			render 'edit'
 		end
+		
+
+		
 	end
 
 	def destroy
 		@video.destroy
 		redirect_to videos_path
+		
 	end
 
 	def upvote
@@ -62,6 +67,8 @@ class VideosController < ApplicationController
 	end
 
 	private
+		
+		
 
 		def video_params
 			params.require(:video).permit(:title, :description, :image, :link,)

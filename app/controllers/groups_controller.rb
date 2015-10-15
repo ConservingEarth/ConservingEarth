@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 	protect_from_forgery with: :exception
-	 
+	before_filter :require_user, :only => [:edit, :update, :destroy]
 	def search
 		
 	end
@@ -24,12 +24,13 @@ class GroupsController < ApplicationController
 	end
 
 	def new
-		@group = Group.new
+		@group = current_user.groups.build
+		@group.user_id = current_user.id
 	end
 
 	def create
-		@group = Group.new(group_params)
-
+		@group = current_user.groups.build(group_params)
+		@group.user_id = current_user.id
 		if @group.save
 			redirect_to @group, notice: "Successfully added a group"
 		else
@@ -39,6 +40,7 @@ class GroupsController < ApplicationController
 
 	def edit
 		@group = Group.friendly.find(params[:id])
+		@group.user_id = current_user.id
 	end
 
 	def update
@@ -77,7 +79,10 @@ class GroupsController < ApplicationController
 	end
 
 	private
-
+		def require_user
+		    @user = User.find_by_id(params[:id])
+		    redirect_to(request.referrer || root_path) unless current_user.id == @user 
+		end
 		def find_post
 			@group = Group.friendly.find(params[:id])
 		end

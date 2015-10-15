@@ -5,9 +5,6 @@ class Group < ActiveRecord::Base
 	Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 
 	belongs_to :user
-	has_many :users
-	has_many :infos
-	has_many :comments
 	has_many :members, :dependent => :destroy
 	has_many :users, :through => :members
 	

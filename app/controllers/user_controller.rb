@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-
+before_filter :require_user, :only => [:edit, :update, :destroy]
 	def index
 		
 	end
@@ -38,4 +38,10 @@ class UserController < ApplicationController
 
 	def settings
 	end
+
+	private
+		def require_user
+		    @user = User.find_by_id(params[:id])
+		    redirect_to(request.referrer || root_path) unless current_user == @user
+	  	end
 end

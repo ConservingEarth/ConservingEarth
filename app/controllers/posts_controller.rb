@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
-	
+	before_filter :require_user, :only => [:edit, :update, :destroy]
 	
 	def search 
      	if params[:search].present? 
@@ -60,6 +60,11 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+		def require_user
+		    @user = User.find_by_id(params[:id])
+		    redirect_to(request.referrer || root_path) unless current_user.id == @user 
+	  	end
 
 		def post_params
 			params.require(:post).permit(:title, :description, :image, :link, :slug)

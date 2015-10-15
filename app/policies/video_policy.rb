@@ -9,10 +9,15 @@ class VideoPolicy
   def index?
   		
   end
+   def edit?
+   
+  end
 
-  def update?
+   def update?
     
   end
 
-
+  def destroy?
+   
+  end
 end

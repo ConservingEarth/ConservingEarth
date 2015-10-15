@@ -11,11 +11,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :mailbox, :conversation
 
- 
-  def user_not_authorized
-  	flash[:alert] = "Access Denied"
-  	redirect_to (request.referrer || root_path)  	
-  end
+
   
 	  private
 
@@ -25,6 +21,11 @@ class ApplicationController < ActionController::Base
 
 	  def conversation
 	    @conversation ||= mailbox.conversations.find(params[:id])
+	  end
+
+	  def user_not_authorized
+	    flash[:alert] = "You are not authorized to perform this action."
+	    redirect_to(request.referrer || root_path)
 	  end
 
 	protected

@@ -12,7 +12,7 @@
       .description= simple_format(@video.description)
     .video_data
       = link_to "Official Link", @video.link, class: "button"
-      = link_to "favorite", @video, class: "button"
+      -#= link_to "favorite", @video, class: "button"
       %p.data
       - if @video.user == current_user
         = link_to "Edit", edit_video_path(@video), class: "data"
