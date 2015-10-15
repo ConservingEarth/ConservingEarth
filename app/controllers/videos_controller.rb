@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
 	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
-	 after_action :verify_authorized
+	 
 	require 'json'
 	require 'oembed'
 
@@ -15,7 +15,7 @@ class VideosController < ApplicationController
 
 	def index
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 50)
-		authorize Video
+		
 	end
 
 	def show
