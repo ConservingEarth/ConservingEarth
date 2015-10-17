@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
   has_many :infos, dependent: :destroy
   has_many :posts
   has_many :comments
-  has_many :members, :dependent => :destroy
-  has_many :groups, :through => :members
+ 
 
   acts_as_messageable
 

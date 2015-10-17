@@ -1,23 +1,25 @@
 class GroupsController < ApplicationController
 	protect_from_forgery with: :exception
 	before_filter :require_user, :only => [:edit, :update, :destroy]
+	before_filter :require_user, :only => [:edit, :update, :destroy]
+	before_filter :authenticate_user!, except: [:index, :show, :map]
 	def search
 		
 	end
 
-	def join
-	    @group = Group.friendly.find(params[:id])
-	    @m = @group.members.build(:user_id => current_user.id)
-	    respond_to do |format|
-	      if @m.save
-	        format.html { redirect_to(@group, :notice => 'You have joined this group.') }
-	        format.xml  { head :ok }
-	      else
-	        format.html { redirect_to(@group, :notice => 'Join error.') }
-	        format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
-	      end
-	    end
-	  end
+	# def join
+	#     @group = Group.friendly.find(params[:id])
+	#     @m = @group.members.build(:user_id => current_user.id)
+	#     respond_to do |format|
+	#       if @m.save
+	#         format.html { redirect_to(@group, :notice => 'You have joined this group.') }
+	#         format.xml  { head :ok }
+	#       else
+	#         format.html { redirect_to(@group, :notice => 'Join error.') }
+	#         format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
+	#       end
+	#     end
+	#   end
 
 	def index
 		@groups = Group.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
@@ -25,12 +27,11 @@ class GroupsController < ApplicationController
 
 	def new
 		@group = current_user.groups.build
-		@group.user_id = current_user.id
 	end
 
 	def create
 		@group = current_user.groups.build(group_params)
-		@group.user_id = current_user.id
+
 		if @group.save
 			redirect_to @group, notice: "Successfully added a group"
 		else
@@ -80,9 +81,10 @@ class GroupsController < ApplicationController
 
 	private
 		def require_user
-		    @user = User.find_by_id(params[:id])
-		    redirect_to(request.referrer || root_path) unless current_user.id == @user 
-		end
+		    unless current_user.id == @group.user_id
+		    	redirect_to(request.referrer || root_path)
+		    end
+	  	end
 		def find_post
 			@group = Group.friendly.find(params[:id])
 		end

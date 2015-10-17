@@ -7,17 +7,21 @@ class VideoPolicy
   end
 
   def index?
-  		
+    @current_user.user?
+  end
+
+  def show?
+    @current_user.user?
   end
    def edit?
-   
+    @current_user == @video
   end
 
    def update?
-    
+    @current_user == @video
   end
 
   def destroy?
-   
+   @current_user == @video
   end
 end

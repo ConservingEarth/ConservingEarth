@@ -1,0 +1,40 @@
+= render "layouts/nav"
+ 
+#thenews
+	.activities
+		- if user_signed_in?
+			-#= link_to "New", root_path, class: "button2"
+			-#= link_to "Popular", root_path, class: "button2"
+			-#= link_to "Search", root_path, class: "button2"
+			= link_to " + Add Event", new_post_path, class: "button2"
+	#news
+		%br
+		%h2 News
+		%hr
+		%br
+		- @posts.each do |post|
+			.new
+				.new_content
+					.title
+						%h2= link_to truncate(post.title, :length => 60), post.link
+						%br
+						%p.username
+							Shared by
+							= post.user.name
+							= time_ago_in_words(post.created_at)
+							ago
+						%p.buttons
+							%span
+								= link_to "Comments", post
+
+	-##ad
+		-#%br
+		-#%h2 Ad
+		-#%hr
+		-#%br
+		-#= render "layouts/ad2"
+
+	%br	
+	%br				
+	.pagination
+		= will_paginate @posts 

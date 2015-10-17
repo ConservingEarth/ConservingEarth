@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
 	before_filter :require_user, :only => [:edit, :update, :destroy]
-	
+	before_filter :authenticate_user!, except: [:index, :show]
 	def search 
      	if params[:search].present? 
       		@post = Post.search(params[:search]) 
@@ -62,8 +62,9 @@ class PostsController < ApplicationController
 	private
 
 		def require_user
-		    @user = User.find_by_id(params[:id])
-		    redirect_to(request.referrer || root_path) unless current_user.id == @user 
+		    unless current_user.id == @post.user_id
+		    	redirect_to(request.referrer || root_path)
+		    end
 	  	end
 
 		def post_params

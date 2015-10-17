@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
 	before_action :find_video, only: [:show, :edit, :update, :destroy, :upvote]
-	
+	before_filter :require_user, :only => [:edit, :update, :destroy]
+	before_filter :authenticate_user!, except: [:index, :show]
 	require 'json'
 	require 'oembed'
 
@@ -15,7 +16,7 @@ class VideosController < ApplicationController
 
 	def index
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 50)
-
+		
 	end
 
 	def show
@@ -23,6 +24,7 @@ class VideosController < ApplicationController
 		 @comments = Comment.where(video_id: @video)
 		 @random_video = Video.where.not(id: @Video).order("RANDOM()").first
 		 @youtube = OEmbed::Providers::Youtube.get(@video.link)
+		 
 	end
 
 	def new
@@ -40,11 +42,11 @@ class VideosController < ApplicationController
 	end
 
 	def edit
-		@video = current_user.videos.find(params[:id])
-		redirect_to(request.referrer || root_path) 	
+		
 	end
 
 	def update
+			
 		if @video.update(video_params)
 			redirect_to @video, notice: "video positive"
 		else
@@ -67,7 +69,12 @@ class VideosController < ApplicationController
 	end
 
 	private
-		
+
+		def require_user
+		    unless current_user.id == @video.user_id
+		    	redirect_to(request.referrer || root_path)
+		    end
+	  	end
 		
 
 		def video_params
