@@ -9,7 +9,7 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	end
 
 	def show
-		
+		@user = User.find(params[:id])
 	end
 	def edit
 		
@@ -44,4 +44,5 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 		    @user = User.find_by_id(params[:id])
 		    redirect_to(request.referrer || root_path) unless current_user == @user
 	  	end
+	  	
 end
