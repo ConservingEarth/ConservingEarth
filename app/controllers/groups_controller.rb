@@ -81,6 +81,7 @@ class GroupsController < ApplicationController
 
 	private
 		def require_user
+			@group = Group.friendly.find(params[:id])
 		    unless current_user.id == @group.user_id
 		    	redirect_to(request.referrer || root_path)
 		    end
