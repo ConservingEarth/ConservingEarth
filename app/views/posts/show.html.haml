@@ -11,7 +11,7 @@
       .description= simple_format(@post.description)
     .new_data
       = link_to "Official Link", @post.link, class: "button"
-      = link_to "Follow", @post, class: "button"
+      -#= link_to "Follow", @post, class: "button"
       %p.data
       - if @post.user == current_user
         = link_to "Edit", edit_post_path(@post), class: "data"

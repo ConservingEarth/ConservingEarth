@@ -7,6 +7,7 @@
  text-decoration: none;
  color: black;
  list-style: none;
+
 }
 
 .gidescription{
@@ -81,16 +82,24 @@
 
 #group_show {
 	
-	padding-top: 10%;
+	padding-top: 5%;
 	margin-left: 15%;
 	.group_image_description {
-		width: 50%;
+		width: 1175px;
+		height: 500px;
 		float: left;
 		margin-right: 5%;
+		background-color: lightgray;
+		margin-top: 50px;
+		box-shadow: 1px 1px 1px 1px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.group_data {
-		width: 15%;
+		width: 250px;
 		float: left;
+		
+		margin-top: 50px;
 		.button {
 			width: 100%;
 			display: inline-block;
@@ -100,8 +109,8 @@
 			text-decoration: none;
 			color: #ffffff;
 			&:hover {
-				color: #50A7C7;
-				border: 1px solid #50A7C7;
+				background-color: #50A7C7;
+				
 			}
 		}
 		.data {

@@ -1,5 +1,7 @@
-%h1 Edit Video
-%br
-= render 'form'
-= link_to "cancel", video_path
-= link_to "back", video_path
+= render "layouts/nav"
+.newvideo
+	%h1 Edit Video
+	%br
+	= render 'form'
+	= link_to "cancel", video_path
+	= link_to "back", video_path

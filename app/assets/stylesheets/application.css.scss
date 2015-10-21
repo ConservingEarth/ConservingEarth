@@ -37,10 +37,23 @@
 
 }
 
+.newvideo{
+	margin-left: 20%;
+	padding-top: 5%;
+	padding-right: 100px;
+}
+
 .newgroup{
 	margin-left: 20%;
 	padding-top: 5%;
 	padding-right: 100px;
+}
+
+.newnews{
+	margin-left: 20%;
+	padding-top: 5%;
+	padding-right: 100px;
+
 }
 
 .marker_container{
@@ -179,6 +192,12 @@ body{
 	color: black;
 	font-size: 30px;
 }
+.button_group_show_title{
+	border-radius: .2rem;
+	outline: none;
+	color: black;
+	font-size: 30px;
+}
 
 .col-md-4{
   position: relative;
@@ -274,11 +293,16 @@ body{
 	width: 90%;
 }
 
+.groupheadshow{
+	height:200px;
+	width: 1500px;
+	background-color: lightgray;
+	box-shadow: 1px 1px 1px 1px;
+}
+
 .grouptitle{
-	padding-top: 2.5%;
-	margin-left: 10%;
-	height: 5%;
-	width: 90%;
+	padding-top: 120px;
+	margin-left: 10px;
 }
  h1, h2, h3, h4, h5, h6 { 
  	font-weight: 500;
