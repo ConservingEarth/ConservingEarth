@@ -12,16 +12,7 @@ devise_for :users
  resources :members, path: '/groups/:id/members'
  resources :user
  resources :welcome
- resources :groups do
- 	resources :members, path: '/groups/:group_friendly_id/members/:group_friendly_id'
- end
-
- resources :groups do
-  member do
-    get 'join' 
-    get 'leave'
-  end
-end
+ resources :groups 
  resources :videos do
  	member do
  		get "like", to: "posts#upvote"

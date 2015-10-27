@@ -7,19 +7,6 @@ class GroupsController < ApplicationController
 		
 	end
 
-	# def join
-	#     @group = Group.friendly.find(params[:id])
-	#     @m = @group.members.build(:user_id => current_user.id)
-	#     respond_to do |format|
-	#       if @m.save
-	#         format.html { redirect_to(@group, :notice => 'You have joined this group.') }
-	#         format.xml  { head :ok }
-	#       else
-	#         format.html { redirect_to(@group, :notice => 'Join error.') }
-	#         format.xml  { render :xml => @group.errors, :status => :unprocessable_entity }
-	#       end
-	#     end
-	#   end
 
 	def index
 		@groups = Group.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
@@ -31,7 +18,7 @@ class GroupsController < ApplicationController
 
 	def create
 		@group = current_user.groups.build(group_params)
-
+		@group.user_id = current_user.id
 		if @group.save
 			redirect_to @group, notice: "Successfully added a group"
 		else
@@ -78,6 +65,8 @@ class GroupsController < ApplicationController
 		@group.destroy
 		redirect_to groups_path
 	end
+
+
 
 	private
 		def require_user

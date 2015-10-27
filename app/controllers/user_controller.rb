@@ -32,10 +32,6 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	def profile
 	end
 
-	def friends
-		
-	end
-
 	def settings
 	end
 

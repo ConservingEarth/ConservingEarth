@@ -2,31 +2,39 @@ class MembersController < ApplicationController
 	
 	
 	  def create
-	    @member = current_user.members.build(:group_id => params[:group_friendly_id])
+	
+	    @member = current_user.members.build(:group_id => params[:group_id])
 	    if @member.save
 	      flash[:notice] = "You have joined this group."
-	      redirect_to :back
+	      redirect_to members_path
 	    else
 	      flash[:error] = "Unable to join."
-	      redirect_to :back
+	      redirect_to members_path
 	    end
 	  end
 
 	  def destroy
-	    @members = current_user.members.find(params[:id])
-	    @members.destroy
+	    @member = current_user.members.find(params[:id])
+	    @member.destroy
 	    flash[:notice] = "Removed you as a member."
-	        redirect_to :back
+	        redirect_to group_path
 	  end
 
 	def index
-		@members = Member.all
-
+		@member = Group.friendly.find(params[:id])
+		
 	end
 
 	def show
-		@members = Member.all
+		
+		@member = Group.friendly.find(params[:id])
 	end
 
+
+	private
+
+	def membercreatparams
+		@member = Group.friendly.find(params[:id])
+	end
 end
 

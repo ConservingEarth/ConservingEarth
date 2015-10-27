@@ -3,7 +3,7 @@
   .groupheadshow
     .grouptitle
       = link_to @group.title, group_path, class: "button_group_show_title"
-    
+      = link_to "Join Group", members_path
   .group_image_description
     %br
     %h2
@@ -15,8 +15,8 @@
   .group_data
     .groupwebsite
       = link_to "Website", @group, class: "button"
-    -#= link_to "Join this group", join_group_path(@group), class: "button"
-    -#= link_to 'leave', leave_group_path(@group), class: "button" 
+      = link_to "Join Group", members_path(:group_id => @group.id), :method => :post, class: "button"
+      -#= link_to 'leave', leave_group_path(@group), class: "button" 
     = image_tag "http://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
     %p.data
     - if @group.user == current_user
