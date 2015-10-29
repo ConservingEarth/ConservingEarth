@@ -1,8 +1,5 @@
-.activities
-  -#= link_to "Chat", group_path, class: "button2" 
-  -#= link_to "Members", member_path, class: "button2" 
-  -#= link_to "Events", group_path, class: "button2" 
-  -# = link_to "Fotos", group_path, class: "button2" 
-  -#= link_to "Videos", group_path, class: "button2" 
-  -#= link_to "Files", user_path, class: "button2" 
-  = link_to "Manage", edit_group_path, class: "button2" 
+.groupheadshow
+	.grouptitle
+		= link_to (image_tag @group.image.url(:thumbnail)), @group
+		= link_to @group.title, group_path, class: "button_group_show_title"
+		= link_to "Members", members_path 

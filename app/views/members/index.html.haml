@@ -1,2 +1,15 @@
-= render 'groups/dashboard' 
-= @member
+= render "layouts/nav"
+.memberpage
+	= render "groups/dashboard"
+	#groups
+		%br
+		%h2 Members
+		%hr
+		%br	
+			- @members.each do |member|
+				.group
+					.group_image
+						-#= link_to (image_tag group.image.url(:small)), group
+					.group_content
+						.title
+							%h2= member.name

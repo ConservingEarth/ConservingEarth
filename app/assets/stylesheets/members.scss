@@ -1,3 +1,61 @@
 // Place all the styles related to the Members controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.memberpage{
+	padding-top: 5%;
+	margin-left: 15%;
+}
+
+#groups {
+		float: left;
+		width:	85%;
+		padding: 0 5% 0 2.5%;
+	.group {
+		background: #F8F9FA;
+		width: 200px;
+		float: left;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		.group_image {
+			overflow: hidden;
+			img {
+				width: 100%;
+				
+			}
+		}
+		.group_content {
+			h2 {
+				margin: 0;
+				font-weight: 100;
+				padding: 0.5rem 5%;
+				font-size: 15px;
+				height: 50px;
+				a {
+					text-decoration: none;
+					color: #333233;
+					&:hover {
+						color: #50A7C7;
+					}
+				}
+			}
+			.data {
+				padding: .75rem 5%;
+				color: #969696;
+				.username, .buttons {
+					margin: 0;
+					font-size: .8rem;
+				}
+				.username {
+					float: left;
+				}
+				.buttons {
+					float: right;
+					span {
+						margin-left: .5rem;
+					}
+				}
+			}
+		}
+	}
+}

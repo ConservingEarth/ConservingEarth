@@ -21,6 +21,7 @@
 @import 'videos.css.scss';
 @import 'posts.css.scss';
 @import 'groups.css.scss';
+@import 'members.scss';
 @import 'normalize.scss';
 @import "bourbon";
 
@@ -301,7 +302,7 @@ body{
 }
 
 .grouptitle{
-	padding-top: 120px;
+	padding-top: 30px;
 	margin-left: 10px;
 }
  h1, h2, h3, h4, h5, h6 { 
@@ -482,6 +483,8 @@ input{
 	width: 100px
 
 }
+
+
 
 .meta{
 	

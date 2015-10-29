@@ -21,8 +21,12 @@ class MembersController < ApplicationController
 	  end
 
 	def index
-		@member = Group.friendly.find(params[:id])
 		
+		 #@members = Member.all
+		 
+ 	 	 @group = Group.friendly.find(params[:id])
+     	 @members = @group.users
+
 	end
 
 	def show
@@ -30,11 +34,9 @@ class MembersController < ApplicationController
 		@member = Group.friendly.find(params[:id])
 	end
 
-
 	private
+	
 
-	def membercreatparams
-		@member = Group.friendly.find(params[:id])
-	end
+	
 end
 
