@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   has_many :members, :foreign_key => :user_id
   has_many :groups, :through => :members
 
-
+  
   acts_as_messageable
 
   enum role: [:inactive, :user, :mod, :admin, :global_admin]

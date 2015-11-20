@@ -2,9 +2,9 @@
 <div class="header">
 		<nav class="navhead">
 			<div class="logo">
-				<%= link_to "Conserving Earth", root_path %>
-				<div class="logoimg"></div>
-				<div class="home"></div>
+				<%= link_to root_path do %>
+				   <%= image_tag "Conservingearthlogo.png", class: "conservingearthlogo" %>
+				<% end %>
 			</div>
 			<% if user_signed_in? %>	
 			<div class="userlogin">
@@ -13,7 +13,7 @@
 				<div class="usermenu">
 					<ul>
 						<li><%= link_to "profile", user_path(current_user) %></li>
-						<!--<li><%= link_to "Community", community_path %></li> -->
+						<li><%= link_to "dashboard", dashboard_path %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 					</ul>
 				</div>

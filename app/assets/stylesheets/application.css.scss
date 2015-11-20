@@ -72,10 +72,11 @@ a {
 }
 
 .activities{
-	width: 70%;
+	width: 100%;
 	height: 5%;
-	margin-left: 1.5%;
 	color: black;
+	margin-top: 25px;
+	margin-bottom: -25px;
 	
 
 
@@ -85,8 +86,14 @@ a {
 	height: 5%;
 	color: black;
 	margin-left: 1.5%;
+}
 	
-	
+.indexactivities{
+	width: 100%;
+	height: 5%;
+	margin-left: 5px;
+	margin-top: 25px;
+	margin-bottom: -25px;	
 
 
 }
@@ -179,13 +186,24 @@ body{
 	color: white;
 
 }
-.button2{
-	padding: .9rem .9rem .9rem .9rem;
-	border-radius: .2rem;
-	outline: none;
-	color: black;
-	font-size: 30px;
+.addpost{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 20px;
+  background: #33cc33;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	
 }
+
+.addpost:hover{
+	background: #3EC33C;
+  	text-decoration: none;
+}
+
 .button3{
 	padding: .9rem .9rem .9rem .9rem;
 	border-radius: .2rem;
@@ -198,6 +216,12 @@ body{
 	outline: none;
 	color: black;
 	font-size: 30px;
+}
+
+.conservingearthlogo{
+ height: 50%;
+ width: 50%;
+
 }
 
 .col-md-4{
@@ -216,8 +240,13 @@ body{
 
 .contentpage{
 	margin-left: 10%;
-	padding-top: 5%;
+	padding-top: 4%;
 	width: 90%;
+}
+
+.dashboard{
+	margin-left: 10%;
+	padding-top: 5%;
 }
 
 .disques{
@@ -290,7 +319,7 @@ body{
 
 #groupindex{
 	margin-left: 10%;
-	padding-top: 5%;
+	padding-top: 4%;
 	width: 90%;
 }
 
@@ -312,7 +341,7 @@ body{
 
  .header {
 	background-color: gray;
-	height: 3rem;
+	height: 50px;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -528,7 +557,7 @@ input{
 
 #news {
 	float: left;
-	width:	45%;
+	width:	70%;
 	padding: 0 5% 0 2.5%;
 }
 
@@ -651,7 +680,7 @@ input{
 	text-decoration: none;
 	z-index: 0;
 	position: fixed;
-	margin-top: 2.5%;
+	margin-top: 50px;
 	box-shadow: 2px 2px 2px black;
 }
 
@@ -730,7 +759,7 @@ span{
 
 #thenews{
 	margin-left: 10%;
-	padding-top: 5%;
+	padding-top: 4%;
 	width: 90%;
 }
 
@@ -867,7 +896,7 @@ ul{
 }
 
 .videonew{
-	margin-left: 10%;
+	margin-left: 20%;
 	padding-top: 5%;
 	width: 50%;
 }

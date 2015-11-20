@@ -12,4 +12,4 @@
 						-#= link_to (image_tag group.image.url(:small)), group
 					.group_content
 						.title
-							%h2= member.name
+							%h2= link_to member.name, member

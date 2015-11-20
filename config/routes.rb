@@ -11,6 +11,8 @@ devise_for :users
  end
  resources :members, path: '/groups/:id/members'
  resources :user
+ resources :friendships
+ resources :friends, :controller => 'friendships'
  resources :welcome
  resources :groups 
  resources :videos do
@@ -50,7 +52,6 @@ devise_for :users
  get '/inbox', to: 'user#inbox'
  get '/mygroups', to: 'user#mygroups'
  get '/profile', to: 'user#profile'
- get '/friends', to: 'user#friends'
  get '/community', to: 'user#community'
  get '/secretpath', to: 'user#user'
  get '/groups/:group_friendly_id/members/:id', to: 'members#index'

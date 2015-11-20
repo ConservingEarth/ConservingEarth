@@ -21,8 +21,6 @@ class MembersController < ApplicationController
 	  end
 
 	def index
-		
-		 #@members = Member.all
 		 
  	 	 @group = Group.friendly.find(params[:id])
      	 @members = @group.users

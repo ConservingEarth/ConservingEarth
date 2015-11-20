@@ -11,28 +11,23 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	def show
 		@user = User.find(params[:id])
 	end
-	def edit
-		
-	end
-	def dashboard
-	end
 
-	def activity
-	end
+	def create
+	  @user = User.new(user_params)
 
-	def favorties
-	end
+	  respond_to do |format|
+	    if @user.save
 
-	def inbox
-	end
+	      # Sends email to user when user is created.
+	      ExampleMailer.registration_confirmation(@user).deliver
 
-	def groups
-	end
-
-	def profile
-	end
-
-	def settings
+	      format.html { redirect_to @user, notice: 'User was successfully created.' }
+	      format.json { render :show, status: :created, location: @user }
+	    else
+	      format.html { render :new }
+	      format.json { render json: @user.errors, status: :unprocessable_entity }
+	    end
+	  end
 	end
 
 	private

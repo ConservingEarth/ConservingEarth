@@ -1,16 +1,16 @@
 = render "layouts/nav"
  
 #thenews
-	.activities
-		- if user_signed_in?
-			-#= link_to "New", root_path, class: "button2"
-			-#= link_to "Popular", root_path, class: "button2"
-			-#= link_to "Search", root_path, class: "button2"
-			= link_to " + Add Post", new_post_path, class: "button2"
 	#news
 		%br
 		%h2 News
+		-#= link_to "New", root_path
+		-#= link_to "Popular", root_path
+		-#= link_to "Search", root_path
 		%hr
+		- if user_signed_in?
+			.indexactivities
+				= link_to " + Add News", new_post_path, class: "addpost"
 		%br
 		- @posts.each do |post|
 			.new

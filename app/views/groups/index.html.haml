@@ -1,14 +1,14 @@
 = render "layouts/nav"
 
 #groupindex
-	.activities
-		- if user_signed_in?
-			-#= link_to "Search", user_path(current_user), class: "button2"
-			= link_to " + Create Group", new_group_path, class: "button2"
 	#groups
 		%br
 		%h2 Groups
+		-#= link_to "Search", user_path(current_user)
 		%hr
+		- if user_signed_in?
+			.indexactivities
+				= link_to " + Create Group", new_group_path, class: "addpost"
 		%br	
 			- @groups.each do |group|
 				.group
