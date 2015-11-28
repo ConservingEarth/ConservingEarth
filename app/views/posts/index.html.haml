@@ -3,11 +3,6 @@
 #thenews
 	#news
 		%br
-		%h2 News
-		-#= link_to "New", root_path
-		-#= link_to "Popular", root_path
-		-#= link_to "Search", root_path
-		%hr
 		- if user_signed_in?
 			.indexactivities
 				= link_to " + Add News", new_post_path, class: "addpost"
@@ -29,8 +24,6 @@
 
 	#tweets
 		%br
-		%h2 Tweets
-		%hr
 		%br
 		= render 'tweets'
 	-##ad

@@ -28,14 +28,13 @@ gem 'bcrypt', '~> 3.1.10'
 gem 'friendly_id', '~> 5.1.0'
 gem 'twitter'
 gem 'acts-as-taggable-on', '~> 3.5.0'
-gem 'public_activity', '~> 1.4.2'
-gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'mailboxer', '~> 0.13.0'
 gem 'bootstrap-sass'
 gem 'client_side_validations', github: "DavyJonesLocker/client_side_validations", branch: "4-2-stable"
 gem 'aws-sdk', '< 2.0'
 gem "pundit"
 gem "better_errors"
+gem 'dalli'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'

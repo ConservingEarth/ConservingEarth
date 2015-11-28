@@ -15,8 +15,9 @@ class VideosController < ApplicationController
 
 
 	def index
+
 		@videos = Video.all.order("created_at DESC").paginate(page: params[:page], per_page: 50)
-		
+		expire_fragment('video_cache')
 	end
 
 	def show

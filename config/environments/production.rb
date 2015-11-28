@@ -104,3 +104,5 @@ Rails.application.configure do
    :authentication       => "plain",
   :enable_starttls_auto => true
   }
+
+  config.cache_store = :dalli_store

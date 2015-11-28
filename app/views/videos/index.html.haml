@@ -3,23 +3,19 @@
 .contentpage
 	#videos
 		%br
-		%h2 Videos
-		-#= link_to "New", video_path(current_user), class: "button2"
-		-#= link_to "Popular", video_path(current_user), class: "button2"
-		-#= link_to "Search", video_path(current_user), class: "button2"
-		%hr
 		- if user_signed_in?
 			.indexactivities
 				= link_to " + Add Video", new_video_path(current_user), class: "addpost"
 		%br	
-		- @videos.each do |video|
-			- @youtube = OEmbed::Providers::Youtube.get(video.link)
-			.video
-				.video_image
-					= link_to (image_tag @youtube.thumbnail_url.html_safe), video
-				.video_content
-					.title
-						%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
+		- cache('video_cache', :expires_in => 12.hour) do 
+			- @videos.each do |video|
+				- @youtube = OEmbed::Providers::Youtube.get(video.link)
+				.video
+					.video_image
+						= link_to (image_tag @youtube.thumbnail_url.html_safe), video
+					.video_content
+						.title
+							%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
 
 	-#ad
 		-#%br
