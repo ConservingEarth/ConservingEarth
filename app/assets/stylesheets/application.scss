@@ -941,8 +941,8 @@ ul{
 }
 
 .aboutbox{
-	margin-left: 10%;
-	padding-top: 5%;
+	margin-left:20%;
+	padding-top: 10%;
 }
 
 .pagination{
@@ -980,15 +980,19 @@ ul{
     margin-left: 1em; }
 
 .jumbotron{
-	background-color:gray;
-	width: 50rem;
-	height: 20rem;
+	float:left;
+	background-color:#f1f1f1;
+	width: 400px;
+	height: 200px;
 	margin-left: 20rem;
 	text-align: center;
+	margin: 10px;
+	box-shadow: 3px 5px 5px 1px gray;
 	h1 {
-		padding-top: 5rem;
+		padding-top: 10px;
+
 	}
 	p{
-		padding-top: 1rem;
+		padding: 5px;
 	}
 }
