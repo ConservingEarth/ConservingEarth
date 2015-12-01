@@ -13,7 +13,11 @@
     .groupwebsite
       = link_to "Website", @group, class: "button"
       - if user_signed_in?
-        = link_to "Join Group", members_path(:group_id => @group.id), :method => :post, class: "button" 
+        - if current_user.groups.include?(@group)
+          .button-joined
+            Joined
+        -else
+          = link_to "Join Group", members_path(:group_id => @group.id), :method => :post, class: "button" 
     = image_tag "http://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
     %p.data
     - if @group.user == current_user
