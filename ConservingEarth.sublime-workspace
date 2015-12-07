@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"color"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
 				"bor",
 				"border-bottom"
 			],
@@ -12,20 +28,12 @@
 				"box-shadow"
 			],
 			[
-				"padd",
-				"padding"
-			],
-			[
 				"mari",
 				"margin-right"
 			],
 			[
 				"padding",
 				"padding-left"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"friend",
@@ -78,10 +86,6 @@
 			[
 				"paddin",
 				"padding-top"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"ma",
@@ -179,7 +183,7 @@
 			"file": "app/views/groups/_dashboard.html.haml",
 			"settings":
 			{
-				"buffer_size": 219,
+				"buffer_size": 285,
 				"line_ending": "Windows"
 			}
 		},
@@ -195,7 +199,23 @@
 			"file": "app/assets/stylesheets/application.scss",
 			"settings":
 			{
-				"buffer_size": 14206,
+				"buffer_size": 14666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/groups.scss",
+			"settings":
+			{
+				"buffer_size": 1843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/posts.scss",
+			"settings":
+			{
+				"buffer_size": 2584,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +231,7 @@
 			"file": "app/views/layouts/_nav.html.erb",
 			"settings":
 			{
-				"buffer_size": 2307,
+				"buffer_size": 2299,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,8 +239,32 @@
 			"file": "app/assets/stylesheets/members.scss",
 			"settings":
 			{
-				"buffer_size": 1059,
+				"buffer_size": 1063,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/videos.scss",
+			"settings":
+			{
+				"buffer_size": 2778,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/videos/_disqusv.html.erb",
+			"settings":
+			{
+				"buffer_size": 831,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/videos/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 840,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -276,7 +320,6 @@
 		"/C/ConservingEarth/app/views/friendships",
 		"/C/ConservingEarth/app/views/groups",
 		"/C/ConservingEarth/app/views/layouts",
-		"/C/ConservingEarth/app/views/mailbox",
 		"/C/ConservingEarth/app/views/members",
 		"/C/ConservingEarth/app/views/posts",
 		"/C/ConservingEarth/app/views/user",
@@ -291,6 +334,7 @@
 	],
 	"file_history":
 	[
+		"/C/ConservingEarth/app/views/members/show.html.erb",
 		"/C/ConservingEarth/app/controllers/videos_controller.rb",
 		"/C/ConservingEarth/config/environments/test.rb",
 		"/C/ConservingEarth/config/environments/development.rb",
@@ -331,7 +375,6 @@
 		"/C/ConservingEarth/app/controllers/groups_controller.rb",
 		"/C/ConservingEarth/app/views/friendship/index.html.erb",
 		"/C/ConservingEarth/app/views/user/friends.html.erb",
-		"/C/ConservingEarth/app/views/members/show.html.erb",
 		"/C/ConservingEarth/app/assets/stylesheets/user.scss",
 		"/C/ConservingEarth/app/assets/stylesheets/groups.css.scss",
 		"/C/ConservingEarth/app/views/devise/registrations/edit.html.erb",
@@ -400,7 +443,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -414,6 +457,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"grouphea",
+			"group",
+			"dis",
+			"logo",
+			"disques",
+			"disquess",
+			"logo",
+			"body",
 			"hov",
 			"active",
 			"header",
@@ -479,7 +530,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -509,13 +560,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "app/views/members/index.html.haml",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 299,
@@ -525,8 +576,8 @@
 						"selection":
 						[
 							[
-								105,
-								105
+								176,
+								177
 							]
 						],
 						"settings":
@@ -538,7 +589,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -568,7 +619,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -577,15 +628,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 219,
+						"buffer_size": 285,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								50,
+								50
 							]
 						],
 						"settings":
@@ -596,7 +647,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -625,13 +676,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -640,15 +691,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14206,
+						"buffer_size": 14666,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3898,
-								3898
+								4041,
+								4041
 							]
 						],
 						"settings":
@@ -656,14 +707,72 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 5424.0,
+						"translation.y": 5310.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
+					"file": "app/assets/stylesheets/groups.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1623,
+								1630
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2104.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/posts.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "Gemfile",
 					"semi_transient": false,
 					"settings":
@@ -684,27 +793,27 @@
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 711.0,
+						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "app/views/layouts/_nav.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2307,
+						"buffer_size": 2299,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1146,
-								1146
+								154,
+								154
 							]
 						],
 						"settings":
@@ -716,30 +825,119 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "app/assets/stylesheets/members.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1059,
+						"buffer_size": 1063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								300,
-								300
+								568,
+								568
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/assets/stylesheets/videos.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1108,
+								1108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/views/videos/_disqusv.html.erb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/views/videos/show.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -843,7 +1041,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

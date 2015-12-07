@@ -1,5 +1,8 @@
 .groupheadshow
 	.grouptitle
-		= link_to (image_tag @group.image.url(:thumbnail)), @group
-		= link_to @group.title, group_path, class: "button_group_show_title"
-		= link_to "| Members", members_path, class: "memberslink"
+		.grouptitleimage
+			= link_to (image_tag @group.image.url(:thumbnail)), @grouptitlenav
+		.grouptitlenav
+			= link_to @group.title, group_path, class: "button_group_show_title"
+			.bar
+			= link_to " Members", members_path, class: "button_group_show_title"

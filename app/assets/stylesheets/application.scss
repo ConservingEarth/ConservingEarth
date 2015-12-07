@@ -145,8 +145,7 @@ body{
 
 .bodycontainer{
 	height: 100vh;
-	
-	
+	background-color: #f1f1f1;
 }
 
  .btn-submit {
@@ -226,7 +225,12 @@ body{
 	background: #3EC33C;
   	text-decoration: none;
 }
-
+.bar{
+	border-right: 1px solid black;
+	height: 30px;
+	padding: 5px;
+	float: left;
+}
 .button3{
 	padding: .9rem .9rem .9rem .9rem;
 	border-radius: .2rem;
@@ -239,12 +243,27 @@ body{
 	outline: none;
 	color: black;
 	font-size: 30px;
+	padding-left: 5px;
+	float: left;
+	&:hover{
+		background:#f1f1f1;
+			}
+}
+.grouptitleimage{
+float: left;
 }
 
+.grouptitlenav{
+ float: left;
+ padding-left:20px;
+ margin-top: 120px; 
+}
+
+
 .conservingearthlogo{
-	margin-top: 5px;
- height: 20px;
- width: 150px;
+	margin-top: -5px;
+ height: 40px;
+ width: 40px;
 
 }
 
@@ -263,6 +282,7 @@ body{
 }
 
 .contentpage{
+	background-color: #f1f1f1;
 	margin-left: 10%;
 	padding-top: 50px;
 	width: 90%;
@@ -275,8 +295,13 @@ body{
 
 .disques{
 	padding-top: 2rem;
-	width: 80%;
-	margin-left: 15%;
+	width: 100%;
+	
+}
+#disqus_thread{
+	background:#fff;
+	padding: 10px;
+	box-shadow: 1px 1px 1px 1px #C9C9C9
 }
 
 .euser{
@@ -342,16 +367,17 @@ body{
 }
 
 #groupindex{
+	background-color: #f1f1f1;
 	margin-left: 10%;
 	padding-top: 50px;
-	width: 90%;
+	width: 100%;
 }
 
 .groupheadshow{
 	height:200px;
-	width: 1500px;
-	background-color: lightgray;
-	box-shadow: 1px 1px 1px 1px;
+	width: 90%;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 1px #C9C9C9;
 }
 
 .grouptitle{
@@ -380,7 +406,7 @@ body{
 
 html { 
  	font-family: 'Raleway', sans-serif; 
- 	
+ 	background:#f1f1f1;
  } 
 
 
@@ -747,6 +773,7 @@ span{
 
 
 #thenews{
+	background-color: #f1f1f1;
 	margin-left: 10%;
 	padding-top: 50px;
 	width: 90%;
@@ -974,7 +1001,7 @@ ul{
 
 .jumbotron{
 	float:left;
-	background-color:#f1f1f1;
+	background-color:#fff;
 	width: 400px;
 	height: 200px;
 	margin-left: 20rem;

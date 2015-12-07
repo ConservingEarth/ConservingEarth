@@ -13,24 +13,24 @@
 	font-size: 30px;
 }
 
-#groups {
+#members {
 		float: left;
 		width:	85%;
 		padding: 0 5% 0 2.5%;
-	.group {
+	.member {
 		background: #F8F9FA;
 		width: 200px;
 		float: left;
 		margin-left: 20px;
 		margin-bottom: 20px;
-		.group_image {
+		.member_image {
 			overflow: hidden;
 			img {
 				width: 100%;
 				
 			}
 		}
-		.group_content {
+		.member_content {
 			h2 {
 				margin: 0;
 				font-weight: 100;
