@@ -199,7 +199,7 @@
 			"file": "app/assets/stylesheets/application.scss",
 			"settings":
 			{
-				"buffer_size": 14666,
+				"buffer_size": 14664,
 				"line_ending": "Unix"
 			}
 		},
@@ -691,15 +691,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14666,
+						"buffer_size": 14664,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4041,
-								4041
+								11971,
+								11971
 							]
 						],
 						"settings":
@@ -707,7 +707,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 5310.0,
+						"translation.y": 19464.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

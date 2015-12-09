@@ -30,10 +30,23 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	  end
 	end
 
+	def update
+			
+		if @user.update(user_params)
+			redirect_to @user, notice: "video positive"
+		else
+			render 'edit'
+		end
+	end
+
 	private
 		def require_user
 		    @user = User.find_by_id(params[:id])
 		    redirect_to(request.referrer || root_path) unless current_user == @user
 	  	end
+
+	 	def user_params
+			params.require(:user).permit(:avatar)
+		end
 	  	
 end

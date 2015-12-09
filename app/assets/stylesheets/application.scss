@@ -832,13 +832,13 @@ ul{
 }
 
 .usermenu ul {
-	width: 100vw;
+	width: 100%;
 	list-style: none;
 
 }
 
 .usermenu ul li{
-	width: 100vw;
+	width: 100%;
 	display: inline-block;
 	list-style: none;
 	text-decoration: none;
@@ -870,7 +870,7 @@ ul{
 }
 
 .usercontent{
-	background-color: lightgray;
+	background-color: #f1f1f1;
 	height: 100%;
 	width:90%; 
 
@@ -889,9 +889,6 @@ ul{
 .useravatar{
 	height: 200px;
 	width: 200px;
-	background-color: black;
-	padding-left: 50px;
-	padding-top: 50px;
 	float: left;
 }
 

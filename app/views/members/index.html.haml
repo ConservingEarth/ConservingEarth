@@ -9,7 +9,7 @@
 			- @members.each do |member|
 				.group
 					.group_image
-						-#= link_to (image_tag group.image.url(:small)), group
+						= image_tag member.avatar.url(:thumb)
 					.group_content
 						.title
 							%h2= link_to member.name, member

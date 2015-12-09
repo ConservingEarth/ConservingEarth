@@ -1,6 +1,10 @@
 <%= render "user/activities" %>
 <%= current_user.name %>
 
+<%= simple_form_for @user, url: users_path do |form| %>
+  <%= form.input :avatar, as: :file %>
+<% end %>
+
 profiel pic
 password
 email address

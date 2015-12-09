@@ -9,7 +9,7 @@ class Group < ActiveRecord::Base
 	has_many :users, :through => :members
 	
 	
-	has_attached_file :image, styles: { medium: "700x500#", small: "350x250#", thumbnail: "250x150#" }
+	has_attached_file :image, styles: { medium: "700x500#", small: "350x250#", thumbnail: "250x150#" }, :default_url => ActionController::Base.helpers.asset_path('CElogo200.png')
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   	

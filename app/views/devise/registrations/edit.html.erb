@@ -17,10 +17,19 @@
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
   </div>
 
+
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
   </div>
 <% end %>
+
+<%= simple_form_for @user, url: @users_path do |form| %>
+  <%= form.input :avatar, as: :file %>
+  <div class="form-actions">
+    <%= form.button :submit, "Update" %>
+  </div>
+<% end %>
+
 <div class="euser">
 <h3>Cancel my account</h3>
 
