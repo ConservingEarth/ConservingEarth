@@ -33,7 +33,7 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	def update
 			
 		if @user.update(user_params)
-			redirect_to @user, notice: "video positive"
+			redirect_to @user, notice: "Update positive"
 		else
 			render 'edit'
 		end
@@ -46,7 +46,7 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	  	end
 
 	 	def user_params
-			params.require(:user).permit(:avatar)
+			params.require(:user).permit(:avatar, :description)
 		end
 	  	
 end

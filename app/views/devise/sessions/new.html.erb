@@ -1,19 +1,23 @@
 <div class="login">
   <div class="signupcontainer">
     <div class="form">
+    <%= image_tag "CElogo200.png", class: "conservingearthlogo" %>
+    <br>
+    <br>
       <h2>Log in</h2>
-
+      <br>
       <%= simple_form_for(resource, :as => resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.error_notification %>
-          <%= f.email_field :email, required: true, :placeholder => "Email" %>
+          <%= f.email_field :email, required: true, :placeholder => "Email", class: "form-content" %>
           <br>
-          <%= f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), :placeholder => "Password" %>
+          <%= f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), :placeholder => "Password", class: "form-content" %>
           <br>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-          <%= f.button :submit, "Log In", class: "btn-submit" %> 
+          <%= f.button :submit, "Log In", class: "c3-btn" %> 
       <% end %>
       <br>
       <%= render "devise/shared/links" %>
+
     </div>
   </div>
 </div>

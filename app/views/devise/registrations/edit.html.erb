@@ -15,25 +15,35 @@
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+
+      <div class="form-actions">
+    <%= f.button :submit, "Update", class: "c3-btn" %>
+  </div>
+  <% end %>
+  <%= link_to "Back", :back %>
   </div>
 
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+
+
+  <div class="form-inputs">
+  <%= simple_form_for @user, url: @users_path do |form| %>
+    <%= image_tag @user.avatar.url(:thumb) %>
+    <%= form.input :avatar, as: :file %>
+    <%= form.input :description, :maxlength => 2000 %>
+    <div class="form-actions">
+      <%= form.button :submit, "Update", class: "c3-btn" %>
+    </div>
+  <% end %>
+  <%= link_to "Back", :back %>
   </div>
-<% end %>
 
-<%= simple_form_for @user, url: @users_path do |form| %>
-  <%= form.input :avatar, as: :file %>
-  <div class="form-actions">
-    <%= form.button :submit, "Update" %>
+
+
+  <div class="form-inputs">
+  <h3>Cancel my account</h3>
+  <br>
+  <p class="c3-btnred"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <br>
+  <%= link_to "Back", :back %>
   </div>
-<% end %>
-
-<div class="euser">
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
-</div>
