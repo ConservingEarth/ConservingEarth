@@ -39,7 +39,7 @@
 		            <li class="<%= active_class(root_path) %>"><%= link_to '<i class="fa fa-newspaper-o"></i> News'.html_safe, root_path, :class => "sidebar-nav-links" %></li>
 		            <li class="<%= active_class(videos_path) %>"><%= link_to '<i class="fa fa-video-camera"></i> Videos'.html_safe, videos_path, :class => "sidebar-nav-links" %></li>
 		            <li class="<%= active_class(groups_path) %>"><%= link_to '<i class="fa fa-leaf"></i> Groups'.html_safe, groups_path, :class => "sidebar-nav-links" %></li>
-					<!-- <li><%= link_to '<i class="fa fa-newspaper-o"></i> Events'.html_safe, map_path, :class => "sidebar-nav-links" %></li> -->
+					<li><%= link_to '<i class="fa fa-calendar"></i> Events'.html_safe, events_path, :class => "sidebar-nav-links" %></li>
 					<li class="<%= active_class(map_path) %>"><%= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, :class => "sidebar-nav-links" %></li>
 	                <li class="<%= active_class(about_path) %>"><%= link_to '<i class="fa fa-info"></i> About'.html_safe, about_path, :class => "sidebar-nav-links" %></li>
 	              </ul>

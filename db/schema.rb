@@ -11,13 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209215048) do
+ActiveRecord::Schema.define(version: 20151212020252) do
 
   create_table "comments", force: :cascade do |t|
     t.text    "content"
     t.integer "post_id"
     t.integer "video_id"
     t.integer "user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "location"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.boolean  "published"
+    t.text     "email_info"
+    t.integer  "capacity"
+    t.boolean  "announced"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

@@ -1,0 +1,13 @@
+= render "layouts/nav" 
+#thenews
+	#news
+		%br
+		- if user_signed_in?
+			.indexactivities
+				= link_to " + Create Event", new_event_path, class: "addpost"
+				%br
+		- @events.each do |event|
+			.new
+				.new_content
+					.title
+						%h2= link_to truncate(event.title, :length => 60)

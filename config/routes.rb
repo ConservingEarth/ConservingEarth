@@ -11,6 +11,7 @@ devise_for :users
  end
  resources :members, path: '/groups/:id/members'
  resources :user
+ resources :events
  resources :friendships
  resources :friends, :controller => 'friendships'
  resources :welcome

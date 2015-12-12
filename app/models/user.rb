@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :videos
   has_many :groups
+  has_many :events
   has_many :infos, dependent: :destroy
   has_many :posts
   has_many :comments
