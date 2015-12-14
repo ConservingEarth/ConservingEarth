@@ -847,19 +847,9 @@ ul{
 
 .usermenu{
 
-	height: 10rem;
-	width: 10rem;
-	position: absolute;
-	position: fixed;
-	background-color: gray;
-	display: block;
-	text-decoration: none;
-	list-style: none;
-	box-shadow: 1px 1px 1px 1px gray;
-	margin: 0px auto;
-	padding-top: 20px;
-	top: 50px;
-	z-index: 1000;
+	float:right;
+	margin-top: 10px;
+	margin-right: 100px
 }
 
 .usermenu ul {
@@ -1051,4 +1041,67 @@ ul{
 	p{
 		padding: 5px;
 	}
+}
+
+.click-nav {
+	width:50px;
+	font-size: 14px;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	border-radius: 4px;
+}
+.click-nav ul {
+	position:relative; 
+	padding: 0;
+	list-style-type: none;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,.15);
+}
+.click-nav ul li {
+	position:relative;
+	list-style:none;
+	cursor:pointer;
+	border-radius: 4px;
+	
+}
+.click-nav ul li ul {
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	position:absolute;
+	width: 200px;
+	border-radius: 4px;
+	margin-top: 10px;
+	
+
+}
+.click-nav ul .clicker {
+	position:relative;
+	background:#33CC33;
+	color:#FFF;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,.15);
+}
+.click-nav ul .clicker:hover,.click-nav ul .active {
+	background:#3EC33C;
+}
+
+.click-nav ul li a {
+	transition:background-color 0.2s ease-in-out;
+	-webkit-transition:background-color 0.2s ease-in-out;
+	-moz-transition:background-color 0.2s ease-in-out;
+	display:block;
+	padding:8px 10px 8px 10px;
+	background:#FFF;
+	color:#222;
+	text-decoration:none;
+
+}
+.click-nav ul li a:hover {
+	background:#F2F2F2;
+}
+
+/* Fallbacks */
+.click-nav .no-js ul {
+	display:none;
+}
+.click-nav .no-js:hover ul {
+	display:block;
 }
