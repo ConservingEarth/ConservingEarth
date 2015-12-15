@@ -9,13 +9,22 @@
 		%br	
 		- cache('video_cache', :expires_in => 12.hour) do 
 			- @videos.each do |video|
-				- @youtube = OEmbed::Providers::Youtube.get(video.link)
+				-if video.link.nil?
+					this video link is no longer supported
+				-else
+					- @youtube = OEmbed::Providers::Youtube.get(video.link)
 				.video
 					.video_image
-						= link_to (image_tag @youtube.thumbnail_url.html_safe), video
+						-if @youtube.thumbnail_url.html_safe.nil?
+							no image
+						-else
+							= link_to (image_tag @youtube.thumbnail_url.html_safe), video
 					.video_content
 						.title
-							%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
+							-if @youtube.title.html_safe.nil?
+								no longer available
+							-else
+								%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
 
 	-#ad
 		-#%br
