@@ -9,14 +9,22 @@
 		%br	
 		- cache('video_cache', :expires_in => 12.hour) do
 			- @videos.each do |video|
-				-unless video.nil?
+				-if video.link.nil?
+					%p not working 
+				-else
 					- @youtube = OEmbed::Providers::Youtube.get(video.link)
 					.video
 						.video_image
-							= link_to (image_tag @youtube.thumbnail_url.html_safe), video
+							-if @youtube.thumbnail_url.html_safe.nil?
+								%p not working
+							-else
+								= link_to (image_tag @youtube.thumbnail_url.html_safe), video
 						.video_content
 							.title
-								%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
+								-if @youtube.title.html_safe.nil?
+									%p not working
+								-else
+									%h2= link_to truncate(@youtube.title.html_safe, :length => 40), video
 
 	-#ad
 		-#%br
