@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+	before_filter :require_user, :only => [:edit, :update, :destroy]
+	before_filter :authenticate_user!, except: [:index, :show]
+
 	def index
 		@events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
 	end
