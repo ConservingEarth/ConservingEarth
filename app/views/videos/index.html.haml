@@ -7,7 +7,7 @@
 			.indexactivities
 				= link_to " + Add Video", new_video_path(current_user), class: "addpost"
 		%br	
-		- cache('video_cache', :expires_in => 12.hour) do 
+		- cache('video_cache', :expires_in => 1.minute) do 
 			- @videos.each do |video|
 				- @youtube = OEmbed::Providers::Youtube.get(video.link)
 				-if @youtube.blank?

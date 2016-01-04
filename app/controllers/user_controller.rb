@@ -6,6 +6,7 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 
 	def user
 		@users = User.all
+		@videos = Video.all
 	end
 
 	def show
