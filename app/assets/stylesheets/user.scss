@@ -1,3 +1,120 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.useractivity{
+	margin-left: 10%;
+	width: 80%;
+	padding-top: 5%
+
+}
+
+.usercontent{
+	margin-left: 10%;
+	padding-top: 5%;
+	width: 90%;
+}
+
+.userlogin{
+
+	float: right;
+	padding-top: 15px;
+	padding-right: 50px;
+	width: 200px;
+	margin: 0 auto;
+	color: white;
+	z-index: 0;
+}
+
+
+.usermenu{
+
+	float:right;
+	margin-top: 10px;
+	margin-right: 100px
+}
+
+.usermenu ul {
+	width: 100%;
+	list-style: none;
+
+}
+
+.usermenu ul li{
+	width: 100%;
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+}
+
+.usermenu ul li a {
+	padding-left: 1rem;
+	padding-top: 1rem;
+	width: 100%;
+	text-decoration: none;
+	color: white;
+	display: block;
+	-webkit-transition :0.2s;
+	-moz-transition :0.2s;
+	-o-transition :0.2s;
+	transition :0.2s;
+}
+
+.userlogin a{
+	color: inherit;
+	list-style: none;
+	text-decoration: none;
+
+	
+}
+.userlogin a:hover{
+	background-color: gray;
+
+}
+
+.usercontent{
+	background-color: #f1f1f1;
+	height: 100%;
+	width:90%; 
+
+}
+
+.userinfo{
+	margin-left: 100px;
+	height: 200px;
+	width: 1500px;
+	background-color: white;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	margin-bottom: 100px;
+
+}
+
+.useravatar{
+	height: 200px;
+	width: 200px;
+	float: left;
+}
+
+.userdetails{
+	padding-left: 50px;
+	margin-top: 125px;
+	float: left;
+		p{
+			float: left;
+			margin-left: 200px;
+			margin-top: -45px;
+	} 
+	
+}
+
+.userdescription{
+	margin-left: 100px;
+	height: 400px;
+	width: 1500px;
+	background-color: white;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+		p{
+			padding: 20px
+		}
+
+}

@@ -35,6 +35,9 @@ gem 'aws-sdk', '< 2.0'
 gem "pundit"
 gem "better_errors"
 gem 'dalli'
+gem 'faye'
+gem 'thin'
+gem 'private_pub'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'

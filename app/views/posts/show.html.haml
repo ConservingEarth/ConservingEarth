@@ -1,25 +1,26 @@
 = render "layouts/nav"
-#new_show
-  %h1= @post.title
-  %p.username
-    Shared by
-    = @post.user.name
-    about
-    = time_ago_in_words(@post.created_at)
-  .clearfix
-    .new_image_description
-      .description= simple_format(@post.description)
-    .new_data
-      = link_to "Official Link", @post.link, class: "button"
-      -#= link_to "Follow", @post, class: "button"
-      %p.data
-      - if @post.user == current_user
-        = link_to "Edit", edit_post_path(@post), class: "data"
-        = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
-    -##random_post
-      -#%h3 Ad
-      -#.new
-        -#= render "layouts/ad1" 
+#newscontainer 
+  #new_show
+    %h1= @post.title
+    %p.username
+      Shared by
+      = @post.user.name
+      about
+      = time_ago_in_words(@post.created_at)
+    .clearfix
+      .new_image_description
+        .description= simple_format(@post.description)
+      .new_data
+        = link_to "Official Link", @post.link, class: "button"
+        -#= link_to "Follow", @post, class: "button"
+        %p.data
+        - if @post.user == current_user
+          = link_to "Edit", edit_post_path(@post), class: "data"
+          = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
+      -##random_post
+        -#%h3 Ad
+        -#.new
+          -#= render "layouts/ad1" 
 
-.disques
-  = render "disqusp"
+  .disques
+    = render "disqusp"

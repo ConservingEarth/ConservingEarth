@@ -19,6 +19,7 @@
 
 
 @import 'videos.scss';
+@import 'user.scss';
 @import 'posts.scss';
 @import 'groups.scss';
 @import 'members.scss';
@@ -38,24 +39,6 @@
 
 }
 
-.newvideo{
-	margin-left: 20%;
-	padding-top: 5%;
-	padding-right: 100px;
-}
-
-.newgroup{
-	margin-left: 20%;
-	padding-top: 5%;
-	padding-right: 100px;
-}
-
-.newnews{
-	margin-left: 20%;
-	padding-top: 5%;
-	padding-right: 100px;
-
-}
 
 .marker_container{
  background-color: white;
@@ -252,15 +235,7 @@ body{
 		background:#f1f1f1;
 			}
 }
-.grouptitleimage{
-float: left;
-}
 
-.grouptitlenav{
- float: left;
- padding-left:20px;
- margin-top: 120px; 
-}
 
 .c3-btn{
 	color: #FFFFFF;
@@ -289,26 +264,8 @@ float: left;
 
 }
 
-.col-md-4{
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
-.col-md-12{
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
-.contentpage{
-	background-color: #f1f1f1;
-	margin-left: 10%;
-	padding-top: 50px;
-	width: 90%;
-}
 
 .dashboard{
 	margin-left: 10%;
@@ -402,24 +359,7 @@ float: left;
 
 }
 
-#groupindex{
-	background-color: #f1f1f1;
-	margin-left: 10%;
-	padding-top: 50px;
-	width: 90%;
-}
 
-.groupheadshow{
-	height:200px;
-	width: 90%;
-	background-color: #fff;
-	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
-
-.grouptitle{
-	padding-top: 30px;
-	margin-left: 10px;
-}
  h1, h2, h3, h4, h5, h6 { 
  	font-weight: 500;
  	text-decoration: none; 
@@ -806,145 +746,12 @@ span{
 }
 
 
-#thenews{
-	background-color: #f1f1f1;
-	margin-left: 10%;
-	padding-top: 50px;
-	width: 90%;
-}
-
-#tweets{
- 	float: left;
- 	width: 27.5%;
-	padding: 0 2.5%;
-}
 
 ul{
 	list-style-type: none;
 }
 
-.useractivity{
-	margin-left: 10%;
-	width: 80%;
-	padding-top: 5%
 
-}
-
-.usercontent{
-	margin-left: 10%;
-	padding-top: 5%;
-	width: 90%;
-}
-
-.userlogin{
-
-	float: right;
-	padding-top: 15px;
-	padding-right: 50px;
-	width: 200px;
-	margin: 0 auto;
-	color: white;
-	z-index: 0;
-}
-
-
-.usermenu{
-
-	float:right;
-	margin-top: 10px;
-	margin-right: 100px
-}
-
-.usermenu ul {
-	width: 100%;
-	list-style: none;
-
-}
-
-.usermenu ul li{
-	width: 100%;
-	display: inline-block;
-	list-style: none;
-	text-decoration: none;
-}
-
-.usermenu ul li a {
-	padding-left: 1rem;
-	padding-top: 1rem;
-	width: 100%;
-	text-decoration: none;
-	color: white;
-	display: block;
-	-webkit-transition :0.2s;
-	-moz-transition :0.2s;
-	-o-transition :0.2s;
-	transition :0.2s;
-}
-
-.userlogin a{
-	color: inherit;
-	list-style: none;
-	text-decoration: none;
-
-	
-}
-.userlogin a:hover{
-	background-color: gray;
-
-}
-
-.usercontent{
-	background-color: #f1f1f1;
-	height: 100%;
-	width:90%; 
-
-}
-
-.userinfo{
-	margin-left: 100px;
-	height: 200px;
-	width: 1500px;
-	background-color: white;
-	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-	margin-bottom: 100px;
-
-}
-
-.useravatar{
-	height: 200px;
-	width: 200px;
-	float: left;
-}
-
-.userdetails{
-	padding-left: 50px;
-	margin-top: 125px;
-	float: left;
-		p{
-			float: left;
-			margin-left: 200px;
-			margin-top: -45px;
-	} 
-	
-}
-
-.userdescription{
-	margin-left: 100px;
-	height: 400px;
-	width: 1500px;
-	background-color: white;
-	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-		p{
-			padding: 20px
-		}
-
-}
-
-.videonew{
-	margin-left: 20%;
-	padding-top: 5%;
-	width: 50%;
-}
 
 .yield{
 	
