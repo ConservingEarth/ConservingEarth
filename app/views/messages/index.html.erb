@@ -1,0 +1,14 @@
+<h2>Messager</h2>
+
+<ul id="chat">
+	<% if @messages.any? %>
+        <%= render @messages %>
+    <% end %>
+</ul>
+
+<%= form_tag [@message, Message.new], :remote => true do %>
+  <%= text_field_tag :message %>
+  <%= submit_tag "Send" %>
+<% end %>
+
+<%= subscribe_to "/messages/new" %>

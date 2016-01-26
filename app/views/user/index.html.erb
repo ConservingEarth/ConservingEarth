@@ -1,0 +1,5 @@
+<%= render "user/activities" %>
+<h2>Friends</h2>
+<% @friendships.user.each do |friendships| %>
+<%= friendships.friends.name %> 
+<%end%>

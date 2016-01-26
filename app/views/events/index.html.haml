@@ -1,5 +1,5 @@
 = render "layouts/nav" 
-#thenews
+#eventcontainer
 	#news
 		%br
 		- if user_signed_in?
@@ -11,6 +11,8 @@
 				.new_content
 					.title
 						%h2= link_to truncate(event.title, :length => 60), event
+					.title
+						%h2= event.location
 					%p 
 						Starts at:
 						= event.starts_at

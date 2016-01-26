@@ -1,0 +1,32 @@
+<%= render 'layouts/nav' %>
+	
+<div class="contentpage">
+	<div id="videos">
+		<br>
+		<% if user_signed_in? %>
+			<div class="indexactivities">.
+				<%= link_to " + Add Project", new_project_path(current_user), class: "addpost" %>
+			</div>
+		<% end %>	
+		<br>	
+		<% cache('video_cache', :expires_in => 12.hour) do %>
+			<% @projects.each do |project| %>
+				<div class="video">
+					<div class="video_image"> 
+						<%= link_to (image_tag project.image), project %>
+					</div>
+					<div class="video_content"> 
+						<div class="title"> 
+							<h2>
+								<%= project.name %>
+							</h2>
+						</div>
+					</div>
+				</div>		
+			<% end %>
+		<% end -%>
+	</div>
+	<div class="pagination"> 
+		<%= will_paginate @projects %>
+	</div>
+</div>

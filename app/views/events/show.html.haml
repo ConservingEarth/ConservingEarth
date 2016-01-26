@@ -1,20 +1,36 @@
 = render "layouts/nav"
-#new_show
-	%h1= @event.title
-	%br
-	%p= @event.description
-	%br	
-	%p= @event.starts_at
-	%br
-	%p= @event.ends_at
-	%br
-	%p= @event.published
-	%br
-	%p= @event.email_info
-	%br
-	%p= @event.capacity
-	%br
-	%p= @event.announced
-	%br
+#eventcontainer 
+	#event_show
+		%h1= @event.title
+		%p.username
+			Shared by
+			= @event.user.name
+			about
+			= time_ago_in_words(@event.created_at)
+		.clearfix
+		.event_image_description
+			= @event.description
+		.event_data
+			= link_to "Official Link", @root_path, class: "button"
+			-#= link_to "favorite", @video, class: "button"
+			%p= @event.starts_at
+			%br
+			%p= @event.ends_at
+			%br
+			%p= @event.published
+			%br
+			%p= @event.email_info
+			%br
+			%p= @event.capacity
+			%br
+			%p= @event.announced
+			%br
 	- if @event.user == current_user
 		%p= link_to "Edit Event", edit_event_path(@event), class: "c3-btn"
+		%p.data
+		- if @event.user == current_user
+			= link_to "Edit", edit_event_path(@event), class: "data"
+			= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }
+	.disques
+		= render "disquse"
+

@@ -1,0 +1,27 @@
+= render "layouts/nav"
+#group_show
+  = render "dashboard"
+  .group_image_description
+    %br
+    %h2
+      Info
+    %br
+    %hr
+    %br
+    = @project.description
+  .group_data
+    .groupwebsite
+      = link_to "Website", @project, class: "button"
+      -#- if user_signed_in?
+        -#- if current_user.groups.include?(@group)
+          -#.button-joined
+            -#Joined
+      -#-else
+          -#= link_to "Join project", members_path(:group_id => @group.id), :method => :post, class: "button" 
+    -#= image_tag "http://maps.google.com/maps/api/staticmap?size=250x250&sensor=false&zoom=10&markers=#{@group.latitude}%2C#{@group.longitude}"
+    %p.data
+    - if @project.user == current_user
+      = link_to "Edit", edit_project_path(@project), class: "data"
+      = link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
+      
+
