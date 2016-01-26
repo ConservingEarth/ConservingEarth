@@ -7,6 +7,8 @@ class Group < ActiveRecord::Base
 	belongs_to :user
 	has_many :members, :foreign_key => :group_id
 	has_many :users, :through => :members
+	has_many :events
+	has_many :projects
 	
 	
 	has_attached_file :image, styles: { medium: "700x500#", small: "350x250#", thumbnail: "250x150#" }, :default_url => ActionController::Base.helpers.asset_path('CElogo200.png')
