@@ -1,7 +1,7 @@
 class UserController < ApplicationController
 before_filter :require_user, :only => [:edit, :update, :destroy]
 	def index
-		
+
 	end
 
 	def user
@@ -11,6 +11,9 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 
 	def show
 		@user = User.find(params[:id])
+		@friend = User.find_by_id(params[:name])
+		
+
 	end
 
 	def create
@@ -47,7 +50,7 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	  	end
 
 	 	def user_params
-			params.require(:user).permit(:avatar, :description)
+			params.require(:user).permit(:avatar, :description, :friendships, :name)
 		end
 	  	
 end
