@@ -1,21 +1,27 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#intro {
+	margin: 2.75rem 0 1.75rem 0;
+	text-align: center;
+	font-size: 1.75rem;
+	line-height: 1;
+	span {
+		font-size: 1.25rem;
+		color: #9B9B9B;
+	}
+}
 
 
-
-#events {
+#videos {
 		float: left;
 		width:	85%;
 		padding: 0 5% 0 2.5%;
 
-	.event {
+	.video {
 		background: #Fff;
 		width: 200px;
 		float: left;
 		margin-left: 20px;
 		margin-bottom: 20px;
-		.event_image {
+		.video_image {
 			width: 100%;
 			overflow: hidden;
 			img {
@@ -23,7 +29,7 @@
 				
 			}
 		}
-		.event_content {
+		.video_content {
 			h2 {
 				margin: 0;
 				font-weight: 100;
@@ -59,22 +65,22 @@
 	}
 }
 
-#eventcontainer{
+#videocontainer{
 	padding-top: 5rem;
 	margin-right: 5%;
 	margin-left: 15%;
 	padding-right: 2%;
 }
-#event_show {
+#video_show {
 	background-color: #fff;
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	padding:10px;
-	.event_image_description {
+	.video_image_description {
 		width: 50%;
 		float: left;
 		
 	}
-	.event_data {
+	.video_data {
 		width: 15%;
 		float: left;
 		.button {
@@ -100,23 +106,95 @@
 			margin: 0;
 		}
 	}
-
+	#random_post {
+		width: 25%;
+		margin-left: 5%;
+		margin-top: -3.2rem;
+		float: left;
+		h3 {
+			font-size: 1rem;
+		}
+		.video {
+			background: #F8F9FA;
+			border: 1px solid #E4E4E4;
+			border-radius: 0.3rem;
+			.post_image {
+				height: 200px;
+				overflow: hidden;
+				img {
+					width: 100%;
+					border-radius: .3rem .3rem 0 0;
+				}
+			}
+			.video_content {
+				h2 {
+					margin: 0;
+					font-weight: 100;
+					padding: 1rem 5%;
+					border-bottom: 1px solid #E4E4E4;
+					font-size: 1.25rem;
+					a {
+						text-decoration: none;
+						color: #333233;
+						&:hover {
+							color: #50A7C7;
+						}
+					}
+				}
+				.data {
+					padding: .75rem 5%;
+					color: #969696;
+					.username, .buttons {
+						margin: 0;
+						font-size: .8rem;
+					}
+					.username {
+						float: left;
+					}
+					.buttons {
+						float: right;
+						span {
+							margin-left: .5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	h1 {
+		margin: 0;
+		color: #333233;
+	}
+	img {
+		width: 100%;
+		border-radius: .3rem;
+	}
+	.username {
+		color: #969696;
+		margin: 0 0 1.5rem 0;
+	}
+	.description {
+		margin: 2rem 0;
+		font-size: 1.1rem;
+		line-height: 1.5;
+		color: #000000;
+	}
 }
 
-.newevet{
+.newvideo{
 	margin-left: 20%;
 	padding-top: 5%;
 	padding-right: 100px;
 }
 
-.eventpage{
+.contentpage{
 	background-color: #f1f1f1;
 	margin-left: 10%;
 	padding-top: 50px;
 	width: 90%;
 }
 
-.eventnew{
+.videonew{
 	margin-left: 20%;
 	padding-top: 5%;
 	width: 50%;

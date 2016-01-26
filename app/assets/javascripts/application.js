@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require private_pub
 //= require jquery_ujs
 //= require turbolinks
 //= require masonry/jquery.masonry
@@ -34,5 +35,12 @@ $(function () {
       $('.click-nav .js ul', this).slideUp();
       $('.clicker').removeClass('active');
     }
+  });
+});
+
+$(function() {
+  var faye = new Faye.Client('http://localhost:9292/faye');
+  faye.subscribe("/messages/new", function(data) {
+    eval(data);
   });
 });
