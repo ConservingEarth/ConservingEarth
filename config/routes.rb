@@ -11,9 +11,10 @@ devise_for :users
  end
  resources :members, path: '/groups/:id/members'
  resources :user
- resources :events
  resources :friendships
- resources :friends, :controller => 'friendships'
+ resources :projects
+ resources :events
+ resources :messages
  resources :welcome
  resources :groups 
  resources :videos do
@@ -41,6 +42,7 @@ devise_for :users
  root 'posts#index'
 
  get '/videos', to:'videos#index' 
+ get '/messages', to:'messages#index'
  get '/about', to:'welcome#about'
  get '/map', to:'groups#map'
  get '/user', to:'user#show'
