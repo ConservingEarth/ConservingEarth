@@ -85,7 +85,6 @@
 	width: 1500px;
 	background-color: white;
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-	margin-bottom: 100px;
 
 }
 
@@ -118,3 +117,23 @@
 		}
 
 }
+.user_friends{
+	padding-left:2rem;
+	padding-top: 2rem;
+
+	.friends{
+		float: left;
+		padding-top: 2rem;
+		
+	}
+	.friend_avatar{
+		float: left;
+	}
+	.friend_name{
+		padding-left:6rem;
+	}
+}
+
+
+	
+
