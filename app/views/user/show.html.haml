@@ -7,19 +7,29 @@
 			%h1
 				= @user.name
 			%p
-				= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post 
-				= link_to "friends", user_path(@user)
+				- if user_signed_in?
+					- if @user == current_user
+						= link_to "Manage", edit_user_registration_path(current_user), class: "button2"
+					-else
+						- if current_user.friends.include?(@user)
+							%i.fa.fa-check Friends
+						-else
+							= link_to "Add Friend", user_path(:friend_id => @user), :method => :post 
+				-#= link_to "friends", user_path(@user)
 				-#= link_to "Events", event_path(@user_id)
 				-#= link_to "Inpact", inpact_path(@user_id)
-				- if @user == current_user
-					= link_to "Manage", edit_user_registration_path(current_user), class: "button2" 
+	%br
 	.userdescription
 		%p 
 			= @user.description
 	%br
 	.userdescription
-		%h2 Friends
-		- for friends in @user.friends
-			%li
-				= friends.name
-
+		.user_friends
+			%h2 Friends
+			- for friends in @user.friends
+				.friends
+					.friend_avatar
+						= image_tag friends.avatar.url(:thumb)
+					.friend_name
+						.title
+							%h2= link_to friends.name, friends
