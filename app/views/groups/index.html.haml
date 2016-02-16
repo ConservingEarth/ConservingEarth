@@ -3,9 +3,10 @@
 #groupindex
 	#groups
 		%br
-		- if user_signed_in?
 			.indexactivities
-				= link_to " + Create Group", new_group_path, class: "addpost"
+				- if user_signed_in?
+					= link_to " + Create Group", new_group_path, class: "addpost"
+				= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, :class => "addpost"
 		%br	
 			- @groups.each do |group|
 				.group
