@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require private_pub
 //= require jquery_ujs
-//= require turbolinks
-//= require masonry/jquery.masonry
 //= require_tree .
+//= require turbolinks
+//= require private_pub
+//= require masonry/jquery.masonry
 //= require underscore
 //= require gmaps/google
 //= require groups
