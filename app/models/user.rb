@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   has_many :members, :foreign_key => :user_id
   has_many :groups, :through => :members
 
-  has_attached_file :avatar, styles: { medium: "200x200#", thumb: "100x100#" }, :default_url => ActionController::Base.helpers.asset_path('CElogo200.png')
+  has_attached_file :avatar, styles: { medium: "200x200#", thumb: "100x100#", nav: "30x30#"}, :default_url => ActionController::Base.helpers.asset_path('CElogo200.png')
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   
