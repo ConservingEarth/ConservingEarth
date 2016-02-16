@@ -13,6 +13,7 @@
 					  <ul class="no-js">
 					    <li>
 					      <a href="#" class="clicker"><i class="fa fa-user"> <i class="fa fa-angle-down"></i></i></a>
+					      <a href="#" class="clicker"><%= image_tag current_user.avatar.url(:nav) %><i class="fa fa-angle-down"></i></i></a>
 					      <ul>
 					        <li><%= link_to "dashboard", dashboard_path %></li>
 					        <li><%= link_to "profile", user_path(current_user) %></li>
