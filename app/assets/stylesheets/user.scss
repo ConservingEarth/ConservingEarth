@@ -22,16 +22,15 @@
 	padding-right: 50px;
 	width: 200px;
 	margin: 0 auto;
-	color: white;
+	color:#3e3e3e;
 	z-index: 0;
 }
 
 
 .usermenu{
-
+	height: 50px;
 	float:right;
-	margin-top: 10px;
-	margin-right: 100px
+	margin-right: 100px;
 }
 
 .usermenu ul {
@@ -134,6 +133,12 @@
 	}
 }
 
-
+.dbjumbo{
+	background-color: #fff;
+	width :90%;
+	height: 100vh;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 	
 
