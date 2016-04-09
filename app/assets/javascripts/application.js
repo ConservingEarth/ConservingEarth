@@ -11,15 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
-//= require turbolinks
 //= require private_pub
 //= require masonry/jquery.masonry
 //= require underscore
 //= require gmaps/google
 //= require groups
 //= require rails.validations
+//= require turbolinks
 
 
 $(function () {

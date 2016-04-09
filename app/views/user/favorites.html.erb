@@ -1,1 +1,11 @@
-<%= render "user/activities" %>
+<%= render "layouts/dashboardnav" %>
+<div class="dashboard">
+	<br>
+	<div class="dbjumbo">
+		<% @user.videos.each do |video| %>
+				<h2>
+					<%= link_to video.title, video %>
+				</h2>
+		<% end %>
+	</div>
+</div>

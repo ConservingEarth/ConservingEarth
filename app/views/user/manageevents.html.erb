@@ -1,0 +1,28 @@
+<%= render "layouts/dashboardnav" %>
+<div class="dashboard">
+		<br>
+	<div id="groupindex"> 
+		<div id="groups"> 
+			<% @user.events.each do |event| %>
+					<div class="group">
+						<div class="group_image">
+							<% if event.image.nil? %>
+								<%= link_to (image_tag "/assets/images/celogo.png"), event %>
+							<% else %>
+								<%= link_to (image_tag event.image.url(:small)), event %>
+							<% end %>
+						</div>
+						<div class="group_content">
+							<% if event.title.nil? %>
+								
+									<h2> this event title is no longer available</h2>
+							<% else %>
+								
+									<h2><%= link_to truncate(event.title, :length => 30), event %></h2>
+							<% end %>
+						</div>
+					</div>
+			<% end %>
+		</div>
+	</div>
+</div>

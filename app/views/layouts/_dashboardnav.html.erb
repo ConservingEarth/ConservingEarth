@@ -1,0 +1,88 @@
+<div class="fullnav">
+<div class="header">
+		<nav class="navhead">
+			<div class="logo">
+				<%= link_to root_path do %>
+				   <%= image_tag "logoCE.png", class: "conservingearthlogo" %>
+				<% end %>
+			</div>
+			<div class="search">
+				<div class="searchicon">
+					<i class="fa fa-search"></i>
+				</div>
+			</div>
+		</nav>
+
+		<% if user_signed_in? %>
+				<div class="usermenu">
+					<div class="click-nav">
+					  <ul class="no-js">
+					    <li>
+					      <a href="#" class="clicker">
+					      		<div class="nav-image"><%= image_tag current_user.avatar.url(:nav) %></div>
+					      		<div class="nav-username"><%= current_user.name %></div>
+					      		<div class="nav-angle-down"><i class="fa fa-angle-down"></i></div>
+					      	</a>
+					      <ul>
+					        <li><%= link_to "dashboard", dashboard_path %></li>
+					        <li><%= link_to "profile", user_path(current_user) %></li>
+					        <hr>
+					        <li><%= link_to('Sign out', destroy_user_session_path, :method => :delete) %></li>
+					      </ul>
+					    </li>
+					  </ul>
+					</div>	
+				</div>
+			<% else %>
+				<div class="userlogin">
+				<%= link_to "Log In", new_user_session_path, class: "button" %>
+				<%= link_to "Sign Up", new_user_registration_path, class: "button" %>
+				</div>
+			<% end %>
+		<div class="notify"><i class="fa fa-bell-o"></i></div>
+	</div>				   
+        <!-- Sidebar -->
+	        <div class="sidebar">
+	        	<ul class="sidebar-nav">
+		             <li class="<%= active_class(root_path) %>">
+		             <%= link_to '<i class="fa fa-newspaper-o"><div class="paddingnav">News</div></i>'.html_safe, root_path, :class => "sidebar-nav-links" %></li>
+		            <li class="<%= active_class(videos_path) %>"><%= link_to '<i class="fa fa-video-camera"><div class="paddingnav">Videos</div></i>'.html_safe, videos_path, :class => "sidebar-nav-links" %></li>
+		            <li class="<%= active_class(groups_path) %>"><%= link_to '<i class="fa fa-leaf"><div class="paddingnav">Groups</div></i>'.html_safe, groups_path, :class => "sidebar-nav-links" %></li>
+					<li class="<%= active_class(events_path) %>"><%= link_to '<i class="fa fa-calendar"><div class="paddingnav">Events</div></i>'.html_safe, events_path, :class => "sidebar-nav-links" %></li>
+					<li class="<%= active_class(projects_path) %>"><%= link_to '<i class="fa fa-cubes"><div class="paddingnavp">Projects</div></i>'.html_safe, projects_path, :class => "sidebar-nav-links" %></li>
+	                <li class="<%= active_class(about_path) %>"><%= link_to '<i class="fa fa-info"><div class="paddingnava">About</div></i>'.html_safe, about_path, :class => "sidebar-nav-links" %></li>     
+	            </ul>
+	            <br>
+	            <% if user_signed_in? %>
+	            <ul class="sidebar-nav">
+		           <li class="<%= active_class(dashboard_path) %>"><%= link_to '<i class="fa fa-laptop"><div class="paddingnav">Dashboard</div></i>'.html_safe, dashboard_path, :class => "sidebar-nav-links" %></li>
+		            <li class="<%= active_class(friends_path) %>"><%= link_to '<i class="fa fa-users"><div class="paddingnav">Friends</div></i>'.html_safe, friends_path, :class => "sidebar-nav-links" %></li>
+		            <li class="<%= active_class(favorites_path) %>"><%= link_to '<i class="fa fa-heart"><div class="paddingnav">Favorites</div></i>'.html_safe, favorites_path, :class => "sidebar-nav-links" %></li>
+		            <li class="<%= active_class(managegroups_path) %>"><%= link_to '<i class="fa fa-leaf"><div class="paddingnav">Manage Groups</div></i>'.html_safe, managegroups_path, :class => "sidebar-nav-links" %></li>
+					<li class="<%= active_class(manageevents_path) %>"><%= link_to '<i class="fa fa-calendar"><div class="paddingnav">Manage Events</div></i>'.html_safe, manageevents_path, :class => "sidebar-nav-links" %></li>
+					<li class="<%= active_class(manageprojects_path) %>"><%= link_to '<i class="fa fa-cubes"><div class="paddingnavp">Manage Projects</div></i>'.html_safe, manageprojects_path, :class => "sidebar-nav-links" %></li>
+	              	<% if user_signed_in? %>
+	              		<li class="<%= active_class(edit_user_registration_path(current_user)) %>"><%= link_to '<i class="fa fa-cog"><div class="paddingnav">Settings</div></i>'.html_safe, edit_user_registration_path(current_user), :class => "sidebar-nav-links" %></li>
+	                <% end -%>
+	            </ul>
+	            <br>
+	            <ul class="sidebar-nav">
+	            	<li class="sidebar-nav-links">
+	            		<i class="fa fa-plus"><div class="paddingnav">Create</div></i>
+	            	</li>
+		            <li class="<%= active_class(new_post_path) %>"><%= link_to ' Create News'.html_safe, new_post_path(current_user), :class => "sidebar-nav-linkscreate" %></li>
+		            <li class="<%= active_class(new_video_path) %>"><%= link_to ' Add Videos'.html_safe, new_video_path(current_user), :class => "sidebar-nav-linkscreate" %></li>
+		            <li class="<%= active_class(groups_path) %>"><%= link_to ' Create Groups'.html_safe, new_group_path(current_user), :class => "sidebar-nav-linkscreate" %></li>
+					<li class="<%= active_class(events_path) %>"><%= link_to ' Create Events'.html_safe, new_event_path(current_user), :class => "sidebar-nav-linkscreate" %></li>
+					<li class="<%= active_class(projects_path) %>"><%= link_to ' Create Projects'.html_safe, new_project_path(current_user), :class => "sidebar-nav-linkscreate" %></li>
+	              
+	            </ul>
+	            <% end %>
+	        </div>
+	        <script type="text/javascript">
+					$(document).ready(function() {
+						$(".fa fa-angle-down").click(function(){
+							alert( "Handler for .click() called." );
+					});
+			</script>
+</div>

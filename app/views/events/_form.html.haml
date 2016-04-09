@@ -16,7 +16,7 @@
 		= f.input :description, imput_html: {class: 'form-control'}
 	.form-group
 		= f.label :email_info, "Email-only info"
-	 	= f.text_area :email_info, class: "form-control", placeholder: "This text will be included in emails we send to attendees, but not visible on the website."
+		= f.text_area :email_info, class: "form-control", placeholder: "Event email"
 	.form-group
 		= f.label :starts_at, "Start date"
 		= f.date_select :starts_at, order: [:day, :month, :year], start_year: Date.today.year, end_year: Date.today.year + 1

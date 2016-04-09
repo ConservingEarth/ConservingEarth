@@ -1,11 +1,11 @@
-= render "layouts/nav"
+= render "layouts/dashboardnav"
  
 #thenews
 	#news
 		%br
 		- if user_signed_in?
 			.indexactivities
-				= link_to " + Add News", new_post_path, class: "addpost"
+				= link_to "<style>+{color:red;background-color:red;}</style> + Add News".html_safe, new_post_path, class: "addpost"
 		%br
 		- @posts.each do |post|
 			.new

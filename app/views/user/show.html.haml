@@ -1,4 +1,4 @@
-= render "layouts/nav" 
+= render "layouts/dashboardnav" 
 .usercontent
 	.userinfo
 		.useravatar
@@ -16,7 +16,6 @@
 						-else
 							= link_to "Add Friend", user_path(:friend_id => @user), :method => :post 
 				-#= link_to "friends", user_path(@user)
-				-#= link_to "Events", event_path(@user_id)
 				-#= link_to "Inpact", inpact_path(@user_id)
 	%br
 	.userdescription

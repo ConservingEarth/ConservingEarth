@@ -16,6 +16,7 @@ gem 'will_paginate'
 gem 'execjs'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'jbuilder'
 gem 'sdoc',  group: :doc
 gem 'rails_12factor', group: :production
@@ -24,12 +25,10 @@ gem 'xml-simple'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'acts_as_votable'
-gem 'bcrypt', '~> 3.1.10'
 gem 'friendly_id', '~> 5.1.0'
 gem 'twitter'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'mailboxer', '~> 0.13.0'
-gem 'bootstrap-sass'
 gem 'client_side_validations', github: "DavyJonesLocker/client_side_validations", branch: "4-2-stable"
 gem 'aws-sdk', '< 2.0'
 gem "pundit"
@@ -38,6 +37,9 @@ gem 'dalli'
 gem 'faye'
 gem 'thin'
 gem 'private_pub'
+gem 'font-awesome-sass'
+gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt' 
+
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.10'

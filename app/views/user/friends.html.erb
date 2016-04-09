@@ -1,0 +1,28 @@
+<%= render "layouts/dashboardnav" %>
+<div class="dashboard">
+	<br>
+	<div id="groupindex"> 
+		<div id="groups"> 
+			<% @user.friends.each do |friend| %>
+					<div class="group">
+						<div class="group_image">
+							<% if friend.avatar.nil? %>
+								<%= link_to (image_tag "/assets/images/celogo.png"), friend %>
+							<% else %>
+								<%= link_to (image_tag friend.avatar.url(:thumb)), friend %>
+							<% end %>
+						</div>
+						<div class="group_content">
+							<% if friend.name.nil? %>
+								
+									<h2> Friend no longer exists</h2>
+							<% else %>
+								
+									<h2><%= link_to truncate(friend.name, :length => 30), friend %></h2>
+							<% end %>
+						</div>
+					</div>
+			<% end %>
+		</div>
+	</div>
+</div>

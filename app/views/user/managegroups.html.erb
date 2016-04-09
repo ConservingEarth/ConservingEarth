@@ -1,0 +1,28 @@
+<%= render "layouts/dashboardnav" %>
+<div class="dashboard">
+	<br>
+	<div id="groupindex"> 
+		<div id="groups"> 
+			<% @user.groups.each do |group| %>
+					<div class="group">
+						<div class="group_image">
+							<% if group.image.nil? %>
+								<%= link_to (image_tag "/assets/images/celogo.png"), group %>
+							<% else %>
+								<%= link_to (image_tag group.image.url(:small)), group %>
+							<% end %>
+						</div>
+						<div class="group_content">
+							<% if group.title.nil? %>
+								
+									<h2> this group title is no longer available</h2>
+							<% else %>
+								
+									<h2><%= link_to truncate(group.title, :length => 30), group %></h2>
+							<% end %>
+						</div>
+					</div>
+			<% end %>
+		</div>
+	</div>
+</div>

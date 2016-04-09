@@ -1,25 +1,29 @@
 <div class="login">
   <div class="signupcontainer">
-    <div class="form">
-      <%= image_tag "CElogo200.png", class: "conservingearthlogo" %>
-      <h1>Welcome to Conserving Earth.</h1>
-      <p>Please fill in the details below.</p>
-      <div class="form-content">
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
+    <div  class="formcontainer">
+      <div class="form">
+        <%= image_tag "CElogo200.png", class: "conservingearthloginlogo" %>
+        <h1>Join Conserving Earth.</h1>
+        <div class="form-content">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-        	<%= f.text_field :name, required: true, autofocus: true, :placeholder => "Name", class: "form-content" %>
-          <br>
-          <%= f.email_field :email, required: true, :placeholder => "Email", class: "form-content" %>
-          <br>
-          <%= f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), :placeholder => "Password", class: "form-content" %>
-          <br>
-          <%= f.password_field :password_confirmation, required: true, :placeholder => "Password Confirmation", class: "form-content" %>
-          <br>
-          <%= f.button :submit, "Create an account", class: "c3-btn" %>
-      <% end %>
+          	<%= f.text_field :name, required: true, autofocus: true, :placeholder => "Name", class: "form-content" %>
+            <br>
+            <%= f.email_field :email, required: true, :placeholder => "Email", class: "form-content" %>
+            <br>
+            <%= f.password_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable), :placeholder => "Password", class: "form-content" %>
+            <br>
+            <%= f.password_field :password_confirmation, required: true, :placeholder => "Password Confirmation", class: "form-content" %>
+            <br>
+            <%= f.button :submit, "Create an account", class: "c3-btn" %>
+        <% end %>
+        </div>
+        <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-default c3-btn" %>
+        <br>
+        <br>
+        <%= link_to "Cancel", root_path, class: "btn btn-default c3-btn" %>   
       </div>
-      <%= link_to "Log in", new_session_path(resource_name), class: "c3-btn" %>   
     </div>
   </div>
 </div>

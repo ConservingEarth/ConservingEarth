@@ -1,3 +1,9 @@
+.addgroup{
+	float: right;
+	margin-right :100px;
+}
+
+
 .giimage{
 
 }
@@ -30,9 +36,14 @@
 
 
 #groups {
-		float: left;
-		width:	85%;
-		padding: 0 5% 0 2.5%;
+
+	float: left;
+    padding: 0 5% 0 2.5%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+    background-color: #fff;
 	.group {
 		background-color: #fff;
 		width: 200px;
@@ -144,10 +155,9 @@ float: left;
 }
 
 #groupindex{
-	background-color: #f1f1f1;
-	margin-left: 10%;
-	padding-top: 50px;
-	width: 90%;
+	margin-left: 205px;
+    padding-top: 50px;
+    width:175vh;
 }
 
 .groupheadshow{
@@ -160,4 +170,23 @@ float: left;
 .grouptitle{
 	padding-top: 30px;
 	margin-left: 10px;
+}
+
+.sectionline{
+	width: 100%;
+	height: 1px;
+	background-color: black;
+}
+.searchgroups{
+	width: 100px;
+	height: 20px;
+	border: 1px solid black;
+	float: right;
+	margin-right: 20px;
+}
+
+.sgicon{
+	float: right;
+    padding-top: 1px;
+    padding-right: 5px;
 }

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  
   has_many :videos
   has_many :groups
   has_many :events
@@ -28,6 +29,11 @@ class User < ActiveRecord::Base
 
   enum role: [:inactive, :user, :mod, :admin, :global_admin]
   after_initialize :set_default_role, :if => :new_record?
+
+
+  def method_name
+    
+  end
 
   def set_default_role
     self.role ||= :user

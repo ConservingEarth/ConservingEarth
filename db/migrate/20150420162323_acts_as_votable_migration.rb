@@ -22,6 +22,6 @@ class ActsAsVotableMigration < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :votes
-  end
+     :votes
+  enddrop_table
 end

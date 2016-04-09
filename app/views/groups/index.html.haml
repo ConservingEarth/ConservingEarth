@@ -1,12 +1,17 @@
-= render "layouts/nav"
+= render "layouts/dashboardnav"
 
 #groupindex
 	#groups
 		%br
 			.indexactivities
 				- if user_signed_in?
-					= link_to " + Create Group", new_group_path, class: "addpost"
-				= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, :class => "addpost"
+					.addgroup 
+						= link_to " + Create Group", new_group_path
+				= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, method: :get
+				.searchgroups
+					.sgicon
+						%i.fa.fa-search
+		.sectionline
 		%br	
 			- @groups.each do |group|
 				.group

@@ -4,6 +4,31 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 
 	end
 
+	def dashboard
+		@user = User.find(current_user)
+		
+	end
+
+	def favorites
+		@user = User.find(current_user)
+	end
+
+	def friends
+		@user = User.find(current_user)
+	end
+
+	def managegroups
+		@user = User.find(current_user)
+	end
+
+	def manageprojects
+		@user = User.find(current_user)
+	end
+
+	def manageevents
+		@user = User.find(current_user)
+	end
+
 	def user
 		@users = User.all
 		@videos = Video.all
@@ -12,8 +37,6 @@ before_filter :require_user, :only => [:edit, :update, :destroy]
 	def show
 		@user = User.find(params[:id])
 		@friend = User.find_by_id(params[:name])
-		
-
 	end
 
 	def create

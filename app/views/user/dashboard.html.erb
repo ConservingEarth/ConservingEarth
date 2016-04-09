@@ -1,0 +1,19 @@
+<%= render "layouts/dashboardnav" %>
+<div class="dashboard">
+	<br>
+	<div class="dbjumbo">
+		<% @user.videos.each do |video| %>
+				<h2>
+					<%= link_to video.title, video %>
+				</h2>
+		<% end %>
+	</div>
+	<br>
+	<div class="dbjumbo">
+		<% current_user.groups.each do |group| %>
+				<h2>
+					<%= link_to group.title, group %>
+				</h2>
+		<% end %>
+	</div>
+</div>

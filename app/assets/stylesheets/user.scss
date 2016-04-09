@@ -15,6 +15,7 @@
 	width: 90%;
 }
 
+
 .userlogin{
 
 	float: right;
@@ -30,7 +31,7 @@
 .usermenu{
 	height: 50px;
 	float:right;
-	margin-right: 100px;
+	
 }
 
 .usermenu ul {
@@ -140,5 +141,26 @@
 	margin-left: 5%;
 	margin-right: 5%;
 }
-	
+
+.nav-create{
+	background-color: blue;
+
+}
+
+.nav-image{
+	float: left;
+}
+
+.nav-username{
+	float: left;
+	padding-left: 5px;
+	padding-top: 6px;
+
+}
+
+.nav-angle-down{
+	float: left;
+	padding-left: 5px;
+	padding-top: 8px;
+}
 
