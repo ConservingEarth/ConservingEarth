@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-	before_filter :require_user, :only => [:edit, :update, :destroy]
+
 	before_filter :authenticate_user!, except: [:index, :show]
 
 	def index
@@ -24,13 +24,14 @@ class ProjectsController < ApplicationController
 	end
 
 	def edit
+		@project = Project.find(params[:id])
 		
 	end
 
 	def update
-			
+		@project = Project.find(params[:id])	
 		if @project.update(project_params)
-			redirect_to @project, notice: "project positive"
+			redirect_to @project, notice: "project updated"
 		else
 			render 'edit'
 		end
