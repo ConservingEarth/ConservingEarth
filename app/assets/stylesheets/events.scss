@@ -1,22 +1,53 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.addevent{
+	float: right;
+	margin-right :100px;
+}
 
+
+.giimage{
+
+}
+.gititle{
+ padding: 5px;
+ font-size: 1.5rem;
+ text-decoration: none;
+ color: black;
+ list-style: none;
+
+}
+
+.gidescription{
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+
+#intro {
+	margin: 2.75rem 0 1.75rem 0;
+	text-align: center;
+	font-size: 1.75rem;
+	line-height: 1;
+	span {
+		font-size: 1.25rem;
+		color: #9B9B9B;
+	}
+}
 
 
 #events {
 		float: left;
-		width:	85%;
-		padding: 0 5% 0 2.5%;
+		margin-top: 30px;
+		background-color: #fff;
+		margin-left: 30px;
 
 	.event {
-		background: #Fff;
-		width: 200px;
-		float: left;
-		margin-left: 20px;
-		margin-bottom: 20px;
+		background:#fff;
+		margin: 20px;
+		width:125vh;
+		background-color:#fff;
+		box-shadow: 0 6px 12px rgba(0,0,0,.175);
 		.event_image {
-			width: 100%;
 			overflow: hidden;
 			img {
 				width: 100%;
@@ -24,17 +55,19 @@
 			}
 		}
 		.event_content {
+			padding: 10px;
 			h2 {
 				margin: 0;
 				font-weight: 100;
-				padding: 0.5rem 5%;
-				font-size: 12px;
-				height: 50px;
+				padding-bottom: 0.5rem;
+				border-bottom: 1px solid #E4E4E4;
+				font-size: 1.25rem;
+
 				a {
 					text-decoration: none;
 					color: #333233;
 					&:hover {
-						color: #50A7C7;
+						color: darkgreen;
 					}
 				}
 			}
@@ -59,24 +92,26 @@
 	}
 }
 
-#eventcontainer{
-	padding-top: 50px;
-	margin-right: 50px;
-	margin-left: 250px;
-	padding-right: 20px;
-}
 #event_show {
-	background-color: #fff;
-	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-	padding:10px;
+	
+	padding-top: 5%;
+	margin-left: 15%;
 	.event_image_description {
-		width: 50%;
+		width: 68%;
+		height: 30em;
 		float: left;
-		
+		margin-right: 5%;
+		background-color: #fff;
+		margin-top: 50px;
+		box-shadow: 0 6px 12px rgba(0,0,0,.175);
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.event_data {
-		width: 15%;
+		width: 250px;
 		float: left;
+		
+		margin-top: 50px;
 		.button {
 			width: 100%;
 			display: inline-block;
@@ -86,38 +121,71 @@
 			text-decoration: none;
 			color: #ffffff;
 			&:hover {
-				color: #50A7C7;
-				border: 1px solid #50A7C7;
+				background-color: #50A7C7;
+				
 			}
 		}
 		.data {
 			width: 100%;
 			display: block;
 			padding: .75rem 0;
-			border-bottom: 1px solid #E9E9E9;
+			border-bottom: 1px solid #222;
 			text-decoration: none;
-			color: #969696;
+			color: #222;
 			margin: 0;
 		}
 	}
-
 }
 
-.newevet{
+.newevent{
 	margin-left: 20%;
 	padding-top: 5%;
 	padding-right: 100px;
 }
 
-.eventpage{
-	background-color: #f1f1f1;
-	margin-left: 10%;
-	padding-top: 50px;
-	width: 90%;
+.eventtitleimage{
+float: left;
 }
 
-.eventnew{
-	margin-left: 20%;
-	padding-top: 5%;
-	width: 50%;
+.eventtitlenav{
+ float: left;
+ padding-left:20px;
+ margin-top: 120px; 
+}
+
+#eventindex{
+	margin-left: 200px;
+    padding-top: 50px;
+    width:175vh;
+}
+
+.eventheadshow{
+	height:200px;
+	width: 90%;
+	background-color: #fff;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.eventtitle{
+	padding-top: 30px;
+	margin-left: 10px;
+}
+
+.sectionline{
+	width: 100%;
+	height: 1px;
+	background-color: black;
+}
+.searchevents{
+	width: 100px;
+	height: 20px;
+	border: 1px solid black;
+	float: right;
+	margin-right: 20px;
+}
+
+.sgicon{
+	float: right;
+    padding-top: 1px;
+    padding-right: 5px;
 }
