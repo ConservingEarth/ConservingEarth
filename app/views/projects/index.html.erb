@@ -1,7 +1,7 @@
 <%= render 'layouts/dashboardnav' %>
 	
-<div class="contentpage">
-	<div id="videos">
+<div id="projectindex">
+	<div id="projects">
 		<br>
 		<% if user_signed_in? %>
 			<div class="indexactivities">.
@@ -11,11 +11,11 @@
 		<br>	
 		<% cache('video_cache', :expires_in => 12.hour) do %>
 			<% @projects.each do |project| %>
-				<div class="video">
-					<div class="video_image"> 
+				<div class="project">
+					<div class="project_image"> 
 						<%= link_to (image_tag project.image), project %>
 					</div>
-					<div class="video_content"> 
+					<div class="project_content"> 
 						<div class="title"> 
 							<h2>
 								<%= project.name %>
