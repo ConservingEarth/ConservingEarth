@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.dbjumbo{
+	background-color: #fff;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top : 30px;
+	padding: 20px;
+}
+
+.dashboard{
+	margin-left: 200px;
+	padding-top: 50px;
+}
+
+
+
 .useractivity{
 	margin-left: 10%;
 	width: 80%;
@@ -134,13 +149,7 @@
 	}
 }
 
-.dbjumbo{
-	background-color: #fff;
-	width :90%;
-	height: 100vh;
-	margin-left: 5%;
-	margin-right: 5%;
-}
+
 
 .nav-create{
 	background-color: blue;
