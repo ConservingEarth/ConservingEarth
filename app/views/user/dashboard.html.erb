@@ -1,6 +1,5 @@
 <%= render "layouts/dashboardnav" %>
 <div class="dashboard">
-	<br>
 	<div class="dbjumbo">
 		<% @user.videos.each do |video| %>
 				<h2>
@@ -8,7 +7,6 @@
 				</h2>
 		<% end %>
 	</div>
-	<br>
 	<div class="dbjumbo">
 		<% current_user.groups.each do |group| %>
 				<h2>
