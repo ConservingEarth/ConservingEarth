@@ -1,7 +1,7 @@
-= render "layouts/nav"
-#group_show
+= render "layouts/dashboardnav"
+#project_show
   = render "dashboard"
-  .group_image_description
+  .project_image_description
     %br
     %h2
       Info
@@ -9,8 +9,8 @@
     %hr
     %br
     = @project.description
-  .group_data
-    .groupwebsite
+  .project_data
+    .projectwebsite
       = link_to "Website", @project, class: "button"
       -#- if user_signed_in?
         -#- if current_user.groups.include?(@group)
