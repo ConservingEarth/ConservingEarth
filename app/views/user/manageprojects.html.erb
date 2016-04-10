@@ -1,28 +1,8 @@
 <%= render "layouts/dashboardnav" %>
 <div class="dashboard">
-	<br>
-	<div id="groupindex"> 
-		<div id="groups"> 
-			<% @user.projects.each do |project| %>
-					<div class="group">
-						<div class="group_image">
-							<% if project.image.nil? %>
-								<%= link_to (image_tag "/assets/images/celogo.png"), project %>
-							<% else %>
-								<%= link_to (image_tag project.image.url(:small)), project %>
-							<% end %>
-						</div>
-						<div class="group_content">
-							<% if project.name.nil? %>
-								
-									<h2> this project is no longer available</h2>
-							<% else %>
-								
-									<h2><%= link_to truncate(project.name, :length => 30), project %></h2>
-							<% end %>
-						</div>
-					</div>
-			<% end %>
-		</div>
-	</div>
-</div>
+	<div class="dbjumbo">
+		<% @user.projects.each do |project| %>
+				<h2>
+					<%= link_to project.name, project %>
+				</h2>
+		<% end %>
