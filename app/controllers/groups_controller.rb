@@ -2,12 +2,11 @@ class GroupsController < ApplicationController
 	protect_from_forgery with: :exception
 	before_filter :require_user, :only => [:edit, :update, :destroy]
 	before_filter :authenticate_user!, except: [:index, :show, :map]
-	def search
-		
-	end
+
 
 
 	def index
+		@search = Group.where{["name LIKE ?","%#{params[:search]}%" ]}
 		@groups = Group.all.order("created_at DESC").paginate(page: params[:page], per_page: 30)
 	end
 
@@ -53,12 +52,13 @@ class GroupsController < ApplicationController
  		marker.lat group.latitude
   		marker.lng group.longitude
   		marker.infowindow render_to_string(:partial => "/groups/infowindow", :locals => { :group => group})
+  		end
   	end
 
-	end
 	def infowindow
 		@group = Group.friendly.find(params[:id])
 	end
+
 	def destroy
 		@group = Group.friendly.find(params[:id])
 		@group.destroy
@@ -74,6 +74,7 @@ class GroupsController < ApplicationController
 		    	redirect_to(request.referrer || root_path)
 		    end
 	  	end
+
 		def find_post
 			@group = Group.friendly.find(params[:id])
 		end
@@ -83,7 +84,7 @@ class GroupsController < ApplicationController
     	end
 
 		def group_params
-			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude, :address, :slug)
+			params.require(:group).permit(:title, :description, :image, :link, :longitude, :latitude, :address, :slug, :tag_list)
 		end
-
+	
 end
