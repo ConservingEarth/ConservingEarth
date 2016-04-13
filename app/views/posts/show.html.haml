@@ -1,4 +1,4 @@
-= render "layouts/nav"
+= render "layouts/dashboardnav"
 #newscontainer 
   #new_show
     %h1= @post.title
@@ -12,6 +12,7 @@
         .description= simple_format(@post.description)
       .new_data
         = link_to "Official Link", @post.link, class: "button"
+        = @post.tag_list
         -#= link_to "Follow", @post, class: "button"
         %p.data
         - if @post.user == current_user
