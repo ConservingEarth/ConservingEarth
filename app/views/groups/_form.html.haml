@@ -20,5 +20,9 @@
 	.form-group  
 		= f.label :address
 		= f.text_field :address
+	.form-group
+		= f.input :tag_list, imput_html: {class: 'form-control'}
+
+
 
 	= f.button :submit, class: "btn btn-primary"
