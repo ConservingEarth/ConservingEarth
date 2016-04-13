@@ -21,7 +21,8 @@ require 'oembed'
 
 	def user
 		@users = User.all
-		autorize User
+		
+	
 	end
 	
 end
