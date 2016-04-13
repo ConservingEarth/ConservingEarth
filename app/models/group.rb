@@ -4,6 +4,8 @@ class Group < ActiveRecord::Base
 	Paperclip.options[:command_path] = "C:\Program Files\ImageMagick-6.9.0-Q16"
 	Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 
+	acts_as_taggable
+
 	belongs_to :user
 	has_many :members, :foreign_key => :group_id
 	has_many :users, :through => :members
@@ -18,9 +20,7 @@ class Group < ActiveRecord::Base
 	geocoded_by :address   
 	after_validation :geocode 
 		
-
-
-  	
-  		
-  	
+	searchable do
+	    text :title, :description
+  	end
 end
