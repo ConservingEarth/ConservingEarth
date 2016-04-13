@@ -9,6 +9,10 @@
 						= link_to " + Create Group", new_group_path
 				= link_to '<i class="fa fa-map-marker"></i> Map'.html_safe, map_path, method: :get
 				.searchgroups
+					= form_tag groups_path, :method => :get do 
+						%p
+							= text_field_tag :search, params[:search] 
+							= submit_tag "Search", :name => nil 
 					.sgicon
 						%i.fa.fa-search
 		.sectionline
