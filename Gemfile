@@ -27,7 +27,6 @@ gem 'geocoder'
 gem 'acts_as_votable'
 gem 'friendly_id', '~> 5.1.0'
 gem 'twitter'
-gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'mailboxer', '~> 0.13.0'
 gem 'client_side_validations', github: "DavyJonesLocker/client_side_validations", branch: "4-2-stable"
 gem 'aws-sdk', '< 2.0'
@@ -38,7 +37,11 @@ gem 'faye'
 gem 'thin'
 gem 'private_pub'
 gem 'font-awesome-sass'
-gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt' 
+gem 'bcrypt-ruby', '3.0.0', :require => 'bcrypt'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
+gem 'acts-as-taggable-on'
 
 
 group :development, :test do
